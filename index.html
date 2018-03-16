@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <style>
+            div{border:1px solid grey;}
+
+            div.container{width:800px;margin:0 auto}
+            div.container > div {margin:12px 0;}
+
+            div.header{display:flex;height:125px;}
+            div.header > div{border-radius:10px;}
+            div.header div.left{flex:2;}
+            div.header div.left dl{display:flex;flex-wrap:wrap;margin:6px;}
+            div.header div.left dd, div.header div.left dt{margin:5px 0;}
+            div.header div.left dd{border-bottom:1px dotted #C0C0C0;padding-bottom:0px;}
+            div.header div.left dt{flex:1 0 30%;}
+            div.header div.left dd{flex:2 0 60%;}
+            div.header div.right{flex:5;}
+
+            div.content{display:flex;height:500px;}
+
+            div.footer{display:flex;height:125px;}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <div class="left">
+                    <dl>
+                        <dt>Terme 1</dt>
+                        <dd>Definition 1</dd>
+                        <dt>Terme 2</dt>
+                        <dd>Definition 2</dd>
+                        <dt>Terme 3</dt>
+                        <dd>Definition 3</dd>
+                        <dt>Terme 4</dt>
+                        <dd>Definition 4</dd>
+                    </dl>
+                </div>
+                <div class="right">
+                </div>
+            </div>
+            <div class="content">
+            </div>
+            <div class="footer">
+            </div>
+    </body>
+</html>
