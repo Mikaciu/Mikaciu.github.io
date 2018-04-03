@@ -18,12 +18,23 @@
     a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
     a:hover { border-bottom-style: solid; color: black; }
     ul { margin: 0 0 32px 17px; }
-    #objective { width: 500px; float: left; }
+    #objective { width: 500px; float: left;margin-top:12px; }
     #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
 
-    dl.contents dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
-    dl.contents dd { width: 600px; float: right; }
-    dl.contents dd.clear { float: none; margin: 0; height: 15px; }
+    dl.contents > dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
+    dl.contents > dd { width: 600px; float: right; }
+    dl.contents > dd.clear { float: none; margin: 0; height: 15px; }
+
+    dt.icon {float:left;clear:left;width: 24px;}
+    dd.icon {float:left;margin: 0 0 0 6px;}
+
+    hr{background-color:#999;height: 1px;padding:0;margin:0 auto;border:0 none;width:200px;}
+    /*
+    dl.columns dd{float:left;clear:left;width:24px;}
+    dl.columns dt{float:left;clear:right;}
+    */
+
+    dt svg{max-width:24px;max-height:24px;}
     </style>
 </head>
 <body>
@@ -31,23 +42,26 @@
 
         <img src="images/cthulu.png" alt="Photo of Cthulu" id="pic" />
 
-        <div id="contact-info" class="vcard">
+        <div id="contact-info">
             <dl class="vcard">
                 <dt>&nbsp;</dt>
                 <dd><h1 class="fn">Mikaël Hautin</h1></dd>
-                <dt>Mobile:</dt>
-                <dd class="tel">+33 6 67 08 15 33</dd>
-                <dt>Email:</dt>
-                <dd class="email">contact__AT__hautin__DOT__fr</dd>
+                <dt class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-smartphone"><use xlink:href="glyph-iconset/sprite/sprite.svg#si-glyph-smartphone" /></dt>
+                <dd class="icon tel">+33 6 67 08 15 33</dd>
+                <dt class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-mail-inbox"><use xlink:href="glyph-iconset/sprite/sprite.svg#si-glyph-mail-inbox" /></dt>
+                <dd class="icon email">contact__AT__hautin__DOT__fr</dd>
+                <dt class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-car"><use xlink:href="glyph-iconset/sprite/sprite.svg#si-glyph-car" /></dt>
+                <dd class="icon note">Permis B (19/07/2003)</dd>
+                <dt class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-house"><use xlink:href="glyph-iconset/sprite/sprite.svg#si-glyph-house" /></svg></dt>
+                <dd class="icon adr">
+                    <span class="street-address">14 rue des vergers</span>
+                    <span class="postal-code">90400</span>
+                    <span class="locality">Dorans</span>
+                    <span class="country-name">France</span>
+                </dd>
+                <dt class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-house"><use xlink:href="glyph-iconset/sprite/sprite.svg#si-glyph-house" /></svg></dt>
+                <dd class="icon note">Propriétaire</dd>
             </dl>
-            <!-- Microformats! -->
-
-
-
-            <!--p>
-                Mobile: <span class="tel">+33 6 67 08 15 33</span><br />
-                Email: <a class="email" href="mailto:pro@lovecraft.com">greatoldone@lovecraft.com</a>
-            </p-->
         </div>
 
         <div id="objective">
@@ -64,20 +78,69 @@
 
             <dt>Education</dt>
             <dd>
-                <h2>Withering Madness University - Planet Vhoorl</h2>
-                <p><strong>Major:</strong> Public Relations<br />
-                    <strong>Minor:</strong> Scale Tending</p>
-                </dd>
+                <h2>2010 - Certification "TYPO3 certified integrator"</h2>
+                <p>
+                    Typo3 Association - score de 72%
+                </p>
+
+                <hr />
+            </dd>
 
                 <dd class="clear"></dd>
 
                 <dt>Skills</dt>
                 <dd>
-                    <h2>Office skills</h2>
-                    <p>Office and records management, database administration, event organization, customer support, travel coordination</p>
+                    <h2>Conception</h2>
+                    <p>UML (starUML, argoUML, conceptDraw), MERISE (powerAMC)</p>
 
-                    <h2>Computer skills</h2>
-                    <p>Microsoft productivity software (Word, Excel, etc), Adobe Creative Suite, Windows</p>
+                    <h2>CMS (système de gestion de contenu)</h2>
+                    <p>TYPO3 (expert, certifié), SPIP (avancé), CREloaded (débutant), Prestashop (débutant)</p>
+
+                    <h2>Administration système</h2>
+                    <p>
+                        <dl class="columns">
+                            <dd>Propriétaire</dd>
+                            <dt>Windows 2000, Windows Server 2003, Windows server 2008</dt>
+                            <dd>Libre</dd>
+                            <dt>Debian GNU Linux, Gentoo, SuSE, Fedora, <abbr title="Red Hat Enterprise Linux">RHEL</abbr></dt>
+                            <dd>Surveillance</dd>
+                            <dt>Nagios</dt>
+                            <dd>Sécurité</dd>
+                            <dt>shorewall, fail2ban, vsftpd, nmap, lynis, ...</dt>
+                        </dl>
+                    </p>
+
+                    <h2>Langages</h2>
+                    <p>
+                        <dl>
+                            <dd>Programmation</dd>
+                            <dt>XHTML, JavaScript, CSS, PHP, ASP/VBScript, Java, C, Python</dt>
+                            <dd>Bases de données</dd>
+                            <dt>mySQL, Transact-SQL, PL/SQL (notions), DB2 SQL, SQL server 2000/2005/2008, Oracle (notions)</dt>
+                            <dd>Scripting</dd>
+                            <dt>MS-Batch, shell (bash, sh), PowerShell, expression rationnelles</dt>
+                        </dl>
+                    </p>
+
+                    <h2>Outils</h2>
+                    <p>
+                        <dl>
+                            <dd>Développement</dd>
+                            <dt>Eclipse, Microsoft SQL Server Enterprise Manager, notepad++ (avec scripting), Atom, PyCharm</dt>
+                            <dd>Conception</dd>
+                            <dt>conceptDraw, powerAMC, modelio, visual paradigm</dt>
+                            <dd>Gestion de versions</dd>
+                            <dt>ClearCase, SVN, git</dt>
+                            <dd>Bureautique</dd>
+                            <dt>Microsoft Office, OpenOffice, LibreOffice</dt>
+                        </dl>
+                    </p>
+
+                    <h2></h2>
+                    <p></p>
+
+                    <h2>Normes</h2>
+                    <p>WAI (<abbr title="Web Content Accessibility Guidelines">WCAG</abbr>, <abbr title="Référentiel Général d'Accessibilité pour les Administrations.">RGAA</abbr>, Accessiweb), W3C</p>
                 </dd>
 
                 <dd class="clear"></dd>
@@ -101,8 +164,32 @@
 
                 <dd class="clear"></dd>
 
+                <dt>Langues</dt>
+                <dd>
+                    <dl>
+                        <dt><img src="flags/fr.png" /></dt>
+                        <dd>Langue maternelle</dd>
+                        <dt><img src="flags/gb.png" /></dt>
+                        <dd>Niveau courant. BULATS obtenu en juin 2010, avec un score de 89% (C1/4). Pratique professionnelle régulière.</dd>
+                        <dt><img src="flags/it.png" /></dt>
+                        <dd>Lu</dd>
+                        <dt><img src="flags/es.png" /></dt>
+                        <dd>Lu</dd>
+                    </dl>
+                </dd>
+
+                <dd class="clear"></dd>
+
                 <dt>Hobbies</dt>
-                <dd>World Domination, Deep Sea Diving, Murder Most Foul</dd>
+                <dd>
+                    <ul>
+                        <li>Course à pied</li>
+                        <li>Fitness</li>
+                        <li>Cuisine</li>
+                        <li>DIY</li>
+                        <li>Jeux de rôle</li>
+                    </ul>
+                </dd>
 
                 <dd class="clear"></dd>
 
