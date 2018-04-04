@@ -14,10 +14,14 @@
     h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
     h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
     h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+    h3 { font-size: 16px; margin: 0 0 6px 0; position: relative; }
+    h3 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 14px; color: #999; font-weight: normal; }
+    h4 { font-size: 14px; margin: 0 0 6px 0; position: relative; }
     p { margin: 0 0 16px 0; }
     a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
     a:hover { border-bottom-style: solid; color: black; }
-    ul { margin: 0 0 32px 17px; }
+    dd.experience{margin-bottom:24px;}
+    ul { margin: 0 0 8px 17px; }
     #objective { width: 500px; float: left;margin-top:12px; }
     #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
 
@@ -29,6 +33,9 @@
     dd.icon {float:left;margin: 0 0 0 6px;}
 
     hr{background-color:#999;height: 1px;padding:0;margin:0 auto;border:0 none;width:200px;}
+
+    ul.technical-context{list-style-type:none;display:flex;flex-wrap:wrap;}
+    ul.technical-context li{border:1px solid #999;border-radius:5px;padding:3px;margin:3px;flex:auto;text-align:center;}
     /*
     dl.columns dd{float:left;clear:left;width:24px;}
     dl.columns dt{float:left;clear:right;}
@@ -146,19 +153,186 @@
                 <dd class="clear"></dd>
 
                 <dt>Experience</dt>
-                <dd>
-                    <h2>Doomsday Cult <span>Leader/Overlord - Baton Rogue, LA - 1926-2010</span></h2>
-                    <ul>
-                        <li>Inspired and won highest peasant death competition among servants</li>
-                        <li>Helped coordinate managers to grow cult following</li>
-                        <li>Provided untimely deaths to all who opposed</li>
+                <dd class="experience">
+                    <h2>Alstom - Power Service <span>Belfort, France - 04/2005-06/2005</span></h2>
+                    <h3>Application de demande de pièces pour alternateurs</h3>
+                    <h4>Environnement technique</h4>
+                    <ul class="technical-context">
+                        <li>Internet Information Services (IIS) version 5</li>
+                        <li>Excel 2000</li>
+                        <li>ASP/VBscript</li>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Java</li>
+                        <li>Intorel WebSite Compiler</li>
                     </ul>
-
-                    <h2>The Watering Hole <span>Bartender/Server - Milwaukee, WI - 2009</span></h2>
+                    <h4>Réalisations</h4>
                     <ul>
-                        <li>Worked on grass-roots promotional campaigns</li>
-                        <li>Reduced theft and property damage percentages</li>
-                        <li>Janitorial work, Laundry</li>
+                        <li>Recensement et rédaction du besoin client</li>
+                        <li>Conception et développement de maquettes fonctionnelles</li>
+                        <li>Analyse du retour utilisateur</li>
+                        <li>Conception, réalisation et maintenance de la plateforme</li>
+                    </ul>
+                </dd>
+
+                <dd class="experience">
+                    <h2>Pimentic SAS<span>Belfort, France - 09/2005-02/2009</span></h2>
+                    <h3>Réalisation et maintenance de sites internet</h3>
+                    <h4>Environnement technique</h4>
+                    <ul class="technical-context">
+                        <li>PSPad</li>
+                        <li>Office 2000 et ultérieurs</li>
+                        <li>SQL Server 2000</li>
+                        <li>IIS 5/6</li>
+                        <li>PHP 3+</li>
+                        <li>MySQL</li>
+                        <li>Shell</li>
+                        <li>Photoshop 9 et ultérieurs</li>
+                        <li>SPIP</li>
+                        <li>TYPO3</li>
+                    </ul>
+                    <h4>Réalisations</h4>
+                    <ul>
+                        <li>Mairie de Seloncourt</li>
+                        <li>SERS (Société d’aménagement et d’Équipement de la Région de Strasbourg)</li>
+                        <li>Centre de Gestion 70</li>
+                        <li>Création d’un modèle de site SPIP réutilisable</li>
+                        <li>TGV Belfort</li>
+                        <li>IEG</li>
+                        <li>Générateur de site TYPO3 Vétoquinol</li>
+                        <li>Place de marché economia</li>
+                        <li>Prestige équipement</li>
+                        <li>Cre@site (générateur de sites internet en ASP)</li>
+                        <li>Bien-être Attitude, Confiserie des Hautes-Vosges, Europartners, Mabi</li>
+                        <li>Intranet Vetoquinol</li>
+                        <li>Chambre de Commerce et d’Industrie du Territoire de Belfort</li>
+                    </ul>
+                </dd>
+
+                <dd class="experience">
+                    <h2>Ciméos SAS<span>Montbéliard, France - 04/2009-03/2011</span></h2>
+                    <h3>Réalisation de sites Internet, administration réseaux et systèmes</h3>
+                    <h4>Environnement technique</h4>
+                    <ul class="technical-context">
+                        <li>PSPad</li>
+                        <li>Office 2007+</li>
+                        <li>SQL Server 2000+</li>
+                        <li>IIS 5/6</li>
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                        <li>Shell</li>
+                        <li>Serveurs Windows</li>
+                        <li>Serveurs Linux (Ubuntu, Debian)</li>
+                        <li>Photoshop 9+</li>
+                        <li>SPIP</li>
+                        <li>TYPO3</li>
+                    </ul>
+                    <h4>Réalisations</h4>
+                    <ul>
+                        <li>CAPEB</li>
+                        <li>SARLAM</li>
+                        <li>Bourgogne Bâtiment Durable</li>
+                        <li>Administration de l’infrastructure</li>
+                    </ul>
+                </dd>
+
+                <dd class="experience">
+                    <h2>Indépendant<span>03/2011-02/2012</span></h2>
+                    <h3>Auto-entrepreneur en développement logiciel et administration système</h3>
+                    <h4>Environnement technique</h4>
+                    <ul class="technical-context">
+                        <li>Serveurs Linux</li>
+                        <li>Cyberduck</li>
+                        <li>Shell</li>
+                        <li>Photoshop</li>
+                    </ul>
+                    <h4>Réalisations</h4>
+                    <ul>
+                        <li>Découpage CATEP</li>
+                        <li>Administration système</li>
+                        <li>Diaporama HTML</li>
+                    </ul>
+                </dd>
+
+                <dd class="experience">
+                    <h2>Feel Europe<span>Audincourt, France - 07/2011-04/2012</span></h2>
+                    <h3>Prestataire en développement logiciel pour Faurecia (équipe PLM-Tec Dev)</h3>
+                    <h4>Environnement technique</h4>
+                    <ul class="technical-context">
+                        <li>ENOVIA V6R2009x</li>
+                        <li>Eclipse</li>
+                        <li>ANT</li>
+                        <li>Notepad++</li>
+                        <li>Mantis</li>
+                        <li>MediaWiki</li>
+                        <li>shell (CygWin, AIX, Linux)</li>
+                        <li>ClearCase</li>
+                        <li>DB2</li>
+                        <li>JAVA</li>
+                    </ul>
+                    <h4>Réalisations</h4>
+                    <ul>
+                        <li>développement de RFC (Request for Change)</li>
+                        <li>développement et maintenance des outils utilisés (extension Firefox,
+                        intégration notepad++)</li>
+                        <li>analyse et optimisation des process étudiés.</li>
+                    </ul>
+                </dd>
+
+                <dd class="experience">
+                    <h2>Feel Europe<span>Audincourt, France - 07/2011-04/2012</span></h2>
+                    <h3>Prestataire en support niveau 3 pour Faurecia (équipe PLM-LV3)</h3>
+                    <h4>Environnement technique</h4>
+                    <ul class="technical-context">
+                        <li>ENOVIA V6R2009x</li>
+                        <li>ENOVIA V6R2012x</li>
+                        <li>Eclipse</li>
+                        <li>ANT</li>
+                        <li>Notepad++</li>
+                        <li>Mantis</li>
+                        <li>MediaWiki</li>
+                        <li>shell (CygWin, AIX, Linux)</li>
+                        <li>ClearCase</li>
+                        <li>DB2</li>
+                        <li>JAVA</li>
+                    </ul>
+                    <h4>Réalisations</h4>
+                    <ul>
+                        <li>Mise en place de procédures de travail concernant les tâches récurrentes du support, et intégration de ces procédures dans une base de connaissances (Wiki)</li>
+                        <li>Refonte de la librairie Java du support, dans le but de simplifier le traitement des scripts exécutés en production (SP) et mise en place de sa documentation</li>
+                        <li>Assistance technique aux membres chinois de l'équipe, afin de les orienter dans une démarche de montée en compétence JAVA et une amélioration de la qualité et de la traçabilité.</li>
+                        <li>Analyse des incidents récurrents afin d'en établir des RFC</li>
+                    </ul>
+                </dd>
+
+                <dd class="experience">
+                    <h2>Feel Europe<span>Audincourt, France - 07/2011-04/2012</span></h2>
+                    <h3>Prestataire en architecture technique pour Faurecia (équipe PLM-Tec)</h3>
+                    <h4>Environnement technique</h4>
+                    <ul class="technical-context">
+                        <li>ENOVIA V6R2009x</li>
+                        <li>ENOVIA V6R2012x</li>
+                        <li>ENOVIA V6R2015x</li>
+                        <li>Eclipse</li>
+                        <li>ANT</li>
+                        <li>Gradle</li>
+                        <li>Notepad++</li>
+                        <li>Atom</li>
+                        <li>ALM</li>
+                        <li>git</li>
+                        <li>Mantis</li>
+                        <li>MediaWiki</li>
+                        <li>shell (CygWin, AIX, Linux)</li>
+                        <li>ClearCase</li>
+                        <li>DB2</li>
+                        <li>JAVA</li>
+                        <li>PowerShell</li>
+                        <li>Python</li>
+                    </ul>
+                    <h4>Réalisations</h4>
+                    <ul>
+                        <li>Livraison des environnements</li>
+                        <li>Développement et maintenance des outils utilisés</li>
+                        <li></li>
                     </ul>
                 </dd>
 
@@ -167,14 +341,17 @@
                 <dt>Langues</dt>
                 <dd>
                     <dl>
-                        <dt><img src="flags/fr.png" /></dt>
-                        <dd>Langue maternelle</dd>
-                        <dt><img src="flags/gb.png" /></dt>
-                        <dd>Niveau courant. BULATS obtenu en juin 2010, avec un score de 89% (C1/4). Pratique professionnelle régulière.</dd>
-                        <dt><img src="flags/it.png" /></dt>
-                        <dd>Lu</dd>
-                        <dt><img src="flags/es.png" /></dt>
-                        <dd>Lu</dd>
+                        <dt class="icon"><img src="flags/fr.png" /></dt>
+                        <dd class="icon">Langue maternelle</dd>
+                        <dt class="icon"><img src="flags/gb.png" /></dt>
+                        <dd class="icon">
+                            Niveau courant. <br />
+                            BULATS obtenu en juin 2010, avec un score de 89% (C1/4).<br />
+                            Pratique professionnelle régulière.</dd>
+                        <dt class="icon"><img src="flags/it.png" /></dt>
+                        <dd class="icon">Lu</dd>
+                        <dt class="icon"><img src="flags/es.png" /></dt>
+                        <dd class="icon">Lu</dd>
                     </dl>
                 </dd>
 
@@ -182,19 +359,19 @@
 
                 <dt>Hobbies</dt>
                 <dd>
-                    <ul>
-                        <li>Course à pied</li>
-                        <li>Fitness</li>
-                        <li>Cuisine</li>
-                        <li>DIY</li>
-                        <li>Jeux de rôle</li>
-                    </ul>
+                    <dl>
+                        <dt class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-heart-signal"><use xlink:href="glyph-iconset/sprite/sprite.svg#si-glyph-heart-signal" /></dt>
+                        <dd class="icon">Course à pied</dd>
+                        <dt class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-heart-signal"><use xlink:href="glyph-iconset/sprite/sprite.svg#si-glyph-heart-signal" /></dt>
+                        <dd class="icon">Fitness</dd>
+                        <dt class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-fridge"><use xlink:href="glyph-iconset/sprite/sprite.svg#si-glyph-fridge" /></dt>
+                        <dd class="icon tel">Cuisine</dd>
+                        <dt class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-multifunction-knife"><use xlink:href="glyph-iconset/sprite/sprite.svg#si-glyph-multifunction-knife" /></dt>
+                        <dd class="icon tel">DIY</dd>
+                        <dt class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="si-glyph-pen-nib"><use xlink:href="glyph-iconset/sprite/sprite.svg#si-glyph-pen-nib" /></dt>
+                        <dd class="icon tel">Jeux de rôle</dd>
+                    </dl>
                 </dd>
-
-                <dd class="clear"></dd>
-
-                <dt>References</dt>
-                <dd>Available on request</dd>
 
                 <dd class="clear"></dd>
             </dl>
