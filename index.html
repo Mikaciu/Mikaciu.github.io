@@ -27,12 +27,13 @@
 
     dl.contents > dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 100px; border-right: 1px solid #999;  }
     dl.contents > dd { width: 600px; float: right; }
-    dl.contents > dd.clear { float: none; margin: 0; height: 15px; }
+    dl.contents > dd.clear { float: none; margin: 0; height: 24px; }
 
     dt.icon {float:left;clear:left;width: 24px;}
     dd.icon {float:left;margin: 0 0 0 6px;}
 
-    hr{background-color:#999;height: 1px;padding:0;margin:0 auto;border:0 none;width:200px;}
+    hr{background-color:#999;height: 1px;padding:0;margin:24px auto;border:0 none;width:200px;}
+    hr.small{margin:12px auto;}
 
     ul.technical-context{list-style-type:none;display:flex;flex-wrap:wrap;}
     ul.technical-context li{border:1px solid #999;border-radius:5px;padding:3px;margin:3px;flex:auto;text-align:center;}
@@ -83,19 +84,44 @@
         <dl class="contents">
             <dd class="clear"></dd>
 
-            <dt>Education</dt>
-            <dd>
-                <h2>2010 - Certification "TYPO3 certified integrator"</h2>
-                <p>
-                    Typo3 Association - score de 72%
-                </p>
+                <dt>Education</dt>
+                <dd>
+                    <h2>2010 - Certification "TYPO3 certified integrator"</h2>
+                    <h3>Typo3 Association - score de 72%</h3>
+                </dd>
 
-                <hr />
-            </dd>
+                <dd><hr class="small" /></dd>
+
+                <dd>
+                    <h2>Ingénieur Réseaux, Systèmes et Multimedia</h2>
+                    <h3>Centre National des Arts et Métiers<span>2008-2017</span></h3>
+                    <h4>Mention très bien</h4>
+                </dd>
+
+                <dd><hr class="small" /></dd>
+
+                <dd>
+                    <h2>Licence professionnelle <abbr title="Intégration des Processus Industriels aux Technologies de l'information et de la Communication">IPITC<abbr></h2>
+                    <h3>IUT Montbéliard<span>2005</span></h3>
+                </dd>
+
+                <dd><hr class="small" /></dd>
+
+                <dd>
+                    <h2>DUT Informatique de gestion</h2>
+                    <h3>IUT Belfort<span>2004</span></h3>
+                </dd>
+
+                <dd><hr class="small" /></dd>
+
+                <dd>
+                    <h2>Baccalauréat scientifique</h2>
+                    <h3>Lycée Gustave Courbet<span>2002</span></h3>
+                </dd>
 
                 <dd class="clear"></dd>
 
-                <dt>Skills</dt>
+                <dt>Compétences</dt>
                 <dd>
                     <h2>Conception</h2>
                     <p>UML (starUML, argoUML, conceptDraw), MERISE (powerAMC)</p>
@@ -107,13 +133,15 @@
                     <p>
                         <dl class="columns">
                             <dd>Propriétaire</dd>
-                            <dt>Windows 2000, Windows Server 2003, Windows server 2008</dt>
+                            <dt><ul class="technical-context">
+                                <li>Windows 2000</li><li>Windows Server 2003</li><li>Windows server 2008</li>
+                            </ul></dt>
                             <dd>Libre</dd>
-                            <dt>Debian GNU Linux, Gentoo, SuSE, Fedora, <abbr title="Red Hat Enterprise Linux">RHEL</abbr></dt>
+                            <dt><ul class="technical-context"><li>Debian GNU Linux</li><li>Gentoo</li><li>SuSE</li><li>Fedora, <abbr title="Red Hat Enterprise Linux">RHEL</abbr></li></ul></dt>
                             <dd>Surveillance</dd>
-                            <dt>Nagios</dt>
+                            <dt><ul class="technical-context"><li>Nagios</li></ul></dt>
                             <dd>Sécurité</dd>
-                            <dt>shorewall, fail2ban, vsftpd, nmap, lynis, ...</dt>
+                            <dt><ul class="technical-context"><li>shorewall</li><li>fail2ban</li><li>vsftpd</li><li>nmap</li><li>lynis</li></ul></dt>
                         </dl>
                     </p>
 
@@ -121,11 +149,11 @@
                     <p>
                         <dl>
                             <dd>Programmation</dd>
-                            <dt>XHTML, JavaScript, CSS, PHP, ASP/VBScript, Java, C, Python</dt>
+                            <dt><ul class="technical-context"><li>XHTML</li><li>JavaScript</li><li>CSS</li><li>PHP</li><li>ASP/VBScript</li><li>Java</li><li>C</li><li>Python</li></ul></dt>
                             <dd>Bases de données</dd>
-                            <dt>mySQL, Transact-SQL, PL/SQL (notions), DB2 SQL, SQL server 2000/2005/2008, Oracle (notions)</dt>
+                            <dt><ul class="technical-context"><li>mySQL</li><li>Transact-SQL</li><li>PL/SQL (notions)</li><li>DB2 SQL</li><li>SQL server 2000/2005/2008</li><li>Oracle (notions)</li></ul></dt>
                             <dd>Scripting</dd>
-                            <dt>MS-Batch, shell (bash, sh), PowerShell, expression rationnelles</dt>
+                            <dt><ul class="technical-context"><li>MS-Batch</li><li>shell (bash, sh)</li><li>PowerShell</li><li>expressions rationnelles</li></ul></dt>
                         </dl>
                     </p>
 
@@ -133,18 +161,15 @@
                     <p>
                         <dl>
                             <dd>Développement</dd>
-                            <dt>Eclipse, Microsoft SQL Server Enterprise Manager, notepad++ (avec scripting), Atom, PyCharm</dt>
+                            <dt><ul class="technical-context"><li>Eclipse</li><li>Microsoft SQL Server Enterprise Manager</li><li>notepad++ (avec scripting)</li><li>Atom</li><li>PyCharm</li></ul></dt>
                             <dd>Conception</dd>
-                            <dt>conceptDraw, powerAMC, modelio, visual paradigm</dt>
+                            <dt><ul class="technical-context"><li>conceptDraw</li><li>powerAMC</li><li>modelio</li><li>visual paradigm</li></ul></dt>
                             <dd>Gestion de versions</dd>
-                            <dt>ClearCase, SVN, git</dt>
+                            <dt><ul class="technical-context"><li>ClearCase</li><li>SVN</li><li>git</li></ul></dt>
                             <dd>Bureautique</dd>
-                            <dt>Microsoft Office, OpenOffice, LibreOffice</dt>
+                            <dt><ul class="technical-context"><li>Microsoft Office</li><li>OpenOffice</li><li>LibreOffice</li></ul></dt>
                         </dl>
                     </p>
-
-                    <h2></h2>
-                    <p></p>
 
                     <h2>Normes</h2>
                     <p>WAI (<abbr title="Web Content Accessibility Guidelines">WCAG</abbr>, <abbr title="Référentiel Général d'Accessibilité pour les Administrations.">RGAA</abbr>, Accessiweb), W3C</p>
@@ -152,25 +177,135 @@
 
                 <dd class="clear"></dd>
 
-                <dt>Experience</dt>
+                <dt>Expérience</dt>
+
                 <dd class="experience">
-                    <h2>Alstom - Power Service <span>Belfort, France - 04/2005-06/2005</span></h2>
-                    <h3>Application de demande de pièces pour alternateurs</h3>
+                    <h2>Feel Europe<span>Audincourt, France - 02/2016-</span></h2>
+                    <h3>Prestataire en architecture technique pour Faurecia (équipe PLM-Tec)</h3>
                     <h4>Environnement technique</h4>
                     <ul class="technical-context">
-                        <li>Internet Information Services (IIS) version 5</li>
-                        <li>Excel 2000</li>
-                        <li>ASP/VBscript</li>
-                        <li>HTML, CSS, JavaScript</li>
-                        <li>Java</li>
-                        <li>Intorel WebSite Compiler</li>
+                        <li>ENOVIA V6R2009x</li>
+                        <li>ENOVIA V6R2012x</li>
+                        <li>ENOVIA V6R2015x</li>
+                        <li>Eclipse</li>
+                        <li>ANT</li>
+                        <li>Gradle</li>
+                        <li>Notepad++</li>
+                        <li>Atom</li>
+                        <li>ALM</li>
+                        <li>git</li>
+                        <li>Mantis</li>
+                        <li>MediaWiki</li>
+                        <li>shell (CygWin, AIX, Linux)</li>
+                        <li>ClearCase</li>
+                        <li>DB2</li>
+                        <li>JAVA</li>
+                        <li>PowerShell</li>
+                        <li>Python</li>
                     </ul>
                     <h4>Réalisations</h4>
                     <ul>
-                        <li>Recensement et rédaction du besoin client</li>
-                        <li>Conception et développement de maquettes fonctionnelles</li>
-                        <li>Analyse du retour utilisateur</li>
-                        <li>Conception, réalisation et maintenance de la plateforme</li>
+                        <li>Livraison des environnements (standard Dassault et personnalisations Faurecia)</li>
+                        <li>Suivi des anomalies avec Dassault Systèmes</li>
+                        <li>Développement et maintenance des outils utilisés</li>
+                        <li>Packaging et déploiement silencieux sur postes clients</li>
+                        <li>Construction et collaboration à une base de connaissances sur les applications déployées</li>
+                    </ul>
+                </dd>
+
+                <dd class="experience">
+                    <h2>Feel Europe<span>Audincourt, France - 05/2012-01/2016</span></h2>
+                    <h3>Prestataire en support niveau 3 pour Faurecia (équipe PLM-LV3)</h3>
+                    <h4>Environnement technique</h4>
+                    <ul class="technical-context">
+                        <li>ENOVIA V6R2009x</li>
+                        <li>ENOVIA V6R2012x</li>
+                        <li>Eclipse</li>
+                        <li>ANT</li>
+                        <li>Notepad++</li>
+                        <li>Mantis</li>
+                        <li>MediaWiki</li>
+                        <li>shell (CygWin, AIX, Linux)</li>
+                        <li>ClearCase</li>
+                        <li>DB2</li>
+                        <li>JAVA</li>
+                    </ul>
+                    <h4>Réalisations</h4>
+                    <ul>
+                        <li>Mise en place de procédures de travail concernant les tâches récurrentes du support, et intégration de ces procédures dans une base de connaissances (Wiki)</li>
+                        <li>Refonte de la librairie Java du support, dans le but de simplifier le traitement des scripts exécutés en production (SP) et mise en place de sa documentation</li>
+                        <li>Assistance technique aux membres chinois de l'équipe, afin de les orienter dans une démarche de montée en compétence JAVA et une amélioration de la qualité et de la traçabilité.</li>
+                        <li>Analyse des incidents récurrents afin d'en établir des RFC</li>
+                    </ul>
+                </dd>
+
+                <dd class="experience">
+                    <h2>Feel Europe<span>Audincourt, France - 07/2011-04/2012</span></h2>
+                    <h3>Prestataire en développement logiciel pour Faurecia (équipe PLM-Tec Dev)</h3>
+                    <h4>Environnement technique</h4>
+                    <ul class="technical-context">
+                        <li>ENOVIA V6R2009x</li>
+                        <li>Eclipse</li>
+                        <li>ANT</li>
+                        <li>Notepad++</li>
+                        <li>Mantis</li>
+                        <li>MediaWiki</li>
+                        <li>shell (CygWin, AIX, Linux)</li>
+                        <li>ClearCase</li>
+                        <li>DB2</li>
+                        <li>JAVA</li>
+                    </ul>
+                    <h4>Réalisations</h4>
+                    <ul>
+                        <li>développement de RFC (Request for Change)</li>
+                        <li>développement et maintenance des outils utilisés (extension Firefox,
+                        intégration notepad++)</li>
+                        <li>analyse et optimisation des process étudiés.</li>
+                    </ul>
+                </dd>
+
+                <dd class="experience">
+                    <h2>Indépendant<span>03/2011-02/2012</span></h2>
+                    <h3>Auto-entrepreneur en développement logiciel et administration système</h3>
+                    <h4>Environnement technique</h4>
+                    <ul class="technical-context">
+                        <li>Serveurs Linux</li>
+                        <li>Cyberduck</li>
+                        <li>Shell</li>
+                        <li>Photoshop</li>
+                    </ul>
+                    <h4>Réalisations</h4>
+                    <ul>
+                        <li>Découpage CATEP</li>
+                        <li>Administration système</li>
+                        <li>Diaporama HTML</li>
+                    </ul>
+                </dd>
+
+                <dd class="experience">
+                    <h2>Ciméos SAS<span>Montbéliard, France - 04/2009-03/2011</span></h2>
+                    <h3>Réalisation de sites Internet, administration réseaux et systèmes</h3>
+                    <h4>Environnement technique</h4>
+                    <ul class="technical-context">
+                        <li>PSPad</li>
+                        <li>Office 2007+</li>
+                        <li>SQL Server 2000+</li>
+                        <li>IIS 5/6</li>
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                        <li>Shell</li>
+                        <li>Serveurs Windows</li>
+                        <li>Serveurs Linux (Ubuntu, Debian)</li>
+                        <li>Photoshop 9+</li>
+                        <li>SPIP</li>
+                        <li>TYPO3</li>
+                    </ul>
+                    <h4>Réalisations</h4>
+                    <ul>
+                        <li>CAPEB</li>
+                        <li>SARLAM</li>
+                        <li>Bourgogne Bâtiment Durable</li>
+                        <li>Administration de l’infrastructure</li>
                     </ul>
                 </dd>
 
@@ -209,130 +344,23 @@
                 </dd>
 
                 <dd class="experience">
-                    <h2>Ciméos SAS<span>Montbéliard, France - 04/2009-03/2011</span></h2>
-                    <h3>Réalisation de sites Internet, administration réseaux et systèmes</h3>
+                    <h2>Alstom - Power Service <span>Belfort, France - 04/2005-06/2005</span></h2>
+                    <h3>Application de demande de pièces pour alternateurs</h3>
                     <h4>Environnement technique</h4>
                     <ul class="technical-context">
-                        <li>PSPad</li>
-                        <li>Office 2007+</li>
-                        <li>SQL Server 2000+</li>
-                        <li>IIS 5/6</li>
-                        <li>PHP</li>
-                        <li>MySQL</li>
-                        <li>Shell</li>
-                        <li>Serveurs Windows</li>
-                        <li>Serveurs Linux (Ubuntu, Debian)</li>
-                        <li>Photoshop 9+</li>
-                        <li>SPIP</li>
-                        <li>TYPO3</li>
+                        <li>Internet Information Services (IIS) version 5</li>
+                        <li>Excel 2000</li>
+                        <li>ASP/VBscript</li>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Java</li>
+                        <li>Intorel WebSite Compiler</li>
                     </ul>
                     <h4>Réalisations</h4>
                     <ul>
-                        <li>CAPEB</li>
-                        <li>SARLAM</li>
-                        <li>Bourgogne Bâtiment Durable</li>
-                        <li>Administration de l’infrastructure</li>
-                    </ul>
-                </dd>
-
-                <dd class="experience">
-                    <h2>Indépendant<span>03/2011-02/2012</span></h2>
-                    <h3>Auto-entrepreneur en développement logiciel et administration système</h3>
-                    <h4>Environnement technique</h4>
-                    <ul class="technical-context">
-                        <li>Serveurs Linux</li>
-                        <li>Cyberduck</li>
-                        <li>Shell</li>
-                        <li>Photoshop</li>
-                    </ul>
-                    <h4>Réalisations</h4>
-                    <ul>
-                        <li>Découpage CATEP</li>
-                        <li>Administration système</li>
-                        <li>Diaporama HTML</li>
-                    </ul>
-                </dd>
-
-                <dd class="experience">
-                    <h2>Feel Europe<span>Audincourt, France - 07/2011-04/2012</span></h2>
-                    <h3>Prestataire en développement logiciel pour Faurecia (équipe PLM-Tec Dev)</h3>
-                    <h4>Environnement technique</h4>
-                    <ul class="technical-context">
-                        <li>ENOVIA V6R2009x</li>
-                        <li>Eclipse</li>
-                        <li>ANT</li>
-                        <li>Notepad++</li>
-                        <li>Mantis</li>
-                        <li>MediaWiki</li>
-                        <li>shell (CygWin, AIX, Linux)</li>
-                        <li>ClearCase</li>
-                        <li>DB2</li>
-                        <li>JAVA</li>
-                    </ul>
-                    <h4>Réalisations</h4>
-                    <ul>
-                        <li>développement de RFC (Request for Change)</li>
-                        <li>développement et maintenance des outils utilisés (extension Firefox,
-                        intégration notepad++)</li>
-                        <li>analyse et optimisation des process étudiés.</li>
-                    </ul>
-                </dd>
-
-                <dd class="experience">
-                    <h2>Feel Europe<span>Audincourt, France - 07/2011-04/2012</span></h2>
-                    <h3>Prestataire en support niveau 3 pour Faurecia (équipe PLM-LV3)</h3>
-                    <h4>Environnement technique</h4>
-                    <ul class="technical-context">
-                        <li>ENOVIA V6R2009x</li>
-                        <li>ENOVIA V6R2012x</li>
-                        <li>Eclipse</li>
-                        <li>ANT</li>
-                        <li>Notepad++</li>
-                        <li>Mantis</li>
-                        <li>MediaWiki</li>
-                        <li>shell (CygWin, AIX, Linux)</li>
-                        <li>ClearCase</li>
-                        <li>DB2</li>
-                        <li>JAVA</li>
-                    </ul>
-                    <h4>Réalisations</h4>
-                    <ul>
-                        <li>Mise en place de procédures de travail concernant les tâches récurrentes du support, et intégration de ces procédures dans une base de connaissances (Wiki)</li>
-                        <li>Refonte de la librairie Java du support, dans le but de simplifier le traitement des scripts exécutés en production (SP) et mise en place de sa documentation</li>
-                        <li>Assistance technique aux membres chinois de l'équipe, afin de les orienter dans une démarche de montée en compétence JAVA et une amélioration de la qualité et de la traçabilité.</li>
-                        <li>Analyse des incidents récurrents afin d'en établir des RFC</li>
-                    </ul>
-                </dd>
-
-                <dd class="experience">
-                    <h2>Feel Europe<span>Audincourt, France - 07/2011-04/2012</span></h2>
-                    <h3>Prestataire en architecture technique pour Faurecia (équipe PLM-Tec)</h3>
-                    <h4>Environnement technique</h4>
-                    <ul class="technical-context">
-                        <li>ENOVIA V6R2009x</li>
-                        <li>ENOVIA V6R2012x</li>
-                        <li>ENOVIA V6R2015x</li>
-                        <li>Eclipse</li>
-                        <li>ANT</li>
-                        <li>Gradle</li>
-                        <li>Notepad++</li>
-                        <li>Atom</li>
-                        <li>ALM</li>
-                        <li>git</li>
-                        <li>Mantis</li>
-                        <li>MediaWiki</li>
-                        <li>shell (CygWin, AIX, Linux)</li>
-                        <li>ClearCase</li>
-                        <li>DB2</li>
-                        <li>JAVA</li>
-                        <li>PowerShell</li>
-                        <li>Python</li>
-                    </ul>
-                    <h4>Réalisations</h4>
-                    <ul>
-                        <li>Livraison des environnements</li>
-                        <li>Développement et maintenance des outils utilisés</li>
-                        <li></li>
+                        <li>Recensement et rédaction du besoin client</li>
+                        <li>Conception et développement de maquettes fonctionnelles</li>
+                        <li>Analyse du retour utilisateur</li>
+                        <li>Conception, réalisation et maintenance de la plateforme</li>
                     </ul>
                 </dd>
 
@@ -380,4 +408,4 @@
 
         </div>
     </body>
-    </html>
+</html>
