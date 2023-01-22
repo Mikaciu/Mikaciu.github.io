@@ -34,5 +34,5 @@ jobs:
           git commit -m '[skip ci] update the timeline files'
           git push --verbose
         env:
-          SOURCE_DIR: ./timeline/_data
-          RESULT_DIR: ./timeline/
+          SOURCE_DIR: ./timeline/_data/source
+          RESULT_DIR: ./timeline/_data/result
