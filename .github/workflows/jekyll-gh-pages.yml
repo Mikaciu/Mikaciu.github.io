@@ -35,29 +35,23 @@ jobs:
         with:
           source: ./
           destination: ./_site_preparation
-      - name: List site files
+      - name: Update the site files with the JSON files
         run: |
-          ls -FAlh
-          
           cp -Rv ./_site_preparation/ ./_site
           
           mkdir -vp ./_site/timeline/_data/
           cp -Rfv ./timeline/_data/result/ ./_site/timeline/_data/
-          
-          ls -FAlh ./_site/timeline/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
-        # with:
-        #   path: 
 
-  # Deployment job
-  # deploy:
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   runs-on: ubuntu-latest
-  #   needs: build
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v1
+  Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
