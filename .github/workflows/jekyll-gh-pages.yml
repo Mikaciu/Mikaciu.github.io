@@ -7,6 +7,8 @@ on:
     branches: ["master"]
     paths-ignore:
       - 'timeline/_data/source/**'
+    workflow_run:
+      workflows: ["Generate timeline"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
