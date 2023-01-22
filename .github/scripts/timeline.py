@@ -16,9 +16,8 @@ logger = colorlog.getLogger(__name__)
 logger.addHandler(handler)
 logger.setLevel(logging.DEBUG)
 
-BASE_DIR = os.environ.get('BASE_DIR', '.')
-SOURCE_DIR = os.path.join(BASE_DIR, 'source')
-RESULT_DIR = os.path.join(BASE_DIR, 'result')
+SOURCE_DIR = os.environ.get('SOURCE_DIR', './source')
+RESULT_DIR = os.environ.get('RESULT_DIR', './result')
 
 def generate_vehicle_json():
     vehicle_json = [
