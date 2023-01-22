@@ -36,6 +36,8 @@ jobs:
           destination: ./_site
       - name: List site files
         run: |
+          ls -FAlh
+          ls -FAlh ./_site
           mkdir -vp ./_site/timeline/_data/
           cp -Rfv ./timeline/_data/result/ ./_site/timeline/_data/
       - name: Upload artifact
