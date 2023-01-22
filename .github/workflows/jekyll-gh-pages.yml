@@ -37,6 +37,7 @@ jobs:
       - name: List site files
         run: |
           ls -FAlh ./_site
+          ls -FAlh ./_site/timeline/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
