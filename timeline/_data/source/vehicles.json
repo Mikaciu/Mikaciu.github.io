@@ -1,0 +1,40 @@
+{
+    "???":{
+        "classname": ""
+    },
+    "C-SAT":{
+        "classname": "c-sat"
+    },
+    "VSAV1":{
+        "classname": "vsav",
+        "affectations": ["CO", "EQ"]
+    },
+    "VSAV2":{
+        "classname": "vsav",
+        "affectations": ["CO", "EQ"]
+    },
+    "VSAV3":{
+        "classname": "vsav",
+        "affectations": ["CO", "EQ"]
+    },
+    "EPA": {
+        "classname": "epa",
+        "affectations": ["EQ"]
+    },
+    "VTU": {
+        "classname": "vtu",
+        "affectations": ["CO","EQ ASC"]
+    },
+    "FPTSR": {
+        "classname": "fpt",
+        "affectations": ["CE1", "EQ1", "CE2", "EQ2"]
+    },
+    "CCFM": {
+        "classname": "fpt",
+        "affectations": ["CE", "EQ"]
+    },
+    "VASR": {
+        "classname": "sr",
+        "affectations": ["EQ"]
+    }
+}
