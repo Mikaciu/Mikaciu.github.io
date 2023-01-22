@@ -35,4 +35,4 @@ jobs:
           git push --verbose
         env:
           SOURCE_DIR: ./timeline/_data/source
-          RESULT_DIR: ./timeline/_data/result
+          RESULT_DIR: ./timeline/
