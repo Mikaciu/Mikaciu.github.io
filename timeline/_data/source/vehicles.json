@@ -25,6 +25,10 @@
         "classname": "vtu",
         "affectations": ["CO","EQ ASC"]
     },
+    "VIRT": {
+        "classname": "fpt",
+        "affectations": ["CO","EQ"]
+    },
     "FPTSR": {
         "classname": "fpt",
         "affectations": ["CE1", "EQ1", "CE2", "EQ2"]
