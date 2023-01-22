@@ -1089,15 +1089,15 @@
         }
     },
     "2022-07-29 19:00:00+12": {
-        "team": "B",
+        "team": "A",
         "affectations": {
-            "C-SAT": "",
-            "EPA>EQ": ""
+            "C-SAT": ""
         }
     },
     "2022-08-27 08:00:00+24": {
         "team": "C",
         "affectations": {
+            "VSAV1>CO": ""
         }
     },
     "2022-09-03 19:00:00+12": {
@@ -1106,15 +1106,22 @@
     },
     "2022-09-10 19:00:00+12": {
         "team": "B",
-        "affectations": {}
+        "affectations": {
+            "VSAV1>CO": ""
+        }
     },
     "2022-09-17 19:00:00+12": {
         "team": "C",
-        "affectations": {}
+        "affectations": {
+            "FPTSR>EQ1": "",
+            "VSAV2>CO": ""
+        }
     },
     "2022-09-29 19:00:00+12": {
         "team": "C",
-        "affectations": {}
+        "affectations": {
+            "VSAV1>CO": ""
+        }
     },
     "2022-10-06 19:00:00+12": {
         "team": "A",
@@ -1125,15 +1132,79 @@
     },
     "2022-10-20 19:00:00+12": {
         "team": "C",
-        "affectations": {}
+        "affectations": {
+            "FPTSR>EQ2": "",
+            "VASR>EQ": "",
+            "VTU>CO": ""
+        }
     },
-    "2022-10-23 19:00:00+12": {
+    "2022-10-23 07:00:00+12": {
         "team": "C",
-        "affectations": {}
+        "affectations": {
+
+        }
     },
     "2022-10-30 19:00:00+12": {
         "team": "A",
-        "affectations": {}
+        "affectations": {
+            "VSAV1>CO": ""
+        }
+    },
+    "2022-11-04 19:00:00+12": {
+        "team": "C",
+        "affectations": {
+            "FPTSR>EQ2": ""
+        }
+    },
+    "2022-11-11 08:00:00+24": {
+        "team": "A",
+        "affectations": {
+            "VSAV1>EQ": ""
+        }
+    },
+    "2022-11-26 08:00:00+24": {
+        "team": "A",
+        "affectations": {
+            "C-SAT": "08:00:00+12",
+            "VSAV2>EQ": "08:00:00+12",
+            "VSAV1>EQ": "20:00:00+12"
+        }
+    },
+    "2022-12-01 19:00:00+12": {
+        "team": "C",
+        "affectations": {
+            "C-SAT": "",
+            "FPTSR>EQ2": "",
+            "VASR>EQ": "",
+            "VTU>CO": ""
+        }
+    },
+    "2022-12-10 08:00:00+24": {
+        "team": "C",
+        "affectations": {
+            "VSAV1>CO": ""
+        }
+    },
+    "2022-12-16 19:00:00+12": {
+        "team": "C",
+        "affectations": {
+            "C-SAT": "",
+            "FPTSR>EQ2": "",
+            "VASR>EQ": "",
+            "VTU>CO": ""
+        }
+    },
+    "2022-12-22 19:00:00+12": {
+        "team": "C",
+        "affectations": {
+            "VSAV1>EQ": ""
+        }
+    },
+    "2022-12-31 07:00:00+12": {
+        "team": "C",
+        "affectations": {
+            "C-SAT": ""
+        }
     },
     "2023-01-12 19:00:00+12": {
         "team": "C",
