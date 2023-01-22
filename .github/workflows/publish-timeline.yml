@@ -29,8 +29,13 @@ jobs:
           git config user.email "github-actions@github.com"
 
           git add --verbose .
-          git commit -m 'update the timeline files'
-          git push --verbose
+          if [[ -n "$(git status --porcelain)" ]]
+          then
+            git commit -m 'update the timeline files'
+            git push --verbose
+          else
+            echo "No files to commit"
+          fi
         env:
           SOURCE_DIR: ./timeline/_data/source
           RESULT_DIR: ./timeline/
