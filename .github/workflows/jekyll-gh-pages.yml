@@ -38,10 +38,10 @@ jobs:
       - name: List site files
         run: |
           ls -FAlh
-          mkdir -vp ./_site/timeline/_data/
           
           cp -Rv ./_site_preparation/ ./_site
           
+          mkdir -vp ./_site/timeline/_data/
           cp -Rfv ./timeline/_data/result/ ./_site/timeline/_data/
           
           ls -FAlh ./_site/timeline/
