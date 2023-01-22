@@ -36,19 +36,19 @@ jobs:
           destination: ./_site
       - name: List site files
         run: |
-          ls -FAlh .
-          ls -FAlh ./_site/timeline/
+          mkdir -vp ./_site/timeline/_data/
+          cp -Rfv ./timeline/_data/result/ ./_site/timeline/_data/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
   # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+  # deploy:
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v1
