@@ -31,7 +31,7 @@ jobs:
           git config user.email "github-actions@github.com"
 
           git add --verbose .
-          git commit -m '[skip ci] update the timeline files'
+          git commit -m 'update the timeline files'
           git push --verbose
         env:
           SOURCE_DIR: ./timeline/_data/source
