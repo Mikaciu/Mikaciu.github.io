@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
-import os
 import csv
+import datetime
 import json
 import logging
-import datetime
-import colorlog
+import os
 from typing import Tuple
+
+import colorlog
 
 handler = colorlog.StreamHandler()
 handler.setFormatter(colorlog.ColoredFormatter(

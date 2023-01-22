@@ -32,15 +32,15 @@ jobs:
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site_preparation
-      - name: Update the site files with the JSON files
-        run: |
-          cp -Rv ./_site_preparation/ ./_site
+      #   with:
+      #     source: ./
+      #     destination: ./_site_preparation
+      # - name: Update the site files with the JSON files
+      #   run: |
+      #     cp -Rv ./_site_preparation/ ./_site
           
-          mkdir -vp ./_site/timeline/_data/
-          cp -Rfv ./timeline/_data/result/ ./_site/timeline/_data/
+      #     mkdir -vp ./_site/timeline/_data/
+      #     cp -Rfv ./timeline/_data/result/ ./_site/timeline/_data/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
