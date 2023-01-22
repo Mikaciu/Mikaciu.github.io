@@ -40,6 +40,9 @@ jobs:
         with:
           source: ./
           destination: ./_site
+      - name: List site files
+        run: |
+          ls -FAlh ./_site/timeline/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
