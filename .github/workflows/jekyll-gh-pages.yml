@@ -24,7 +24,7 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    name: Build the jekyll static site
+    name: Build the Jekyll static site
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -32,20 +32,12 @@ jobs:
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
-      #   with:
-      #     source: ./
-      #     destination: ./_site_preparation
-      # - name: Update the site files with the JSON files
-      #   run: |
-      #     cp -Rv ./_site_preparation/ ./_site
-          
-      #     mkdir -vp ./_site/timeline/_data/
-      #     cp -Rfv ./timeline/_data/result/ ./_site/timeline/_data/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
 
   # Deployment job
   deploy:
+    name: Deploy the Jekyll static site to GitHub Pages
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
