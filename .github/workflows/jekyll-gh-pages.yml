@@ -40,13 +40,15 @@ jobs:
           ls -FAlh
           mkdir -vp ./_site/timeline/_data/
           
-          cp -Rv ./_site_preparation ./_site
+          cp -Rv ./_site_preparation/ ./_site
           
           cp -Rfv ./timeline/_data/result/ ./_site/timeline/_data/
           
           ls -FAlh ./_site/timeline/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+        # with:
+        #   path: 
 
   # Deployment job
   # deploy:
