@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random question</title>
+    <style>
+        dl dt{font-size: 2em; font-style: italic;}
+        dl dd{font-size: 1em; }
+    </style>
+    <script>
+        Array.prototype.random = function () {
+            return this[Math.floor((Math.random() * this.length))];
+        }
+
+        let questions = [
+            ["Quelle est la longueur d'une commande ?", "25m"],
+            ["Citez la manœuvre ETB4", ""],
+            ["À quelle pression est gonflée une bouteille d'ARI ?", "300 bar"],
+            ["Donnez la composition d'un dispositif de descente", ""],
+            ["Donnez le matériel de base de l'équipier BAT", ""]
+        ];
+
+        let current_question;
+        document.addEventListener("DOMContentLoaded", function (event) {
+            current_question = questions.random();
+            document.querySelector('dl#question dt').innerText = current_question[0];
+            document.querySelector('dl#question dd').innerText = current_question[1];
+        });
+    </script>
+    </head>
+<body>
+<dl id="question">
+    <dt></dt>
+    <dd></dd>
+</dl>
+
+</body>
+</html>
