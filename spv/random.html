@@ -1,147 +1,188 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random question</title>
     <style>
-        body, html{ height:100%;}
-        dl#question{display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%;}
-        dl dt{font-size: 2em; font-style: italic;}
-        dl dd{font-size: 1em; }
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        dl#question {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            margin: 0;
+        }
+        dl dt {
+            font-size: 2em;
+            font-style: italic;
+            margin: 3px 0;
+        }
+        dl dd {
+            font-size: 1em;
+            margin: 3px 0;
+            padding: 0;
+        }
+        dl dd.tag {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 0 3px;
+        }
+        dl dd.source {
+            color: #A00000;
+        }
+        dl dd.reponse {
+            color: #00A000;
+        }
     </style>
     <script>
         Array.prototype.random = function () {
             return this[Math.floor((Math.random() * this.length))];
         }
-
+        const GTO_ARI = 'GTO "Engagements en milieu vicié", page ';
+        const GTO_ETB = 'GTO "Établissements et techniques d\'extinction", page ';
+        const GTO_SAUV = 'GTO "Sauvetages et mises en sécurité", page ';
+        const GDO_INC = 'GDO "Incendies de structure", page ';
         let questions = [
-            ["Quelle est la longueur d'une commande ?", "25m"],
-            ["Citez la manœuvre ETB4", ""],
-            ["À quelle pression est gonflée une bouteille d'ARI ?", "300 bar"],
-            ["Donnez la composition d'un dispositif de descente", ""],
-            ["Donnez le matériel de base de l'équipier BAT", ""],
-            ["Que signifie SDACR ?", "Schéma départemental d'analyse et de couverture des risques"],
-            ["Quels sont les différents types d'ascenseurs ?", "Hydraulique, pneumatique, électro-pneumatique"],
-            ["Citez les grades d'officier de Sapeur-Pompier", ""],
-            ["Donnez la définition de MGO", "Marche Générale des Opérations"],
-            ["Donnez la compostion d'un dispositif d'amarrage", ""],
-            
-            ["Donnez les avantages et inconvénients du jet diffusé d'attaque", ""],
-            ["Donnez la résistance du harnais", ""],
-            ["Expliquer la conduction", ""],
-            ["Quelle formule utilise t'on pour calculer l'autonomie en air de la bouteille d'ARI ?", ""],
-            ["Donnez la longueur de la liaison personnelle (courte)", ""],
+            ["Quelle est la longueur d'une commande ?", "30m", GTO_SAUV + "48, 135", "J2"],
+            // ["Citez la manœuvre ETB4", ""],
+            ["À quelle pression est gonflée une bouteille d'ARI dans le département ?", "300 bar", "", "ARI"],
+            // ["Donnez la composition d'un dispositif de descente", "???", "", "LSPCC"],
+            // ["Donnez le matériel de base de l'équipier BAT", ""],
+            ["Que signifie SDACR ?", "Schéma Départemental d'Analyse et de Couverture des Risques"],
+            // ["Quels sont les différents types d'ascenseurs ?", "Hydraulique, pneumatique"],
+            ["Citez les grades d'officier de Sapeur-Pompier", "Lieutenant, Capitaine, Commandant, Lieutenant-Colonel"],
+            ["Donnez la définition de MGO", "Marche Générale des Opérations", GDO_INC + 68, "INC"],
+            // ["Donnez la composition d'un dispositif d'amarrage", ""],
+            // ["Donnez les avantages et inconvénients du jet diffusé d'attaque", ""],
+            ["Donnez la résistance du harnais", "2000kg", GTO_SAUV + 135],
+            ["Expliquer la conduction", "La conduction est un mode de transfert thermique provoque par une difference de température entre deux régions d'un même milieu(ou entre deux milieux en contact) et se réalisant sans déplacement global de matière à l'échelle macroscopique.", GDO_INC + 92, "INC"],
+            ["Quelle formule utilise t'on pour calculer l'autonomie en air de la bouteille d'ARI ?", "Loi de Boyle-Mariotte : t = (PV)/Q", GTO_ARI + 80],
+            ["Donnez la longueur de la liaison personnelle (courte)", "1,25m", GTO_ARI + "20", "ARI"],
             ["Épelez VASR en alphabet phonétique", "Victor Alpha Sierra Roméo"],
-            ["Quelles sont les différences entre une lance classique et une lance automatique ?", ""],
-            ["Citez 4 règles d'établissement", ""],
-            ["Qu'est-ce qu'un ARICF ?", ""],
-            ["Donnez le triangle du feu.", ""],
-
-            ["Quelle est la pression minimum d'un hydrant ? Pendant quelle durée ?", ""],
-            ["Quelles sont les différences entre un LSPCC engin et échelle", ""],
-            ["Donnez la manœuvre ETB2", ""],
-            ["Qui est le chef de centre de Belfort Sud ?", ""],
-            ["Quelle est la longueur d'une échelle à coulisse 2 plans ?", "9m"],
-            ["Donnez les classes de feu", ""],
-            ["Que veut dire CCFS", ""],
-            ["Donnez la longueur d'un cordage", ""],
-            ["Citez ETB3", ""],
-            ["Qu'est-ce que l'eau dopée ?", ""],
-            
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            // ["", ""],
-            ["Qui est Merlin à Belfort Sud ?", ""],
+            // ["Quelles sont les différences entre une lance classique et une lance automatique ?", ""],
+            // ["Citez 4 règles d'établissement", ""],
+            ["Qu'est-ce qu'un ARICF ?", "Appareil Respiratoire Isolant à Circuit Fermé", GTO_ARI + "14, 75", "ARI"],
+            ["Donnez le triangle du feu.", "Carburant, Comburant, Énergie d'activation", GDO_INC + 19, "INC"],
+            // ["Quelle est la pression minimum d'un hydrant ? Pendant quelle durée ?", ""],
+            ["Quelles sont les différences entre un LSPCC engin et échelle", "Échelle : 6 anneaux cousus bleus, 2 harnais, 9 connecteurs", GTO_SAUV + 137],
+            // ["Donnez la manœuvre ETB2", ""],
+            ["Qui est le chef de centre de Belfort Sud ?", "Le Lieutenant Raffier"],
+            ["Quelle est la longueur déployée d'une échelle à coulisse 2 plans ?", "9m", GTO_SAUV + 18],
+            // ["Donnez les classes de feu", ""],
+            // ["Que veut dire CCFS", ""],
+            // ["Donnez la longueur d'un cordage", ""],
+            // ["Citez ETB3", ""],
+            ["Qu'est-ce que l'eau dopée ?", "L'eau dopée est de l'eau à laquelle a été ajouté du produit mouillant dans différentes concentrations. L'adjonction de mouillant permet de faciliter son épandage et son imprégnation dans la matière.", "Guide opérationnel, fiche C020"],
+            ["Quelle est la masse de l'échelle à crochets ?", "8kg", GTO_SAUV + 18],
+            ["Expliquez le phénomène de rayonnement thermique", "Le rayonnement correspond au processus d'émission ou de propagation de l'energie impliquant une onde électromagnetique. <br />Il ne necessite pas de contact matériel à l'inverse des deux modes de propagation de la chaleur précédents.", GDO_INC + 92],
+            // ["Qu'est-ce qu'un comburant ?", ""],
+            ["Donnez la longueur d'un anneau cousu rouge", "80cm", GTO_SAUV + 135],
+            ["Que signifie EPA ?", "Échelle Pivotante Automatique", GTO_SAUV + 133],
+            ["Donnez la composition de l'ARI", "une réserve d'air (bouteille), un dossard, un détendeur HP/MP, un flexible moyenne pression, une SàD, un manomètre, un flexible haute pression, une pièce faciale, un sifflet de fin de charge", GTO_ARI + "12", "ARI"],
+            // ["Donnez la longueur de la LDT du FPTSR Sud", ""],
+            // ["Donnez l'éthique du sapeur-pompier", ""],
+            // ["Donnez la longueur de la LDT du CCFM", ""],
+            ["Donnez votre prénom en alphabet phonétique", ""],
+            ["Donnez la longueur de l'échelle à crochets", "4,25m", GTO_SAUV + 18],
+            // ["Donnez les différents jets que l'on peut faire avec une LDV", "Droit, JDA, JDP, Purge"],
+            ["Donnez la définition d'un point fixe", "<ul><li>L'ancrage, ou point fixe est un support sur lequel est (sont) amarré(s) le(s) dispositif(s).</li><li>Est considéré comme point fixe, tout objet ou structure convenablement ancré offrant une résistance suffisante à l'effort demandé.</li></ul>", GTO_SAUV + 72],
+            // ["Citez la maœuvre ETB4", ""],
+            ["Peut-on utiliser une échelle à coulisse à l'horizontale ? Expliquez.", "Oui, mais uniquement reployée", GTO_SAUV + "95-96"],
+            // ["Donnez les avantages et inconvénients du jet diffusé de protection", ""],
+            ["Donnez la longueur de la ligne guide", "50 à 60m", GTO_ARI + 19],
+            // ["Donnez la définition de combustible", ""],
+            ["Donnez la résistance d'un anneau cousu bleu", "2000kg", GTO_SAUV + 135],
+            // ["Expliquez le phénomène de déplacement (mode de propagation)", ""],
+            ["Quelle est la longueur d'un anneau cousu bleu ?", "150cm", GTO_SAUV + 135],
+            // ["Donnez les différents débits que l'on retrouve sur une LDV500", ""],
+            ["Donnez la résistance de la corde du LSPCC", "3000kg", GTO_SAUV + 135],
+            // ["Donnez le matériel de base de l'équipier BAL", ""],
+            // ["Donnez le matériel de base du chef BAT", ""],
+            // ["Citez la manœuvre ETB5", ""],
+            ["Quelle est la longueur de la corde du LSPCC échelle ?", "60m minimum", GTO_SAUV + 137],
+            ["Quelle est la longueur de la corde du LSPCC engin ?", "30m minimum", GTO_SAUV + 135],
+            ["Donnez la longueur d'une ligne d'attaque de 45 ???", "de 40 à 60m", GTO_ETB + 50],
+            // ["Citez 4 points d'eau différents utilisables par les SP", ""],
+            ["Que signifie SSSM ?", "Service de Santé et de Secours Médical"],
+            ["Donnez la capacité en litres d'une bouteille d'ARI (composite)", "6,8L", "", "ARI"],
+            ["Donnez la capacité en litres d'une bouteille d'ARI (acier)", "6L", "", "ARI"],
+            // ["Donnez la composition d'un dispositif de frein", ""],
+            // ["Combien de mètres de tuyaux retrouve t'on sur un dévidoir ?", ""],
+            ["Donnez les 4 modes de propagation", "Conduction, Convection, Rayonnement, Déplacement"],
+            // ["Sur quel type de feu puis-je agir avec un extincteur à eau + additif AFFF ?", ""],
+            // ["Donnez les pièces de jonction", ""],
+            // ["Donnez la résistance du triangle d'évacuation", ""],
+            ["Donnez la composition de la ligne de vie", "Ligne guide + liaison personnelle", GTO_ARI + "18-19"],
+            ["Donnez la masse de l'échelle à coulisse 2 plans", "33kg", GTO_SAUV + 18],
+            ["Donnez la résistance d'un anneau cousu rouge", "2000kg", GTO_SAUV + 135],
+            // ["Citez 4 types de lance", ""],
+            ["Épelez VSAV en alphabet phonétique", "Victor Sierra Alpha Victor"],
+            // ["Citez 4 accessoires hydrauliques", ""],
+            // ["Décrivez la manœuvre ETB6", ""],
+            // ["Donnez la distance entre les olives de la ligne guide", ""],
+            ["À quoi sert le nœud français ?", "Réaliser une poignée de préhension de la corde à l'aide de la cordelette (minimum 3 tours)", GTO_SAUV + 48],
+            ["Donnez la résistance du 8 descendeur", "2000kg", GTO_SAUV + 135],
+            ["Que signifie EPI ?", "Équipement de Protection Individuel"],
+            ["Au bout de combien de temps la préalarme de la balise sonore se déclenche ?", "18 à 23 secondes si pas de mouvements détectés", '<a href="https://cdn2.ox-resources.net/L00827/site/medias/SUPER%20PASS%20II%20mode%20d\'emploi.pdf" target="_blank">SUPER PASS 2 mode d\'emploi</a>'],
+            ["Au bout de combien de temps l'alarme de la balise sonore se déclenche ?", "30 à 35 secondes si pas de mouvements détectés", '<a href="https://cdn2.ox-resources.net/L00827/site/medias/SUPER%20PASS%20II%20mode%20d\'emploi.pdf" target="_blank">SUPER PASS 2 mode d\'emploi</a>'],
+            ["Combien de tours doit-on effectuer pour ouvrir un poteau de 100 ?", "13", GTO_ETB + 23],
+            // ["Combien de binômes sont nécessaire pour mettre en œuvre ETB1 ?", ""],
+            // ["Qu'est-ce qu'une énergie d'activation ?", ""],
+            ["Donnez la longueur de la liaison personnelle (longue)", "6m", GTO_ARI + "20", "ARI"],
+            ["Combien de litres de vapeur dégage un litre d'eau à 100 degrés ?", "1702,3L", GDO_INC + 120],
+            ["Donnez la MGO (11 points)", "<ul><li>Reconnaissances</li><li>Placement des engins</li><li>Sauvetage et mise en sécurité</li><li>Attaque</li><li>Etablissements</li><li>Ventilation</li><li>Protection</li><li>Surveillance</li><li>Déblai</li><li>Remise en condition des hommes et reconditionnement du matériel</li><li>Préservation des traces et indices</li></ul>", GDO_INC + 68],
+            ["Qu'est-ce qu'un ARICO ?", "Appareil Respiratoire Isolant à Circuit Ouvert", GTO_ARI + "11, 75", "ARI"],
+            // ["Quel débit d'air peut apporter la SàD au maximum ?", "300L/min"],
+            ["Qu'est-ce qu'un gaz de pyrolyse ?", "Un combustible gazeux issu de la décomposition d'un solide", GDO_INC + 93],
+            // ["Citez trois types de dévidoirs", ""],
+            // ["Sur quel type de feu puis-je agir avec un extincteur à poudre classique ?", ""],
+            ["Expliquez le phénomène de convection", "La convection désigne les mouvements internes d'un fluide et qui impliquent le transport des propriétes de ce fluide. <br />En situation d'incendie, elle correspond à la transmission de l'energie thermique d'un fluide à une surface.", GDO_INC + 92],
+            // ["Donnez les avantages et inconvénients du jet droit", "Precision / potentiel de destruction"],
+            ["Quelle est la pression minimum d'engagement avec l'ARI ?", "Pas inférieure à la pression nominale de la bouteille moins 10 %", GTO_ARI + "11, 75", "ARI"],
+            ["Peut-on faire un point fixe avec un seul anneau cousu ?", "Oui, selon la situation opérationnelle et/ou la nécessité d'effectuer une évacuation rapide", GTO_SAUV + 73],
+            ["Quelle est l'utilité de la poulie sur un montage LSPCC ?", "dévier la corde (poulie fixe de renvoi), ou moufler une charge (poulie mobile dite de mouflage)", GTO_SAUV + 47],
+            // ["Décrivez la manœuvre ETB1", ""],
+            ["Listez les grades de sous-officiers", "Sergent, sergent-chef, adjudant, adjudant-chef"],
+            ["Quel type d'ARI utilise-t'on dans le département ?", "ARICO SCOTT", "Guide opérationnel, fiche B063", "ARI"],
+            ["Qui est Merlin à Belfort Sud ?", "Le Lieutenant Raffier"],
+            ["Qu'est-ce qu'un réseau étoilé ?", "Ce sont des canalisations partant d'un seul réservoir jusqu'en bout de conduite (cul de sac). Ces réseaux n'ont qu'un seul sens de circulation (de l'eau). <br />Lorsqu'il y a un probleme sur le réseau (exemple: rupture de canalisation), un secteur complet du réseau peut être condamné.", GTO_ETB + 23],
+            ["Qu'est-ce qu'un réseau maillé ?", "ils partent de plusieurs conduites et forment un maillage du reseau, permettant la continuité de l'écoulement de l'eau dans tous les sens.", GTO_ETB + 23],
         ];
-
         let current_question;
         document.addEventListener("DOMContentLoaded", function (event) {
             current_question = questions.random();
             document.querySelector('dl#question dt').innerText = current_question[0];
-            document.querySelector('dl#question dd').innerText = current_question[1];
+            document.querySelector('dl#question dd.reponse').innerHTML = current_question[1];
+            if (current_question.length >= 3) {
+                document.querySelector('dl#question dd.source').innerHTML = current_question[2];
+                document.querySelector('dl#question dd.source').style.visibility = 'visible';
+            } else {
+                document.querySelector('dl#question dd.source').innerHTML = '';
+                document.querySelector('dl#question dd.source').style.visibility = 'hidden';
+            }
+            if (current_question.length >= 4) {
+                document.querySelector('dl#question dd.tag').innerHTML = current_question[3];
+                document.querySelector('dl#question dd.tag').style.visibility = 'visible';
+            } else {
+                document.querySelector('dl#question dd.tag').innerHTML = '';
+                document.querySelector('dl#question dd.tag').style.visibility = 'hidden';
+            }
         });
     </script>
-    </head>
+</head>
 <body>
-<dl id="question">
-    <dt></dt>
-    <dd></dd>
-</dl>
-
+    <dl id="question">
+        <dt></dt>
+        <dd class="reponse"></dd>
+        <dd class="source"></dd>
+        <dd class="tag"></dd>
+    </dl>
 </body>
 </html>
