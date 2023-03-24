@@ -674,9 +674,7 @@
     },
     "2021-03-12 19:00+12": {
         "team": "A",
-        "affectations": {
-            
-        }
+        "affectations": {}
     },
     "2021-03-20 08:00+24": {
         "team": "C",
@@ -743,8 +741,7 @@
         "affectations": {
             "VSAV1>CO": ""
         }
-    }
-    ,
+    },
     "2021-06-12 08:00:00+24": {
         "team": "C",
         "affectations": {
@@ -1140,9 +1137,7 @@
     },
     "2022-10-23 07:00:00+12": {
         "team": "C",
-        "affectations": {
-
-        }
+        "affectations": {}
     },
     "2022-10-30 19:00:00+12": {
         "team": "A",
@@ -1211,6 +1206,74 @@
         "affectations": {
             "FPTSR>EQ1": "",
             "VTU>EQ ASC": "",
+            "VSAV2>EQ": ""
+        }
+    },
+    "2023-01-22 08:00:00+24": {
+        "team": "C",
+        "affectations": {
+            "FPTSR>EQ2": "",
+            "VASR>EQ": "",
+            "VTU>CO": ""
+        }
+    },
+    "2023-01-27 19:00:00+12": {
+        "team": "C",
+        "affectations": {
+            "VSAV1>CO": ""
+        }
+    },
+    "2023-02-02 19:00:00+12": {
+        "team": "C",
+        "affectations": {
+            "VSAV1>CO": ""
+        }
+    },
+    "2023-02-11 08:00:00+24": {
+        "team": "C",
+        "affectations": {
+            "FPTSR>EQ2": "",
+            "VASR>EQ": "",
+            "VTU>CO": ""
+        }
+    },
+    "2023-02-18 19:00:00+12": {
+        "team": "A",
+        "affectations": {
+            "VSAV1>CO": "",
+            "VTU>EQ ASC": ""
+        }
+    },
+    "2023-02-24 19:00:00+12": {
+        "team": "A",
+        "affectations": {
+            "C-SAT": ""
+        }
+    },
+    "2023-03-03 19:00:00+12": {
+        "team": "B",
+        "affectations": {
+            "C-SAT": "",
+            "VSAV2>CO": "",
+            "VTU>EQ ASC": ""
+        }
+    },
+    "2023-03-11 08:00:00+24": {
+        "team": "A",
+        "affectations": {
+            "VSAV1>CO": ""
+        }
+    },
+    "2023-03-17 19:00:00+13": {
+        "team": "A",
+        "affectations": {
+            "VSAV2>CO": ""
+        }
+    },
+    "2023-03-24 19:00:00+13": {
+        "team": "B",
+        "affectations": {
+            "C-SAT": "",
             "VSAV2>EQ": ""
         }
     }
