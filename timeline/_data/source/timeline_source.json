@@ -1328,32 +1328,32 @@
         }
     },
     "2023-06-02 19:00:00+12": {
-        "team": "?",
+        "team": "C",
         "affectations": {
             "FPTSR>EQ1": "",
             "VSAV2>EQ": ""
         }
     },
     "2023-06-09 19:00:00+12": {
-        "team": "?",
+        "team": "A",
         "affectations": {
             "VSAV1>CO": ""
         }
     },
     "2023-06-16 19:00:00+12": {
-        "team": "?",
+        "team": "B",
         "affectations": {
             "VSAV1>CO": ""
         }
     },
     "2023-06-24 08:00:00+24": {
-        "team": "?",
+        "team": "A",
         "affectations": {
             "FPTSR>EQ2": ""
         }
     },
     "2023-06-29 19:00:00+12": {
-        "team": "?",
+        "team": "C",
         "affectations": {
             "C-SAT": "",
             "VTU>EQ ASC": "",
@@ -1361,19 +1361,19 @@
         }
     },
     "2023-07-08 08:00:00+24": {
-        "team": "?",
+        "team": "C",
         "affectations": {
             "VSAV1>CO": ""
         }
     },
     "2023-07-14 19:00:00+12": {
-        "team": "?",
+        "team": "C",
         "affectations": {
             "VSAV1>EQ": ""
         }
     },
     "2023-07-21 19:00:00+12": {
-        "team": "?",
+        "team": "A",
         "affectations": {
             "C-SAT": "",
             "EPA>EQ": ""
