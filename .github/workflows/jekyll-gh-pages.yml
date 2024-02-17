@@ -32,7 +32,7 @@ jobs:
     name: Build the Jekyll static site
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
