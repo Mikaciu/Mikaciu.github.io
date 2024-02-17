@@ -57,6 +57,9 @@ def generate_vehicle_json():
                 
                 # Add the list of children to the parent
                 current_item['nestedGroups'] = sub_items
+
+                if 'showNested' in vehicle_data:
+                    current_item['showNested'] = vehicle_data['showNested']
             else:
                 # no affectation : this means the current item has no subitems. Add the classname so it can be visible on the timeline
                 current_item['className'] = vehicle_data['classname']

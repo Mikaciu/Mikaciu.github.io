@@ -27,7 +27,8 @@
     },
     "VIRT": {
         "classname": "fpt",
-        "affectations": ["CO","EQ"]
+        "affectations": ["CO","EQ"],
+        "showNested": false
     },
     "FPTSR": {
         "classname": "fpt",
@@ -35,7 +36,8 @@
     },
     "CCFM": {
         "classname": "fpt",
-        "affectations": ["CE", "EQ"]
+        "affectations": ["CE", "EQ"],
+        "showNested": false
     },
     "VASR": {
         "classname": "sr",
