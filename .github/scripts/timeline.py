@@ -153,8 +153,8 @@ def generate_timeline_json(vehicle_id):
         'hiddenDates': hidden_dates,
         "horizontalScroll": True,
         'zoomKey': 'ctrlKey',
-        'zoomMin': 72000000,
-        'zoomMax': 31536000000,
+        'zoomMin': 86400000,    # 24 hours
+        'zoomMax': 31557600000, # 1 year
     }
 
     with open(os.path.join(RESULT_DIR, 'timeline_options.json'), 'w') as hidden_dates_file:
