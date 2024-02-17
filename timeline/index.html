@@ -49,11 +49,27 @@
             // Create a Timeline
             var timeline = new vis.Timeline(container);
 
+            function get_min_max_dates(selected_year_value){
+                const current_year = new Date().getFullYear();
+                const selected_year = selected_year_value || current_year;
+                
+                const min_date = new Date(selected_year + '-01-01');
+                const max_date = new Date(selected_year + '-12-31');
+
+                const max_view_date = (selected_year != current_year) ? max_date : timeline.options.end;
+
+                return {
+                    'min': min_date,
+                    'max': max_view_date
+                };
+            }
+
             $('#year-selector').on("change", function(){
-                if (this.value){
-                    timeline.setWindow(new Date(this.value + '-01-01'), new Date(this.value + '-12-31'))
-                    timeline.redraw()
-                }
+                min_max_dates = get_min_max_dates(this.value);
+                timeline.setOptions(min_max_dates)
+
+                timeline.setWindow(min_max_dates['min'], min_max_dates['max'])
+                timeline.redraw()
             });
             
             var nextStartDate = "";
@@ -64,7 +80,11 @@
                         nextStartDate = data['nextStartDate'];
                         delete data['nextStartDate'];
                     }
+
                     timeline.setOptions(data);
+
+                    min_max_dates = get_min_max_dates($('#year-selector').value);
+                    timeline.setOptions(min_max_dates)
                 },
                 error: function (err) {
                     console.log('Error', err);
