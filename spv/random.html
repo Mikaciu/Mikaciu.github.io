@@ -41,10 +41,8 @@
             color: #00A000;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/gh/nastyox/Rando.js@master/code/plain-javascript/2.0.0/rando-min.js"></script>
     <script>
-        Array.prototype.random = function () {
-            return this[Math.floor((Math.random() * this.length))];
-        }
         const GTO_ARI = 'GTO "Engagements en milieu vicié", page ';
         const GTO_ETB = 'GTO "Établissements et techniques d\'extinction", page ';
         const GTO_SAUV = 'GTO "Sauvetages et mises en sécurité", page ';
@@ -54,7 +52,7 @@
             // ["Citez la manœuvre ETB4", ""],
             ["À quelle pression est gonflée une bouteille d'ARI dans le département ?", "300 bar", "", "ARI"],
             // ["Donnez la composition d'un dispositif de descente", "???", "", "LSPCC"],
-            // ["Donnez le matériel de base de l'équipier BAT", ""],
+            ["Donnez le matériel de base du premier équipier (ex équipier BAT)", "EPI, ARI, commande, deux tuyaux de 45, projecteur, [radio], [caméra thermique]"],
             ["Que signifie SDACR ?", "Schéma Départemental d'Analyse et de Couverture des Risques"],
             // ["Quels sont les différents types d'ascenseurs ?", "Hydraulique, pneumatique"],
             ["Citez les grades d'officier de Sapeur-Pompier", "Lieutenant, Capitaine, Commandant, Lieutenant-Colonel"],
@@ -75,7 +73,7 @@
             // ["Donnez la manœuvre ETB2", ""],
             ["Qui est le chef de centre de Belfort Sud ?", "Le Lieutenant Raffier"],
             ["Quelle est la longueur déployée d'une échelle à coulisse 2 plans ?", "9m", GTO_SAUV + 18],
-            // ["Donnez les classes de feu", ""],
+            ["Donnez les classes de feu", "<ul><li>A: feux dits “secs” : bois, carton</li><li>B: feux de liquides ou de solides liquéfiables, dits “gras”: plastique, essence</li><li>C: feux gazeux : bouteille de gaz, gaz de ville</li><li>D: feux de métaux: magnésium, aluminium</li><li>F: feux d’auxilliaires de cuisson (huile de friture)</li></ul>"],
             // ["Que veut dire CCFS", ""],
             // ["Donnez la longueur d'un cordage", ""],
             // ["Citez ETB3", ""],
@@ -91,7 +89,7 @@
             // ["Donnez la longueur de la LDT du CCFM", ""],
             ["Donnez votre prénom en alphabet phonétique", ""],
             ["Donnez la longueur de l'échelle à crochets", "4,25m", GTO_SAUV + 18],
-            // ["Donnez les différents jets que l'on peut faire avec une LDV", "Droit, JDA, JDP, Purge"],
+            ["Donnez les différents jets que l'on peut faire avec une LDV", "Droit, JDA, JDP, Purge"],
             ["Donnez la définition d'un point fixe", "<ul><li>L'ancrage, ou point fixe est un support sur lequel est (sont) amarré(s) le(s) dispositif(s).</li><li>Est considéré comme point fixe, tout objet ou structure convenablement ancré offrant une résistance suffisante à l'effort demandé.</li></ul>", GTO_SAUV + 72],
             // ["Citez la maœuvre ETB4", ""],
             ["Peut-on utiliser une échelle à coulisse à l'horizontale ? Expliquez.", "Oui, mais uniquement reployée", GTO_SAUV + "95-96"],
@@ -101,9 +99,9 @@
             ["Donnez la résistance d'un anneau cousu bleu", "2000kg", GTO_SAUV + 135],
             // ["Expliquez le phénomène de déplacement (mode de propagation)", ""],
             ["Quelle est la longueur d'un anneau cousu bleu ?", "150cm", GTO_SAUV + 135],
-            // ["Donnez les différents débits que l'on retrouve sur une LDV500", ""],
+            ["Donnez les différents débits que l'on retrouve sur la LDV 500 GeForce", "purge, pulsing 250L/min, low (400 L/min à 3 bar), auto (500L/min à 6 bar)"],
             ["Donnez la résistance de la corde du LSPCC", "3000kg", GTO_SAUV + 135],
-            ["Donnez le matériel de base du deuxième équipier (ex équipier BAL)", ""],
+            ["Donnez le matériel de base du deuxième équipier (ex équipier BAL)", "EPI, lampe, [radio], 2 tuyaux de 70 ou dévidoir"],
             // ["Donnez le matériel de base du chef BAT", ""],
             // ["Citez la manœuvre ETB5", ""],
             ["Quelle est la longueur de la corde du LSPCC échelle ?", "60m minimum", GTO_SAUV + 137],
@@ -118,14 +116,14 @@
             ["Combien de mètres de tuyaux retrouve t'on sur un dévidoir ?", "200m"],
             ["Donnez les 4 modes de propagation", "Conduction, Convection, Rayonnement, Déplacement"],
             // ["Sur quel type de feu puis-je agir avec un extincteur à eau + additif AFFF ?", ""],
-            // ["Donnez les pièces de jonction", "Raccord, Division, Vanne, Coude, Collecteur, Retenue"],
+            ["Donnez les pièces de jonction", "Raccord, Division, Vanne, Coude, Collecteur, Retenue"],
             // ["Donnez la résistance du triangle d'évacuation", ""],
             ["Donnez la composition de la ligne de vie", "Ligne guide + liaison personnelle", GTO_ARI + "18-19"],
             ["Donnez la masse de l'échelle à coulisse 2 plans", "33kg", GTO_SAUV + 18],
             ["Donnez la résistance d'un anneau cousu rouge", "2000kg", GTO_SAUV + 135],
             // ["Citez 4 types de lance", ""],
             ["Épelez VSAV en alphabet phonétique", "Victor Sierra Alpha Victor"],
-            // ["Citez 4 accessoires hydrauliques", ""],
+            // ["Citez 4 accessoires hydrauliques", "Clé de poteau, clé de barrage, Tricoise / polycoise, crépine d'aspiration, flotteur, turbopompe, bouchon obturateur"],
             // ["Décrivez la manœuvre ETB6", ""],
             // ["Donnez la distance entre les olives de la ligne guide", ""],
             ["À quoi sert le nœud français ?", "Réaliser une poignée de préhension de la corde à l'aide de la cordelette (minimum 3 tours)", GTO_SAUV + 48],
@@ -158,7 +156,9 @@
         ];
         let current_question;
         document.addEventListener("DOMContentLoaded", function (event) {
-            current_question = questions.random();
+            const random_question = rando(questions);
+            const current_question = random_question.value;
+            
             document.querySelector('dl#question dt').innerText = current_question[0];
             document.querySelector('dl#question dd.reponse').innerHTML = current_question[1];
             if (current_question.length >= 3) {
