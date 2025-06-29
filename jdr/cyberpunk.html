@@ -278,7 +278,8 @@
     }
     h1 {border-bottom:1px solid #44475a;}
 
-    div.content{ display:flex;}
+    div.content{ display:flex; position: relative }
+    div.background {position: absolute; width: 100%; height: 100%; opacity: .05;background:no-repeat center url("sceptre.jpg");}
   </style>
   <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
   <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
@@ -329,6 +330,7 @@
 <body>
   <h1>Progression création de la base CyberPunk RED</h1>
   <div class="content">
+    <div class="background"></div>
     <div class="progress-pane">
       <div class="progress dark">
         <div class="left">
