@@ -285,6 +285,7 @@
   <link href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css" rel="stylesheet" />
   <script>
     var current_table = null;
+    const USED_CREDIT = 40000;
     $( document ).ready(function() {
       current_table = $('.table-pane table').DataTable({
         paging: false,
@@ -313,6 +314,7 @@
             .reduce(function (a, b) {
                 return a + b;
           }));
+          $('#contribution-remaining').html($('#contribution-total').html() - USED_CREDIT);
         }
       });
     });
@@ -350,12 +352,13 @@
       <thead>
         <th>Date</th>
         <th>Donateur</th>
-        <th>Montant</th>
+        <th>Montant (€$)</th>
       </thead>
       <tbody>
       </tbody>
       <tfoot>
         <tr><td colspan="2">Total</td><td id="contribution-total">0</td></tr>
+        <tr><td colspan="2">Restant</td><td id="contribution-remaining">0</td></tr>
       </tfoot>
     </table></div>
   </div>
