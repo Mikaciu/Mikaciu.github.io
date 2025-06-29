@@ -8,10 +8,17 @@
   <style>
     @import url("https://fonts.googleapis.com/css?family=Lato");
 
+    .inventory-pane {
+      min-width: 20vw;
+      max-width: 35vw;
+      flex: 1;
+      padding: 0 5vw;
+    }
+
     .progress-pane {
       height: 75vh;
       min-width: 20vw;
-      max-width: 75vw;
+      max-width: 25vw;
       flex: 1;
       padding-left: 5vw;
     }
@@ -19,8 +26,8 @@
     .table-pane {
       height: 100vh;
       min-width: 20vw;
+      max-width: 20vw;
       flex: 1;
-      padding-right: 5vw;
     }
 
     .progress {
@@ -285,33 +292,17 @@
   <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
   <link href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css" rel="stylesheet" />
   <script>
-    var current_table = null;
     const USED_CREDIT = 25000 + 50000;
     $( document ).ready(function() {
-      current_table = $('.table-pane table').DataTable({
+      $('.table-pane table').DataTable({
         paging: false,
         searching: false,
         info: false,
         fixedHeader: {
           header: false,
-          // footer: false
+          footer: false
         },
-        data: [
-          ['2024-08-17', 'Gizmo', 10000],
-          ['2024-08-17', 'Aituā', 5200],
-          ['2024-08-17', 'Karis', 4100],
-          ['2024-08-17', 'Altaren', 1700],
-          ['2024-08-17', 'Nogal', 5000],
-          ['2025-03-14', 'Altaren', 13000],
-          ['2025-03-14', 'Aituā', 5000],
-          ['2025-03-22', 'Erik', 1000],
-          ['2025-04-05', 'Altaren', 13000],
-          ['2025-04-05', 'Aituā', 4000],
-          ['2025-04-05', 'Nemesis', 2000],
-          ['2025-05-03', 'Cury', 2000],
-          ['2025-06-29', 'Altaren', 8000],
-          ['2025-06-29', 'Aituā', 10000],
-        ],
+        ajax: 'contributions.json',
         drawCallback: function () {
           var api = this.api();
           $('#contribution-total').html(api
@@ -320,8 +311,20 @@
             .reduce(function (a, b) {
                 return a + b;
           }));
+          $('#contribution-used').html(USED_CREDIT);
           $('#contribution-remaining').html($('#contribution-total').html() - USED_CREDIT);
         }
+      });
+
+      $('.inventory-pane table').DataTable({
+        paging: false,
+        searching: false,
+        info: false,
+        fixedHeader: {
+          header: false,
+          footer: false
+        },
+        ajax: 'inventory.json',
       });
     });
   </script>
@@ -365,10 +368,22 @@
       </tbody>
       <tfoot>
         <tr><td colspan="2">Total</td><td id="contribution-total">0</td></tr>
+        <tr><td colspan="2">Cr&eacute;dits consommés</td><td id="contribution-used">0</td></tr>
         <tr><td colspan="2">Restant</td><td id="contribution-remaining">0</td></tr>
       </tfoot>
     </table></div>
+    <div class="inventory-pane">
+      <h2>Inventaire</h2>
+      <table>
+      <thead>
+        <th>Cat&eacute;gorie</th>
+        <th>&Eacute;lement</th>
+        <th>Notes</th>
+        <th>Quantit&eacute;</th>
+      </thead>
+      <tbody>
+      </tbody>
+    </table></div>
   </div>
 </body>
-
 </html>
