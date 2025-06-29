@@ -285,7 +285,7 @@
   <link href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css" rel="stylesheet" />
   <script>
     var current_table = null;
-    const USED_CREDIT = 40000;
+    const USED_CREDIT = 25000 + 50000;
     $( document ).ready(function() {
       current_table = $('.table-pane table').DataTable({
         paging: false,
@@ -296,6 +296,11 @@
           // footer: false
         },
         data: [
+          ['2024-08-17', 'Gizmo', 10000],
+          ['2024-08-17', 'Aituā', 5200],
+          ['2024-08-17', 'Karis', 4100],
+          ['2024-08-17', 'Altaren', 1700],
+          ['2024-08-17', 'Nogal', 5000],
           ['2025-03-14', 'Altaren', 13000],
           ['2025-03-14', 'Aituā', 5000],
           ['2025-03-22', 'Erik', 1000],
@@ -328,7 +333,7 @@
       <div class="progress dark">
         <div class="left">
           <div class="done">Donation de Erik ☭</div>
-          <div class="done"></div>
+          <div class="done">25 000 €$</div>
           <div class="done">50 000 €$</div>
           <div>40 000 €$</div>
           <div>85 000 €$</div>
