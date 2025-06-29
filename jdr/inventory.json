@@ -8,15 +8,20 @@
           ["Arme", "Pistolet lourd", "", 8],
           ["Arme", "Grenade flash", "", 3],
           ["Arme", "Grenade incendiaire", "", 2],
+          ["Arme", "Arme à air comprimé", "", 3],
+          ["Outil", "Lance-grappin", "", 3],
           ["Medic", "Trousse de premiers soins", "", 4],
           ["Medic", "M&eacute;discanner", "p. 354", 1],
           ["Medic", "Technoscanner", "p. 355", 1],
           ["Divers", "Agent, vide", "À considérer comme un téléphone jetable", 12],
           ["Divers", "Caméra", "Vision nocturne, thermique et sources électriques", 1],
+          ["Divers", "Brouilleur", "", 1],
+          ["Divers", "Peinture phosphorescente", "lot de 20", 3],
           ["Habillement", "Dressing", "Tenues civiles", 1],
           ["Véhicule", "Voiture télécommandée", "La télécommande ne fonctionne qu'à l'intérieur de Night City", 1],
           ["Habillement", "Combinaisons Nucléaire Biologique Chimique", "", 3],
-          ["Cybertech", "Puce d'aide au pistolet", "+1 cumulable avec la compétence", 1],
+          ["Habillement", "Paire de bottes magnétiques", "", 3],
+          ["Cyberimplant", "Puce d'aide au pistolet", "+1 cumulable avec la compétence", 1],
           ["Cyberimplant", "radar / sonar", "portée 50 mètres, coût 7 points d'humanité", 1]
       ]
 }
