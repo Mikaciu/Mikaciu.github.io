@@ -1,126 +1,364 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyberpunk 2045 - construction de base</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js" charset="utf-8"></script>
-    <style>
-   body {
-  margin: 0;
-            padding: 50px;
-  font-family: sans-serif;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  /* background: #0d0c2d; */
-}
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyberpunk 2045 - construction de base</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Lato");
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(1, 160px);
-  grid-gap: 80px;
-  background: #0d0c2d;
-  box-shadow: -5px -5px 8px rgba(94, 104, 121, 0.288),
-              4px 4px 6px rgba(94, 104, 121, 0.288);
-  padding: 60px;
-  margin: auto;
-}
+    .progress-pane {
+      height: 75vh;
+      min-width: 20vw;
+      max-width: 75vw;
+      flex: 1;
+      padding-left: 10%;
+    }
 
-@media (min-width: 420px) and (max-width: 659px) {
-  .container {
-    grid-template-columns: repeat(2, 160px);
-  }
-}
+    .table-pane {
+      height: 100vh;
+      min-width: 20vw;
+      flex: 1;
+      padding-right: 10%;
+    }
 
-@media (min-width: 660px) and (max-width: 899px) {
-  .container {
-    grid-template-columns: repeat(3, 160px);
-  }
-}
+    .progress {
+      display: inline-flex;
+      height: 100%;
+      padding: 5vh 10%;
+    }
 
-@media (min-width: 900px) {
-  .container {
-    grid-template-columns: repeat(4, 160px);
-  }
-}
+    .progress>div {
+      display: flex;
+      flex-direction: column;
+      color: #282a36;
+    }
 
-.container .box {
-  width: 100%;
-}
+    .progress>div.left {
+      padding-right: 20px;
+      text-align: right;
+    }
 
-.container .box h2 {
-  display: block;
-  text-align: center;
-  color: #fff;
-}
+    .progress>div.left div:last-of-type:after {
+      display: none;
+    }
 
-.container .box .chart {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  font-size: 40px;
-  line-height: 160px;
-  height: 160px;
-  color: #fff;
-}
+    .progress>div.left div:after {
+      content: "";
+      background: rgba(51, 51, 51, 0.1);
+      border-radius: 2px;
+      position: absolute;
+      right: -20px;
+      top: 10px;
+      height: 101%;
+      width: 1px;
+      transform: translateX(50%);
+    }
 
-.container .box canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  width: 100%;
-}
-    </style>
+    .progress>div.right {
+      padding-left: 20px;
+    }
+
+    .progress>div.right div.prev:after {
+      transition: none;
+    }
+
+    .progress>div.right div.current {
+      color: #282a36;
+      font-weight: bold;
+    }
+
+    .progress>div.right div.current:before {
+      background: #282a36;
+      padding: 10px;
+      transition: all 0.2s 0.15s cubic-bezier(0.175, 0.885, 0.32, 2);
+    }
+
+    .progress>div.right div.current:after {
+      height: 0%;
+      transition: height 0.2s ease-out;
+    }
+
+    .progress>div.right div.current~div {
+      color: #666;
+    }
+
+    .progress>div.right div.current~div:before {
+      background: #666;
+      padding: 2.5px;
+    }
+
+    .progress>div.right div.current~div:after {
+      height: 0%;
+      transition: none;
+    }
+
+    .progress>div.right div:before {
+      content: "";
+      background: #282a36;
+      padding: 5px;
+      border-radius: 50%;
+      position: absolute;
+      left: -20px;
+      top: 10px;
+      transform: translateX(-50%) translateY(-50%);
+      transition: padding 0.2s ease;
+    }
+
+    .progress>div.right div:after {
+      content: "";
+      background: #282a36;
+      border-radius: 2px;
+      position: absolute;
+      left: -20px;
+      top: 10px;
+      height: 101%;
+      width: 2px;
+      transform: translateX(-50%);
+      transition: height 0.2s ease;
+    }
+
+    .progress>div div {
+      flex: 1;
+      position: relative;
+      line-height: 20px;
+      cursor: default;
+      min-height: 30px;
+    }
+
+    .progress>div div:last-of-type {
+      flex: 0;
+    }
+
+    .progress.dark {
+      background: #282a36;
+      display: inline-flex;
+      height: 100%;
+      width: 100%;
+      padding: 5vh 10%;
+    }
+
+    .progress.dark>div {
+      display: flex;
+      flex-direction: column;
+      color: #ccc;
+    }
+
+    .progress.dark>div.left {
+      padding-right: 20px;
+      text-align: right;
+    }
+
+    .progress.dark>div.left div:last-of-type:after {
+      display: none;
+    }
+
+    .progress.dark>div.left div:after {
+      content: "";
+      background: rgba(211, 211, 211, 0.05);
+      border-radius: 2px;
+      position: absolute;
+      right: -20px;
+      top: 10px;
+      height: 101%;
+      width: 1px;
+      transform: translateX(50%);
+    }
+
+    .progress.dark>div.right {
+      padding-left: 20px;
+    }
+
+    .progress.dark>div.right div.prev:after {
+      transition: none;
+    }
+
+    .progress.dark>div.right div.current {
+      color: white;
+      font-weight: bold;
+    }
+
+    .progress.dark>div.right div.current:before {
+      background: white;
+      padding: 10px;
+      transition: all 0.2s 0.15s cubic-bezier(0.175, 0.885, 0.32, 2);
+    }
+
+    .progress.dark>div.right div.current:after {
+      height: 0%;
+      transition: height 0.2s ease-out;
+    }
+
+    .progress.dark>div.right div.current~div {
+      color: #666;
+    }
+
+    .progress.dark>div.right div.current~div:before {
+      background: #666;
+      padding: 2.5px;
+    }
+
+    .progress.dark>div.right div.current~div:after {
+      height: 0%;
+      transition: none;
+    }
+
+    .progress.dark>div.right div:before {
+      content: "";
+      background: lightgray;
+      padding: 5px;
+      border-radius: 50%;
+      position: absolute;
+      left: -20px;
+      top: 10px;
+      transform: translateX(-50%) translateY(-50%);
+      transition: padding 0.2s ease;
+    }
+
+    .progress.dark>div.right div:after {
+      content: "";
+      background: lightgray;
+      border-radius: 2px;
+      position: absolute;
+      left: -20px;
+      top: 10px;
+      height: 101%;
+      width: 2px;
+      transform: translateX(-50%);
+      transition: height 0.2s ease;
+    }
+
+    .progress.dark>div.right div.done:after {
+      background-color: #90ee9066;
+    }
+
+    .progress.dark>div.right div.done:before {
+      background-color: #90ee90;
+    }
+
+    .progress.dark>div div {
+      flex: 1;
+      position: relative;
+      line-height: 20px;
+      cursor: default;
+      min-height: 30px;
+    }
+
+    .progress.dark>div div:last-of-type {
+      flex: 0;
+    }
+
+    .done.current {
+      color: #62af0b !important;
+    }
+
+    .done.current:before {
+      background: #62af0b !important;
+    }
+
+    .dark .right .done {
+      color: #90ee90c0 !important;
+    }
+
+    .dark .done.current {
+      color: lightgreen !important;
+    }
+
+    .dark .done.current:before {
+      background: lightgreen !important;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Lato", Arial, sans-serif;
+      background-color: #282a36;
+      color: #f8f8f2;
+    }
+    h1 {border-bottom:1px solid #44475a;}
+
+    div.content{ display:flex;}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+  <link href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css" rel="stylesheet" />
+  <script>
+    var current_table = null;
+    $( document ).ready(function() {
+      current_table = $('.table-pane table').DataTable({
+        paging: false,
+        searching: false,
+        info: false,
+        fixedHeader: {
+          header: false,
+          // footer: false
+        },
+        data: [
+          ['2025-03-14', 'Altaren', 13000],
+          ['2025-03-14', 'Aituā', 5000],
+          ['2025-03-22', 'Erik', 1000],
+          ['2025-04-05', 'Altaren', 13000],
+          ['2025-04-05', 'Aituā', 4000],
+          ['2025-04-05', 'Nemesis', 2000],
+          ['2025-05-03', 'Cury', 2000],
+          ['2025-06-29', 'Altaren', 8000],
+          ['2025-06-29', 'Aituā', 10000],
+        ],
+        drawCallback: function () {
+          var api = this.api();
+          $('#contribution-total').html(api
+            .column(2)
+            .data()
+            .reduce(function (a, b) {
+                return a + b;
+          }));
+        }
+      });
+    });
+  </script>
 </head>
 
 <body>
-    <h1>Progression création de la base CyberPunk 2045</h1>
-    <div class="container">
-        <div class="box">
-            <div class="chart" data-percent="100">100%</div>
-            <h2>Laboratoire médical</h2>
+  <h1>Progression création de la base CyberPunk RED</h1>
+  <div class="content">
+    <div class="progress-pane">
+      <div class="progress dark">
+        <div class="left">
+          <div class="done">Donation de Erik ☭</div>
+          <div class="done"></div>
+          <div class="done">50 000 €$</div>
+          <div>40 000 €$</div>
+          <div>85 000 €$</div>
+          <div></div>
+          <div></div>
         </div>
-        <div class="box">
-            <div class="chart" data-percent="100">100%</div>
-            <h2>Hangar de stockage</h2>
+        <div class="right">
+          <div class="done">🥼 Laboratoire médical</div>
+          <div class="done">📦 Hangar de stockage</div>
+          <div class="done current">🚘 Garage à véhicules</div>
+          <div>⚡ Alimentation électrique</div>
+          <div>🥷🏻 Local pour netrunners et danse sensorielle</div>
+          <div>🦾 Local à cyber-implants</div>
+          <div>🚇 Travaux des souterrains</div>
         </div>
-        <div class="box">
-            <div class="chart" data-percent="100">100%</div>
-            <h2>Garage pour les véhicules</h2>
-        </div>
-        <div class="box">
-            <div class="chart" data-percent="0">50 k€$</div>
-            <h2>Alimentation électrique</h2>
-        </div>
-        <div class="box">
-            <div class="chart" data-percent="0">40 k€$</div>
-            <h2>Local pour netrunners + DS</h2>
-        </div>
-        <div class="box">
-            <div class="chart" data-percent="0">85 k€$</div>
-            <h2>Local cyber implants</h2>
-        </div>
-        <div class="box">
-            <div class="chart" data-percent="0">? k€$</div>
-            <h2>Travaux des souterrains</h2>
-        </div>
+      </div>
     </div>
-    <script>  $(function() {
-  $('.chart').easyPieChart({
-    size: 160,
-    barColor: "#36e617",
-    scaleLength: 0,
-    lineWidth: 15,
-    trackColor: "#525151",
-    lineCap: "circle",
-    animate: 2000,
-  });
-});</script>
+    <div class="table-pane">
+      <h2>Contributions</h2>
+      <table>
+      <thead>
+        <th>Date</th>
+        <th>Donateur</th>
+        <th>Montant</th>
+      </thead>
+      <tbody>
+      </tbody>
+      <tfoot>
+        <tr><td colspan="2">Total</td><td id="contribution-total">0</td></tr>
+      </tfoot>
+    </table></div>
+  </div>
 </body>
 
 </html>
