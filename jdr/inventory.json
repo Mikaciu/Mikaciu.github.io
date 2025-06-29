@@ -1,98 +1,20 @@
-[
-    [
-        "Véhicule",
-        "Camionnette \"armurerie\"",
-        "",
-        1
-    ],
-    [
-        "Véhicule",
-        "Camionnette pour la surveillance",
-        "Contient 2 programmes pour les netrunners",
-        1
-    ],
-    [
-        "Véhicule",
-        "Pièces détachées de camionnettes",
-        "Valeur 10 000€$",
-        2
-    ],
-    [
-        "Véhicule",
-        "Camion",
-        "",
-        1
-    ],
-    [
-        "Drone",
-        "Porteur de matériel lourd",
-        "",
-        1
-    ],
-    [
-        "Arme",
-        "Pistolet lourd",
-        "",
-        8
-    ],
-    [
-        "Arme",
-        "Grenade flash",
-        "",
-        1
-    ],
-    [
-        "Medic",
-        "Trousse de premiers soins",
-        "",
-        4
-    ],
-    [
-        "Medic",
-        "M&eacute;discanner",
-        "p. 354",
-        1
-    ],
-    [
-        "Medic",
-        "Technoscanner",
-        "p. 355",
-        1
-    ],
-    [
-        "Divers",
-        "Agent, vide",
-        "À considérer comme un téléphone jetable",
-        12
-    ],
-    [
-        "Habillement",
-        "Dressing",
-        "Tenues civiles",
-        1
-    ],
-    [
-        "Véhicule",
-        "Voiture télécommandée",
-        "La télécommande ne fonctionne qu'à l'intérieur de Night City",
-        1
-    ],
-    [
-        "Habillement",
-        "Combinaisons Nucléaire Biologique Chimique",
-        "",
-        3
-    ],
-    [
-        "Cybertech",
-        "Puce d'aide au pistolet",
-        "+1 cumulable avec la compétence",
-        1
-    ],
-    [
-        "Cyberimplant",
-        "radar / sonar",
-        "portée 50 mètres, coût 7 points d'humanité",
-        1
-    ]
-]
+{
+    "data":[
+          ["Véhicule", "Camionnette \"armurerie\"", "", 1],
+          ["Véhicule", "Camionnette pour la surveillance","Contient 2 programmes pour les netrunners", 1],
+          ["Véhicule", "Pièces détachées de camionnettes","Valeur 10 000€$", 2],
+          ["Véhicule", "Camion", "", 1],
+          ["Drone", "Porteur de matériel lourd", "", 1],
+          ["Arme", "Pistolet lourd", "", 8],
+          ["Arme", "Grenade flash", "", 1],
+          ["Medic", "Trousse de premiers soins", "", 4],
+          ["Medic", "M&eacute;discanner", "p. 354", 1],
+          ["Medic", "Technoscanner", "p. 355", 1],
+          ["Divers", "Agent, vide", "À considérer comme un téléphone jetable", 12],
+          ["Habillement", "Dressing", "Tenues civiles", 1],
+          ["Véhicule", "Voiture télécommandée", "La télécommande ne fonctionne qu'à l'intérieur de Night City", 1],
+          ["Habillement", "Combinaisons Nucléaire Biologique Chimique", "", 3],
+          ["Cybertech", "Puce d'aide au pistolet", "+1 cumulable avec la compétence", 1],
+          ["Cyberimplant", "radar / sonar", "portée 50 mètres, coût 7 points d'humanité", 1]
+      ]
+}
