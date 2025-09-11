@@ -98,8 +98,8 @@ subit -->|Inférieurs à la moitié des points de vie max| inferieur
 subit -->|Égaux ou supérieurs à la moitié des points de vie max| sup_egal
 subit -->|Strictement supérieurs aux points de vie max| sup_strict["fa:fa-skull **Mort**"]
 
-inferieur("`**Dégâts ordinaires**<br>Premiers soins: soignent 1 point ; médecine : soigne 1D3 points`")
-sup_egal("`**Blessure grave**<br>1. Tombe à terre<br>2. Test de CON: si échec, tombe inconscient`")
+inferieur("`<h5>Dégâts ordinaires</h5>Premiers soins: soignent 1 point ; médecine : soigne 1D3 points`")
+sup_egal("`<h5>Blessure grave</h5>1. Tombe à terre<br>2. Test de CON: si échec, tombe inconscient`")
 ```
 
 ### Guérison des blessures graves
