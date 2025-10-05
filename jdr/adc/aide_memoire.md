@@ -1,3 +1,6 @@
+---
+site.title:
+---
 # Appel de cthulhu - aide mémoire
 
 ## Système de jeu
