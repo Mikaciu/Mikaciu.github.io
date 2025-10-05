@@ -1,5 +1,5 @@
 ---
-site.title:
+title:
 ---
 # Appel de cthulhu - aide mémoire
 
