@@ -1,5 +1,5 @@
 ---
-title:
+layout: custom-page
 ---
 # Appel de cthulhu - aide mémoire
 
