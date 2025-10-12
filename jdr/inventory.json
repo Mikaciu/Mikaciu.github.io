@@ -22,6 +22,7 @@
           ["Habillement", "Combinaisons Nucléaire Biologique Chimique", "", 3],
           ["Habillement", "Paire de bottes magnétiques", "", 3],
           ["Cyberimplant", "Puce d'aide au pistolet", "+1 cumulable avec la compétence", 1],
-          ["Cyberimplant", "radar / sonar", "portée 50 mètres, coût 7 points d'humanité", 1]
+          ["Cyberimplant", "radar / sonar", "portée 50 mètres, coût 7 points d'humanité", 1],
+          ["Cyberimplant", "Cyberœil", "marque militech, perte d'humanité 7/2", 1]
       ]
 }
