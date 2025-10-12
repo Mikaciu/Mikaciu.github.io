@@ -41,8 +41,7 @@
 
     .progress {
       display: inline-flex;
-      height: 100%;
-      padding: 5vh 10%;
+      height: 33vh;
     }
 
     .progress>div {
@@ -67,7 +66,6 @@
       position: absolute;
       right: -20px;
       top: 10px;
-      height: 101%;
       width: 1px;
       transform: translateX(50%);
     }
@@ -129,7 +127,6 @@
       position: absolute;
       left: -20px;
       top: 10px;
-      height: 101%;
       width: 2px;
       transform: translateX(-50%);
       transition: height 0.2s ease;
@@ -150,9 +147,7 @@
     .progress.dark {
       background: #282a36;
       display: inline-flex;
-      height: 100%;
       width: 100%;
-      padding: 5vh 10%;
     }
 
     .progress.dark>div {
@@ -177,7 +172,6 @@
       position: absolute;
       right: -20px;
       top: 10px;
-      height: 101%;
       width: 1px;
       transform: translateX(50%);
     }
@@ -377,39 +371,26 @@
             contributions[current_element[1]] += current_element[2];
           });
 
-          Chart.defaults.plugins.tooltip.enabled = true;
+          const ordered_contributions = Object.keys(contributions).sort().reduce(
+            (obj, key) => {
+              obj[key] = contributions[key];
+              return obj;
+            },
+            {}
+          );
+
           new Chart(document.getElementById("contributions-pie-chart"), {
             type: 'doughnut',
             data: {
-              labels: Object.keys(contributions),
+              labels: Object.keys(ordered_contributions),
               datasets: [{
-                // label: 'My First Dataset',
-                data: Object.values(contributions),
-                // backgroundColor: [
-                //   'rgb(255, 99, 132)',
-                //   'rgb(54, 162, 235)',
-                //   'rgb(255, 205, 86)'
-                // ],
+                data: Object.values(ordered_contributions),
                 hoverOffset: 4
               }]
-            },
-            options: {
-              plugins: {
-                legend: {
-                  display: true,
-                },
-                tooltip: {
-                  enabled: true,
-                  position: "nearest"
-                }
-              }
-            },
+            }
           });
-
-
         }
       );
-
     });
   </script>
 </head>
@@ -419,6 +400,7 @@
   <div class="content">
     <div class="background"></div>
     <div class="progress-pane">
+      <h2>Constructions</h2>
       <div class="progress dark">
         <div class="left">
           <div class="done">30 000 €$</div>
