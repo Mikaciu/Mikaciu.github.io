@@ -5,11 +5,19 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyberpunk 2045 - construction de base</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"
+    integrity="sha256-Lye89HGy1p3XhJT24hcvsoRw64Q4IOL5a7hdOflhjTA=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
+    <link href="https://code.jquery.com/ui/1.14.1/themes/dark-hive/jquery-ui.css" rel="stylesheet" />
+  <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+  <link href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css" rel="stylesheet" />
   <style>
     @import url("https://fonts.googleapis.com/css?family=Lato");
 
     .inventory-pane {
-      min-width: 50vw;
+      min-width: 85vw;
       max-width: 95vw;
       min-height: 50vh;
       padding: 2.5vh 5vw 0 5vw;
@@ -304,17 +312,19 @@
       opacity: .05;
       background: no-repeat center url("sceptre.jpg");
     }
+
+    /* JQuery-ui overrides */
+    div#tabs{width: 98.7vw;}
+    .ui-tabs { padding: 0; margin: 0;}
+    .ui-widget-content { background: none; border: 0 none;}
+    .ui-widget-header { background: none;}
+    .ui-tabs .ui-tabs-panel { display: flex; }
   </style>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"
-    integrity="sha256-Lye89HGy1p3XhJT24hcvsoRw64Q4IOL5a7hdOflhjTA=" crossorigin="anonymous"></script>
-  <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
-  <link href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css" rel="stylesheet" />
   <script>
     const USED_CREDIT = 30000 + 25000 + 50000;
     let total_contribution_drawn = false;
     $(document).ready(function () {
+      $("#tabs").tabs();
       $('.table-pane table').DataTable({
         paging: false,
         searching: false,
@@ -397,74 +407,83 @@
 
 <body>
   <h1>Progression création de la base CyberPunk RED</h1>
-  <div class="content">
-    <div class="background"></div>
-    <div class="progress-pane">
-      <h2>Constructions</h2>
-      <div class="progress dark">
-        <div class="left">
-          <div class="done">30 000 €$</div>
-          <div class="done">25 000 €$</div>
-          <div class="done">50 000 €$</div>
-          <div>40 000 €$</div>
-          <div>85 000 €$</div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="right">
-          <div class="done">🥼 Laboratoire médical</div>
-          <div class="done">📦 Hangar de stockage</div>
-          <div class="done current">🚘 Garage à véhicules</div>
-          <div>⚡ Alimentation électrique</div>
-          <div>🥷🏻 Local pour netrunners et danse sensorielle</div>
-          <div>🦾 Local à cyber-implants</div>
-          <div>🚇 Travaux des souterrains</div>
+  <div id="tabs">
+    <ul>
+      <li><a href="#tabs-contribs">Contributions</a></li>
+      <li><a href="#tabs-inventory">Inventaire</a></li>
+    </ul>
+    <div id="tabs-contribs" class="content">
+      <div class="background"></div>
+      <div class="progress-pane">
+        <h2>Constructions</h2>
+        <div class="progress dark">
+          <div class="left">
+            <div class="done">30 000 €$</div>
+            <div class="done">25 000 €$</div>
+            <div class="done">50 000 €$</div>
+            <div>40 000 €$</div>
+            <div>85 000 €$</div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="right">
+            <div class="done">🥼 Laboratoire médical</div>
+            <div class="done">📦 Hangar de stockage</div>
+            <div class="done current">🚘 Garage à véhicules</div>
+            <div>⚡ Alimentation électrique</div>
+            <div>🥷🏻 Local pour netrunners et danse sensorielle</div>
+            <div>🦾 Local à cyber-implants</div>
+            <div>🚇 Travaux des souterrains</div>
+          </div>
         </div>
       </div>
+      <div class="pie-pane" style="position:relative;">
+        <h2>Répartition des contributions</h2>
+        <canvas id="contributions-pie-chart"></canvas>
+      </div>
+      <div class="table-pane">
+        <h2>Contributions</h2>
+        <table>
+          <thead>
+            <th>Date</th>
+            <th>Donateur</th>
+            <th>Montant (€$)</th>
+          </thead>
+          <tbody>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">Total</td>
+              <td id="contribution-total">0</td>
+            </tr>
+            <tr>
+              <td colspan="2">Cr&eacute;dits consommés</td>
+              <td id="contribution-used">0</td>
+            </tr>
+            <tr>
+              <td colspan="2">Restant</td>
+              <td id="contribution-remaining">0</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
     </div>
-    <div class="pie-pane" style="position:relative;">
-      <h2>Répartition des contributions</h2>
-      <canvas id="contributions-pie-chart"></canvas>
+    <div id="tabs-inventory" class="content">
+      <div class="inventory-pane">
+        <h2>Inventaire</h2>
+        <table>
+          <thead>
+            <th>Cat&eacute;gorie</th>
+            <th>&Eacute;lement</th>
+            <th>Notes</th>
+            <th>Quantit&eacute;</th>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+
     </div>
-    <div class="table-pane">
-      <h2>Contributions</h2>
-      <table>
-        <thead>
-          <th>Date</th>
-          <th>Donateur</th>
-          <th>Montant (€$)</th>
-        </thead>
-        <tbody>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td colspan="2">Total</td>
-            <td id="contribution-total">0</td>
-          </tr>
-          <tr>
-            <td colspan="2">Cr&eacute;dits consommés</td>
-            <td id="contribution-used">0</td>
-          </tr>
-          <tr>
-            <td colspan="2">Restant</td>
-            <td id="contribution-remaining">0</td>
-          </tr>
-        </tfoot>
-      </table>
-    </div>
-  </div>
-  <div class="inventory-pane">
-    <h2>Inventaire</h2>
-    <table>
-      <thead>
-        <th>Cat&eacute;gorie</th>
-        <th>&Eacute;lement</th>
-        <th>Notes</th>
-        <th>Quantit&eacute;</th>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
   </div>
 </body>
 
