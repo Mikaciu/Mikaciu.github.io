@@ -1,0 +1,43 @@
+name: Create characters page
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: ["master", "develop"]
+    paths:
+      - 'jdr/adc/personnages*'
+
+jobs:
+  generate_characters_page:
+    name: "Generate the characters page"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v2
+
+      - name: Generate the PDF file
+        run: |
+          ${{ steps.setup-chrome.outputs.chrome-path }} --version
+
+      - name: Generate the characters page
+        run: |
+          pip install --upgrade -r .github/scripts/personnages_requirements.txt
+          python .github/scripts/personnages.py
+          # git config user.name "github-actions"
+          # git config user.email "github-actions@github.com"
+
+          # git add --verbose .
+          # if [[ -n "$(git status --porcelain)" ]]
+          # then
+          #   git commit -m 'update the timeline files'
+          #   git push --verbose
+          # else
+          #   echo "No files to commit"
+          # fi
+        env:
+          SOURCE_DIR: ./jdr/adc
