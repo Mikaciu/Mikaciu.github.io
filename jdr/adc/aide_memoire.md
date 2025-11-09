@@ -7,9 +7,9 @@ layout: custom-page
 
 1D100 ; la plupart des actions se résolvent à l’aide d’un `D100` (un `D10` + un `D10aines`).
 
-> 00 = 100
+> 00 + 0 = 100
 
-Exemple : pour une compétence à 45 %, un `D100` faisant 45 ou moins est réussi.
+Exemple : pour une compétence à `45 %`, un `D100` faisant `45` ou moins est réussi.
 
 En combat, l’avantage est à la défense : si l’assaillant et le défenseur font la même qualité de réussite, le défenseur réussit sa défense.
 
@@ -34,6 +34,12 @@ En combat, l’avantage est à la défense : si l’assaillant et le défenseur
 | 36-70  | Réussite standard   |
 | 71-95  | Échec               |
 | 96-100 | Échec critique      |
+
+### Cas particulier de la chance
+
+Lors d'un `100` en chance, faire un jet d'expérience en chance. Une réussite apporte 1D4+2%.
+
+Lors d'une réussite critique de chance, faire un jet de compétence. Une réussite enlève 1D4+2%.
 
 ## Redoublement
 
@@ -146,7 +152,7 @@ surprise ~~~ reussite_extreme
 surprise ~~~ sous_nombre
 
 sous_nombre("`<h3>En sous-nombre</h3>Si le personnage a déjà esquivé ou rendu les coups durant ce round, les attaques supplémentaires contre lui reçoivent un dé bonus.<br>Ne s'applique pas à ceux qui ont plusieurs attaques (peuvent esquiver/rendre les coups autant de fois qu'ils ont d'attaques avant que la règle ne s'applique)`");
-reussite_extreme("`<h3>Réussite extrême</h3><em>Ne s'applique pas à un défenseur qui rend les coups.</em><br><strong>Empalement</strong> = dégâts maximum de l'arme + bonus maximum + dé de l'arme<br><strong>Contondant</strong> = dégâts maximum de l'arme + bonus maximum`");
+reussite_extreme("`<h3>Réussite extrême</h3><em>Ne s'applique pas à un défenseur qui rend les coups.</em><br><h4>Empalement</h4> = dégâts maximum de l'arme + bonus maximum + dé de l'arme<br><h4>Contondant</h4> = dégâts maximum de l'arme + bonus maximum`");
 
 ordre_attaque("`<h3>Ordre d'attaque</h3>Par ordre de DEX croissante: la valeur la plus élevée joue en premier. *Une arme à feu prêt à tirer agit à DEX + 50.*`")
 ordre_dex("`<h3>Résoudre par ordre de DEX</h3>a) Choix entre attaque, fuite ou manœuvre<br>b) Le défenseur esquive, rend les coups ou effectue une mnœuvre<br>c) Attaquant et défenseur font des tests en opposition.`")
@@ -154,9 +160,9 @@ attaque_surprise("`<h3>Attaque par surprise</h3>Autoriser un test: la cible anti
 surprise_oui("`<h3>Oui</h3>Utilisez l'ordre normal de DEX pour le combat`")
 surprise_non("`<h3>Non</h3>L'attaque porte automatiquement ou reçoit un dé bonus`")
 
-eviter_coups("`<h3>Éviter les coups</h3>L'attaquant l'emporte ave une niveau de réussite supérieur.<br><strong>Égalité</strong> = le défenseur gagne.<br><strong>Échec mutuel</strong> = aucun dégât n'est infligé.`")
-rendre_coups("`<h3>Rendre les coups</h3>Le plus haut de réussite l'emporte.<br><strong>Égalité</strong> = l'attaquant gagne.<br><strong>Échec mutuel</strong> = aucun dégât n'est infligé.`")
+eviter_coups("`<h3>Éviter les coups</h3>L'attaquant l'emporte avec une niveau de réussite supérieur.<br><h4>Égalité</h4> = le défenseur gagne.<br><h4>Échec mutuel</h4> = aucun dégât n'est infligé.`")
+rendre_coups("`<h3>Rendre les coups</h3>Le plus haut de réussite l'emporte.<br><h4>Égalité</h4> = l'attaquant gagne.<br><h4>Échec mutuel</h4> = aucun dégât n'est infligé.`")
 manoeuvre("`<h3>Manœuvre</h3>Résoudre comme pour rendre les coups, mais au lieu d'infliger des dégâts, appliquer les effets de la manœuvre.`")
 
-si_manoeuvre("`<h3>Si manœuvre</h3>Comparer les carrures<br><strong>Si l'initiateur est plus petit</strong>: un dé de malus par point de différence.<br><strong>Si différence de 3 ou plus</strong>: la manœuvre est impossible.`")
+si_manoeuvre("`<h3>Si manœuvre</h3>Comparer les carrures<br><h4>Si l'initiateur est plus petit</h4>: un dé de malus par point de différence.<br><h4>Si différence de 3 ou plus</h4>: la manœuvre est impossible.`")
 ```
