@@ -1,5 +1,16 @@
 name: Create characters page
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
@@ -7,6 +18,7 @@ on:
     branches: ["master", "develop"]
     paths:
       - 'jdr/adc/personnages*'
+      - .github/workflows/create-characters.yml
 
 jobs:
   generate_characters_page:
@@ -19,25 +31,57 @@ jobs:
 
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v2
-
-      - name: Generate the PDF file
-        run: |
-          ${{ steps.setup-chrome.outputs.chrome-path }} --version
+        id: setup-chrome
+        with:
+          chrome-version: stable
 
       - name: Generate the characters page
         run: |
           pip install --upgrade -r .github/scripts/personnages_requirements.txt
           python .github/scripts/personnages.py
-          # git config user.name "github-actions"
-          # git config user.email "github-actions@github.com"
-
-          # git add --verbose .
-          # if [[ -n "$(git status --porcelain)" ]]
-          # then
-          #   git commit -m 'update the timeline files'
-          #   git push --verbose
-          # else
-          #   echo "No files to commit"
-          # fi
         env:
           SOURCE_DIR: ./jdr/adc
+
+      - name: Generate the PDF file
+        run: |
+          echo "Generating the PDF file"
+
+          ${{ steps.setup-chrome.outputs.chrome-path }} \
+            --disable-background-networking \
+            --disable-background-timer-throttling \
+            --disable-backgrounding-occluded-windows \
+            --disable-checker-imaging \
+            --disable-client-side-phishing-detection \
+            --disable-cloud-import \
+            --disable-component-update \
+            --disable-default-apps \
+            --disable-dev-shm-usage \
+            --disable-extensions \
+            --disable-gpu \
+            --disable-infobars \
+            --disable-notifications \
+            --disable-popup-blocking \
+            --disable-sync \
+            --enable-logging \
+            --headless=new \
+            --ignore-certificate-errors \
+            --log-level=3 \
+            --metrics-recording-only \
+            --mute-audio \
+            --no-default-browser-check \
+            --no-first-run \
+            --no-pdf-header-footer \
+            --no-sandbox \
+            --print-to-pdf=jdr/adc/personnages.pdf \
+            --run-all-compositor-stages-before-draw \
+            jdr/adc/personnages.html
+
+          echo "PDF file generated"
+
+      - name: Publish the PDF file
+        uses: actions/upload-artifact@v4
+        with:
+          name: personnages
+          path: jdr/adc/personnages.pdf
+          overwrite: true
+          compression-level: 9 # no compression
