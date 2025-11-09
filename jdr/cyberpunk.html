@@ -9,8 +9,9 @@
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"
     integrity="sha256-Lye89HGy1p3XhJT24hcvsoRw64Q4IOL5a7hdOflhjTA=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
-    <link href="https://code.jquery.com/ui/1.14.1/themes/dark-hive/jquery-ui.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+    integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
+  <link href="https://code.jquery.com/ui/1.14.1/themes/dark-hive/jquery-ui.css" rel="stylesheet" />
   <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
   <link href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css" rel="stylesheet" />
   <style>
@@ -314,11 +315,27 @@
     }
 
     /* JQuery-ui overrides */
-    div#tabs{width: 98.7vw;}
-    .ui-tabs { padding: 0; margin: 0;}
-    .ui-widget-content { background: none; border: 0 none;}
-    .ui-widget-header { background: none;}
-    .ui-tabs .ui-tabs-panel { display: flex; }
+    div#tabs {
+      width: 98.7vw;
+    }
+
+    .ui-tabs {
+      padding: 0;
+      margin: 0;
+    }
+
+    .ui-widget-content {
+      background: none;
+      border: 0 none;
+    }
+
+    .ui-widget-header {
+      background: none;
+    }
+
+    .ui-tabs .ui-tabs-panel {
+      display: flex;
+    }
   </style>
   <script>
     const USED_CREDIT = 30000 + 25000 + 50000;
@@ -389,16 +406,20 @@
             {}
           );
 
-          new Chart(document.getElementById("contributions-pie-chart"), {
-            type: 'doughnut',
-            data: {
-              labels: Object.keys(ordered_contributions),
-              datasets: [{
-                data: Object.values(ordered_contributions),
-                hoverOffset: 4
-              }]
-            }
-          });
+          try {
+            new Chart(document.getElementById("contributions-pie-chart"), {
+              type: 'doughnut',
+              data: {
+                labels: Object.keys(ordered_contributions),
+                datasets: [{
+                  data: Object.values(ordered_contributions),
+                  hoverOffset: 4
+                }]
+              }
+            });
+          } catch (e) {
+            console.error(e);
+          }
         }
       );
     });
