@@ -23,6 +23,12 @@ Mentor: Shosuro Koharu
 
 XP allouée: 1
 
+### Vide
+
+Progression 🔲🔲🔲🔲🔲
+
+Augmenter la capacité à ressentir les Kami.
+
 ### Enquête sur la mort de mon précédent daimyo
 
 Progression 🔲🔲🔲🔲🔲
