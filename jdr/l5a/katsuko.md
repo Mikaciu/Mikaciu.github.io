@@ -16,7 +16,7 @@ Progression 🔲🔲🔲🔲🔲
 
 ### Tai-chi
 
-Progression ✅🔲🔲🔲🔲
+Progression ✅✅✅🔲🔲
 
 Art martial non létal spécialisé dans le désarmement et l'immobilisation
 Mentor: Shosuro Koharu
