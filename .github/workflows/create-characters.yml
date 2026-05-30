@@ -17,7 +17,7 @@ on:
   push:
     branches: ["master", "develop"]
     paths:
-      - 'jdr/adc/personnages*'
+      - "jdr/adc/personnages*"
       - .github/workflows/create-characters.yml
 
 jobs:
@@ -28,6 +28,8 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v2
@@ -43,10 +45,12 @@ jobs:
           SOURCE_DIR: ./jdr/adc
 
       - name: Generate the PDF file
+        env:
+          CHROME_PATH: "${{ steps.setup-chrome.outputs.chrome-path }}"
         run: |
           echo "Generating the PDF file"
 
-          ${{ steps.setup-chrome.outputs.chrome-path }} \
+          "${CHROME_PATH}" \
             --disable-background-networking \
             --disable-background-timer-throttling \
             --disable-backgrounding-occluded-windows \

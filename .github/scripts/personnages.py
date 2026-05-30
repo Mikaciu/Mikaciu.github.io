@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 
-import os
-import logging
-import pathlib
 import glob
-
 import json
-
-from jinja2 import Environment, FileSystemLoader
+import logging
+import os
+import pathlib
 
 import colorlog
+from jinja2 import Environment, FileSystemLoader
 
 handler = colorlog.StreamHandler()
-handler.setFormatter(colorlog.ColoredFormatter("%(log_color)s%(levelname)s:%(name)s:%(message)s"))
+handler.setFormatter(
+    colorlog.ColoredFormatter("%(log_color)s%(levelname)s:%(name)s:%(message)s")
+)
 
 logger = colorlog.getLogger(__name__)
 logger.addHandler(handler)
@@ -34,7 +34,11 @@ with open(SOURCE_JSON, "r") as source_file:
     for character_name, character_data in source_data.items():
         if "pic" not in character_data:
             # no picture defined, try to find one from the character name
-            current_glob = glob.glob(pathname=os.path.join(SOURCE_DIR, "pics", character_name.replace(" ", "_") + ".*"))
+            current_glob = glob.glob(
+                pathname=os.path.join(
+                    SOURCE_DIR, "pics", character_name.replace(" ", "_") + ".*"
+                )
+            )
             if len(current_glob) > 0:
                 glob_path = pathlib.Path(current_glob[0])
                 character_data["pic"] = glob_path.relative_to(SOURCE_DIR)

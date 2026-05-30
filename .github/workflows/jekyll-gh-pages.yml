@@ -6,10 +6,11 @@ on:
   push:
     branches: ["master"]
     paths-ignore:
-      - 'timeline/_data/source/**'
+      - "timeline/_data/source/**"
   workflow_run:
     workflows: ["Generate timeline"]
     types: ["completed"]
+    branches: ["master"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -30,9 +31,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: Build the Jekyll static site
+    if: ${{ github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.workflow_name == 'Generate timeline') }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
