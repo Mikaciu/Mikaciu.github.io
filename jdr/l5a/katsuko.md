@@ -1,3 +1,6 @@
+---
+layout: custom-page
+---
 # Shosuro Katsuko
 
 ![Shosuro Katsuko](./katsuko.jpeg)
@@ -6,7 +9,7 @@
 
 ### Recherches sur le Kolat
 
-Progression 🔲🔲🔲🔲🔲
+Progression ✅✅✅✅✅
 
 5 réussites + 1 aubaine au palais d'émeraude.
 

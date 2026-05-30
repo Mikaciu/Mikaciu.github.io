@@ -1,3 +1,6 @@
+---
+layout: custom-page
+---
 # Le bushido
 
 ## Compassion (jin, 仁)
