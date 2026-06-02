@@ -13,18 +13,23 @@ Progression ✅✅✅✅✅
 
 5 réussites + 1 aubaine au palais d'émeraude.
 
+### Recherches sur le Kolat - village scorpion
+
+Progression 🔲🔲🔲🔲🔲
+
+Enquêter sur le clan du scorpion dissident (Kolat) -> où est-il ?
+
 ### Recherches sur Veneku No Kamiyori
 
 Progression 🔲🔲🔲🔲🔲
 
 ### Tai-chi
 
-Progression ✅✅✅🔲🔲
+Progression ✅✅✅✅✅
 
 Art martial non létal spécialisé dans le désarmement et l'immobilisation
-Mentor: Shosuro Koharu
-
-XP allouée: 1
+Mentor: Shosuro Koharu, au palais d'émeraude
+Spécialité : Combat à mains nues
 
 ### Vide
 
