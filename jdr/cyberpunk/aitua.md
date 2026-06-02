@@ -1,3 +1,6 @@
+---
+layout: custom-page
+---
 # Kaori Kaumātua (Aituā)
 
 ![Aitua](./aitua.jpg)

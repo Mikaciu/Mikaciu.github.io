@@ -18,7 +18,7 @@ Moyennes: `FOR 50`, `CON 50`, `TAI 60`, `DEX 50`, `APP 50`, `INT 50`, `POU 50` (
 ### Âge
 
 | Âge   | Modificateurs                                                                                                | Mouvement |
-| ----- | ------------------------------------------------------------------------------------------------------------ | --------- |
+|-------|--------------------------------------------------------------------------------------------------------------|-----------|
 | 15-19 | -5% entre `FOR` et `TAI`. -5% `EDU`. Lancez deux fois les dés pour la chance et gardez le meilleur résultat. |           |
 | 20-39 | Un test d'expérience en `EDU`                                                                                |           |
 | 40-49 | Deux jets d'expérience en `EDU`. -5% entre `FOR`, `CON` et `DEX`. -5% `APP`                                  | -1        |
@@ -30,7 +30,7 @@ Moyennes: `FOR 50`, `CON 50`, `TAI 60`, `DEX 50`, `APP 50`, `INT 50`, `POU 50` (
 ### Impact (`IMP`) et carrure (`CAR`)
 
 | `FOR` + `TAI` | `IMP` (modificateur aux dégâts) | `CAR` (sert aux manœuvres de combat) |
-| ------------- | ------------------------------- | ------------------------------------ |
+|---------------|---------------------------------|--------------------------------------|
 | 2-64          | -2                              | -2                                   |
 | 65-84         | -1                              | -1                                   |
 | 85-124        | 0                               | 0                                    |
@@ -42,7 +42,7 @@ Moyennes: `FOR 50`, `CON 50`, `TAI 60`, `DEX 50`, `APP 50`, `INT 50`, `POU 50` (
 En un round de combat, un investigateur peut se déplacer de son score de mouvement en mètres, et à 5 fois cette valeur s'il court.
 
 | `FOR` et `DEX`                  | `MVT` |
-| ------------------------------- | ----- |
+|---------------------------------|-------|
 | strictement inférieures à `TAI` | 7     |
 | égales ou supérieures à `TAI`   | 8     |
 | strictement supérieures à `TAI` | 9     |
@@ -87,7 +87,7 @@ _Cf_. [Historiques](historiques.md)
 Lancer `1d3+1` fois sur la table suivante. Un seul jet possible par catégorie.
 
 | 1d100 | Passion / hobby | Type     | Table   |
-| ----- | --------------- | -------- | ------- |
+|-------|-----------------|----------|---------|
 | 01-17 | Art             | pratique | Table A |
 | 18-34 | Technologie     | intérêt  | Table B |
 | 35-50 | Gastronomie     | pratique | Table C |
@@ -100,7 +100,7 @@ Lancer `1d3+1` fois sur la table suivante. Un seul jet possible par catégorie.
 L'intérêt pour un art confère `10%` de bonus pour calculer les plages de réussite majeure et extrême, dans le domaine en question (une spécialisation de la compétence `Arts et Métiers`).
 
 | 1d100 | Art          |
-| ----- | ------------ |
+|-------|--------------|
 | 01-10 | Chant        |
 | 11-20 | Littérature  |
 | 21-30 | Musique      |
@@ -114,25 +114,25 @@ L'intérêt pour un art confère `10%` de bonus pour calculer les plages de réu
 
 #### Table B - Intérêt pour la technologie
 
-| 1d100 | Hobby technologique                                   | Compétence associée           |
-| ----- | ----------------------------------------------------- | ----------------------------- |
-| 6–10  |  Radioamateur et chasseur de signaux                  | Science: physique             |
-| 11–15 |  Photographe expérimentateur                          | Arts et Métiers: photographie |
-| 16–20 |  Mécanicien automobile du dimanche                    | Mécanique                     |
-| 26–35 |  Électricien autodidacte                              | Électricité                   |
-| 36–45 |  Astronome amateur                                    | Science : astronomie          |
-| 46–55 |  Horloger                                             | Arts & métiers: horlogerie    |
-| 86–90 |  Chimiste amateur (développe ses propres photos)      | Science: chimie               |
-| 31–40 |  Bidouilleur de drones et de robots `DIY`             | Électronique                  |
-| 61–70 |  Spécialiste en cybersécurité et chiffrement          | Science: cryptographie        |
-| 81–90 |  Passionné d’intelligence artificielle et de chatbots | Informatique                  |
+| 1d100 | Hobby technologique                                  | Compétence associée           |
+|-------|------------------------------------------------------|-------------------------------|
+| 6–10  | Radioamateur et chasseur de signaux                  | Science: physique             |
+| 11–15 | Photographe expérimentateur                          | Arts et Métiers: photographie |
+| 16–20 | Mécanicien automobile du dimanche                    | Mécanique                     |
+| 26–35 | Électricien autodidacte                              | Électricité                   |
+| 36–45 | Astronome amateur                                    | Science : astronomie          |
+| 46–55 | Horloger                                             | Arts & métiers: horlogerie    |
+| 86–90 | Chimiste amateur (développe ses propres photos)      | Science: chimie               |
+| 31–40 | Bidouilleur de drones et de robots `DIY`             | Électronique                  |
+| 61–70 | Spécialiste en cybersécurité et chiffrement          | Science: cryptographie        |
+| 81–90 | Passionné d’intelligence artificielle et de chatbots | Informatique                  |
 
 #### Table C - Pratique de la gastronomie
 
 La pratique de la gastronomie confère `3d6%` dans Arts et Métiers: cuisine
 
 | 1d100 | Spécialité                    |
-| ----- | ----------------------------- |
+|-------|-------------------------------|
 | 01-08 | Chocolat                      |
 | 09-16 | Pâtisserie                    |
 | 17-24 | Fruits                        |
@@ -152,7 +152,7 @@ La pratique de la gastronomie confère `3d6%` dans Arts et Métiers: cuisine
 La pratique d'un jeu confère `3d6%` dans sa compétence associée.
 
 | 1d100 | Jeu               | Compétence associée      |
-| ----- | ----------------- | ------------------------ |
+|-------|-------------------|--------------------------|
 | 01-08 | Bridge            | Jeu                      |
 | 09-16 | Tarot             | Jeu                      |
 | 17-24 | Échecs            | Psychologie              |
@@ -169,7 +169,7 @@ La pratique d'un jeu confère `3d6%` dans sa compétence associée.
 #### Table E - Divertissement et spectacle
 
 | 1d100 | Divertissement / spectacle   |
-| ----- | ---------------------------- |
+|-------|------------------------------|
 | 01-05 | Boxe (anglaise ou française) |
 | 06-10 | Cabaret                      |
 | 11-15 | Cinéma                       |
@@ -194,7 +194,7 @@ Hormis l'haltérophilie, la pratique d'un sport confère `3d6%` dans sa compéte
 L'haltérophilie autorise un jet d'expérience en `FOR` toutes les 5 séances d'entraînement (une séance par session de jeu). Préciser au gardien que le joueur fait une séance d'entraînement. Il ne sera pas possible d'utiliser le temps pour une autre activité.
 
 | 1d100 | Sport                | Compétence associée             |
-| ----- | -------------------- | ------------------------------- |
+|-------|----------------------|---------------------------------|
 | 01-06 | Football             | athlétisme                      |
 | 07-12 | Rugby                | athlétisme                      |
 | 13-18 | Tennis               | athlétisme                      |
@@ -222,7 +222,7 @@ Si le joueur décide qu'il a investi ou parié, demander la somme investie.
 > Attention: cela peut mener à une altération du crédit du personnage.
 
 | 1d100 | Résultat                                    |
-| ----- | ------------------------------------------- |
+|-------|---------------------------------------------|
 | 01-05 | Banqueroute ! Vous avez tout perdu !        |
 | 06-15 | Perte ! Divisez la mise par 1d10 + 1        |
 | 16-45 | Perte ! Divisez la mise par 1d3 + 1         |
@@ -234,7 +234,7 @@ Si le joueur décide qu'il a investi ou parié, demander la somme investie.
 ### Table H - collections
 
 | 1d100 | Collection      | Quantité / année |
-| ----- | --------------- | ---------------- |
+|-------|-----------------|------------------|
 | 01-10 | Antiquités      | 1d6 pièces / an  |
 | 11-15 | Armes à feu     | 1d6 pièces / an  |
 | 16-20 | Art religieux   | 1d10 pièces / an |
@@ -258,7 +258,7 @@ Si le joueur décide qu'il a investi ou parié, demander la somme investie.
 ### Lieu de résidence
 
 | 1d100 | Lieu de résidence                                                                      |
-| ----- | -------------------------------------------------------------------------------------- |
+|-------|----------------------------------------------------------------------------------------|
 | 1-48  | Appartement (dans la ville, étage sur 1d10)                                            |
 | 49-58 | Duplex (deux étages avec terrasse, étage sur 1d10+10)                                  |
 | 59-68 | Hébergé par un ami (car sa demeure est trop grande pour lui)                           |
@@ -273,7 +273,7 @@ Si le joueur décide qu'il a investi ou parié, demander la somme investie.
 Définir succinctement le conjoint : nom, apparence physique, `APP`, âge (à la liberté du joueur).
 
 | 1d100 | Situation maritale                                                         |
-| ----- | -------------------------------------------------------------------------- |
+|-------|----------------------------------------------------------------------------|
 | 01-35 | Depuis l’âge de (`1d8 + 24` ans) / `30%` pour avoir une maîtresse/un amant |
 | 36-70 | Non / `30%` pour être divorcé                                              |
 | 71-00 | Fiancé (depuis `1d10` mois)                                                |
@@ -283,7 +283,7 @@ Définir succinctement le conjoint : nom, apparence physique, `APP`, âge (à l
 Définir les noms et âges des enfants (à la liberté du joueur).
 
 | 1d100 | Famille descendante |
-| ----- | ------------------- |
+|-------|---------------------|
 | 01-59 | Non                 |
 | 60-79 | 1                   |
 | 80-92 | 2                   |
@@ -292,7 +292,7 @@ Définir les noms et âges des enfants (à la liberté du joueur).
 ### Survie des parents
 
 | Âge du PJ       | Mère   | Père   |
-| --------------- | ------ | ------ |
+|-----------------|--------|--------|
 | la vingtaine    | `99 %` | `90 %` |
 | la trentaine    | `90 %` | `80 %` |
 | la quarantaine  | `70 %` | `60 %` |
@@ -301,7 +301,7 @@ Définir les noms et âges des enfants (à la liberté du joueur).
 ### Mort d'un parent
 
 | 1d100 | Situation maritale                                                                                |
-| ----- | ------------------------------------------------------------------------------------------------- |
+|-------|---------------------------------------------------------------------------------------------------|
 | 01-10 | Assassiné (d’une agression, d’un cambriolage, d’une bombe)                                        |
 | 11-20 | D’une maladie (10 % qu’elle soit honteuse)                                                        |
 | 21-60 | De sa belle mort (dans un lit, chez soi avec ses proches)                                         |
@@ -312,7 +312,7 @@ Définir les noms et âges des enfants (à la liberté du joueur).
 ### Lieu de l'enfance
 
 | 1d100 | Lieu de l'enfance                                    |
-| ----- | ---------------------------------------------------- |
+|-------|------------------------------------------------------|
 | 01-20 | Petite ville (moins de 10 000 habitants)             |
 | 21-40 | Ville de taille moyenne (10 000 à 100 000 habitants) |
 | 41-70 | Grande ville (plus de 100 000 habitants)             |
@@ -323,7 +323,7 @@ Définir les noms et âges des enfants (à la liberté du joueur).
 ### Frères et sœurs
 
 | 1d100 | Frères et sœurs                                                                                                                                                                       |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 01-50 | Vous êtes un exemplaire unique. (`30%` pour être le dernier descendant, pas de cousins)                                                                                               |
 | 51-80 | Vous avez partagé vos jouets avec...                                                                                                                                                  |
 | 81-00 | Vous fûtes un de plus ! tirez deux fois sur la table des genres (retirez sur cette table, oubliez le résultat « enfant unique » mais donnez un bonus de `+50%` à la deuxième option). |
@@ -331,14 +331,14 @@ Définir les noms et âges des enfants (à la liberté du joueur).
 ### Genre des frères et sœurs
 
 | 1d100 | Genre  |
-| ----- | ------ |
+|-------|--------|
 | 01-50 | Garçon |
 | 51-00 | Fille  |
 
 ### Âge des frères et sœurs
 
 | 1d100 | Âge par rapport au PJ                              |
-| ----- | -------------------------------------------------- |
+|-------|----------------------------------------------------|
 | 01-45 | Plus jeune. Tirez `1d10` années en moins que vous. |
 | 46-55 | Vous êtes jumeaux !                                |
 | 56-00 | Plus âgé. Tirez 1d10 années en plus de votre âge.  |
@@ -346,7 +346,7 @@ Définir les noms et âges des enfants (à la liberté du joueur).
 ### Milieu social
 
 | 1d100 | Milieu social          |
-| ----- | ---------------------- |
+|-------|------------------------|
 | 01-05 | indigent (`5%`)        |
 | 06-20 | Pauvre (`25%`)         |
 | 21-80 | classe moyenne (`50%`) |
@@ -356,7 +356,7 @@ Définir les noms et âges des enfants (à la liberté du joueur).
 ### Professions
 
 | 1d100 | Profession / Occupation                                                             |
-| ----- | ----------------------------------------------------------------------------------- |
+|-------|-------------------------------------------------------------------------------------|
 | 01-04 | Artiste (acteur, sculpteur, photographe, peintre, musicien, danseur, illustrateur)  |
 | 05-08 | Écrivain (romancier, poète, journaliste, scénariste, critique littéraire)           |
 | 09-12 | Cadre commercial (directeur des ventes, agent immobilier, responsable marketing)    |
@@ -396,7 +396,7 @@ Définir les noms et âges des enfants (à la liberté du joueur).
 ### Degré de réussite
 
 | 1d100 | Degré de réussite                                                                                 |
-| ----- | ------------------------------------------------------------------------------------------------- |
+|-------|---------------------------------------------------------------------------------------------------|
 | 01-04 | Ruiné, en disgrâce ou poursuivi par la justice                                                    |
 | 05-10 | Licencié, limogé ou en vacances forcées pour raisons de santé ou de scandale                      |
 | 11-18 | Sans emploi, vit de petits boulots ou d’aides                                                     |
@@ -413,7 +413,7 @@ Définir les noms et âges des enfants (à la liberté du joueur).
 ### Origines ethniques
 
 | 1d100 | Origine ethnique                                                                                 |
-| ----- | ------------------------------------------------------------------------------------------------ |
+|-------|--------------------------------------------------------------------------------------------------|
 | 01-90 | Souche européenne                                                                                |
 | 91-93 | Souche asiatique                                                                                 |
 | 94-96 | Souche africaine                                                                                 |
@@ -422,7 +422,7 @@ Définir les noms et âges des enfants (à la liberté du joueur).
 #### Origines ethniques européennes
 
 | 1d100 | Origine ethnique |
-| ----- | ---------------- |
+|-------|------------------|
 | 01-05 | Allemande        |
 | 06-30 | Anglaise         |
 | 31-40 | Espagnole        |
@@ -459,7 +459,7 @@ Dès qu'une caractéristique d'un investigateur passe au dessus de `90%`, il a u
 À la fin de chaque mission accomplie, des points d'expérience sont accordés. Les points d'expérience se dépensent pour faire des jets d'expérience dans les compétences.
 
 | Compétence | XP nécessaires |
-| ---------- | -------------- |
+|------------|----------------|
 | 0-24%      | 1              |
 | 25-49%     | 2              |
 | 50-74%     | 3              |
@@ -482,10 +482,10 @@ Le jet est ensuite bonifié de la différence qu'il existe entre la compétence 
 - `+15%` si le professeur a entre `50` et `74%`
 - `+20%` si le professeur a entre `75` et `99%`
 
-| Résultat du jet    | Effet                                                                               |
-| ------------------ | ----------------------------------------------------------------------------------- |
-| Test réussi        | une barre                                                                           |
-| Test échoué        | rien n'arrive                                                                       |
-| Réussite spéciale  | moins de temps est nécessaire (possibilité de faire un second jet)                  |
-| Réussite critique  | 2 barres et moins de temps nécessaire (possibilité de faire un second jet)          |
-| Echec critique     | `-1d3` dans la compétence en question (l'élève se remet en question sur son savoir) |
+| Résultat du jet   | Effet                                                                               |
+|-------------------|-------------------------------------------------------------------------------------|
+| Test réussi       | une barre                                                                           |
+| Test échoué       | rien n'arrive                                                                       |
+| Réussite spéciale | moins de temps est nécessaire (possibilité de faire un second jet)                  |
+| Réussite critique | 2 barres et moins de temps nécessaire (possibilité de faire un second jet)          |
+| Echec critique    | `-1d3` dans la compétence en question (l'élève se remet en question sur son savoir) |

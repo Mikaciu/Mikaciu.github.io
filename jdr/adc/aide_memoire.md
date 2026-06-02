@@ -16,7 +16,7 @@ En combat, l’avantage est à la défense : si l’assaillant et le défenseur
 ## Qualités de réussite
 
 | D100             | Qualité de réussite                                                 |
-| ---------------- | ------------------------------------------------------------------- |
+|------------------|---------------------------------------------------------------------|
 | 01               | Réussite critique. Un jet d'expérience immédiat dans la compétence. |
 | ≤ compétence ÷ 5 | Réussite extrême                                                    |
 | ≤ compétence ÷ 2 | Réussite majeure                                                    |
@@ -27,7 +27,7 @@ En combat, l’avantage est à la défense : si l’assaillant et le défenseur
 ### Exemple, pour une compétence à 70 %
 
 | D100   | Qualité de réussite |
-| ------ | ------------------- |
+|--------|---------------------|
 | 01     | Réussite critique   |
 | 02-14  | Réussite extrême    |
 | 15-35  | Réussite majeure    |
@@ -48,7 +48,7 @@ Il est possible de redoubler un jet (i.e. relancer le D100), mais avec une justi
 ### Exemples de justifications
 
 | Compétence     | Justification                                                      |
-| -------------- | ------------------------------------------------------------------ |
+|----------------|--------------------------------------------------------------------|
 | Arts & métiers | Recommencer l'œuvre depuis le début                                |
 | Baratin        | Se rapprocher pour établir une connection physique                 |
 | Conduite       | Faire demi-tour, prendre une autre route                           |
@@ -69,7 +69,7 @@ Les dés de malus s’utilisent de la même manière, mais cette fois le joueur 
 ### Exemples d'usage
 
 | D10aines 1 | D10aines 2 | D10 | Si dé bonus | Si dé malus |
-| ---------- | ---------- | --- | ----------- | ----------- |
+|------------|------------|-----|-------------|-------------|
 | 40         | 80         | 4   | 44          | 84          |
 | 00         | 20         | 5   | 05          | 25          |
 | 60         | 00         | 0   | 60          | 100         |
@@ -88,7 +88,7 @@ Un jet d'expérience réussi confère `1d8 + 2` points dans cette compétence. S
 Cette table décrit combien investir de points d'expérience dans une compétence pour pouvoir faire un jet d'expérience.
 
 | Score de compétence | Coût |
-| ------------------- | ---- |
+|---------------------|------|
 | 0-24                | 1 XP |
 | 25-49               | 2 XP |
 | 50-74               | 3 XP |

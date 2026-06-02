@@ -1,23 +1,26 @@
+---
+layout: custom-page
+---
 # Kellen O’Clover
 
 ![Kellen](./kellen.jpg)
 
-|                   | |
-|-|-|
-| Cour | Seelies |
-| Aspect | Gamin |
-| Kith | Clurichaun |
-| Bande | Maisonnée `xxx` |
+|        |                 |
+|--------|-----------------|
+| Cour   | Seelies         |
+| Aspect | Gamin           |
+| Kith   | Clurichaun      |
+| Bande  | Maisonnée `xxx` |
 
 ## Historiques
 
-| Historique | Niveau |
-|-----------------------------|-------|
-| Possessions | ⚫⚫⚫⚫⚫ |
-| Ressources | ⚫⚫⚫⚫⚫ |
-| Rêveurs | ⚫⚫⚫⚪⚪ |
-| Réminiscence | ⚫⚫⚫⚪⚪ |
-| Compagnon chimérique | ⚫⚫⚫⚪⚪ |
+| Historique           | Niveau |
+|----------------------|--------|
+| Possessions          | ⚫⚫⚫⚫⚫  |
+| Ressources           | ⚫⚫⚫⚫⚫  |
+| Rêveurs              | ⚫⚫⚫⚪⚪  |
+| Réminiscence         | ⚫⚫⚫⚪⚪  |
+| Compagnon chimérique | ⚫⚫⚫⚪⚪  |
 
 ### Compagnon chimérique: Morrig, un corbeau
 
@@ -25,11 +28,11 @@
 
 ## Arts
 
-| Art | Niveau |
-|-----------------------------|-------|
-| Ire du dragon | ⚫⚪⚪⚪⚪ |
-| Oniromancie | ⚫⚪⚪⚪⚪ |
-| Désignation | ⚫⚪⚪⚪⚪ |
+| Art           | Niveau |
+|---------------|--------|
+| Ire du dragon | ⚫⚪⚪⚪⚪  |
+| Oniromancie   | ⚫⚪⚪⚪⚪  |
+| Désignation   | ⚫⚪⚪⚪⚪  |
 
 ## Autres traits / héritages
 
@@ -89,7 +92,7 @@ les Clurichauns.
 | peau de granit | atout ; 2 points | Cet atout, très courant parmi les Trolls et les Bonnets rouges, est assez littéral. Votre épiderme est recouvert d’une fine couche de pierre très dure, qui le rend beaucoup plus résistant que la normale. Vous avez quand même la fâcheuse tendance à semer derrière vous de petits éclats dès que vous vous penchez ou que vous vous pliez. Vous êtes en permanence protégé par l’équivalent d’une cotte de mailles (cf. page 285). Si elle n’impose aucune pénalité à la Dextérité, la difficulté de tous les jets effectués pour se déplacer sans faire de bruit augmente de +1
 | oreille attentive | atout ; 1 point | Les Pookas savent y faire quand il s’agit de faire parler les gens. Cependant, vous êtes un maître en la matière. Un mot par ci, un geste par là et vous ouvrez les gens comme des huîtres, vous récoltez leurs secrets comme autant de perles. Face à votre aptitude à écouter, les autres vous dévoilent leurs sentiments, leurs problèmes et leurs rêves secrets. Ils ne savent pas pourquoi ils vous racontent tout ça, mais ils se sentent en général mieux après. La difficulté de tous les jets visant à obtenir des informations des autres diminue de –2
 | voix de rossignol | atout ; 2 points | Les Satyres disent que votre voix pourrait charmer les pommes sur les arbres. Vous avez l’oreille absolue et vous êtes capables de chanter a cappella sans erreur ni fausse note. Même lorsque vous ne faites que parler, votre voix séduit et attire les gens. La difficulté des jets en rapport avec l’éloquence ou le chant diminue de –2
-| VoLonté de fer | atoUt ; 3 points | Vos détracteurs prétendent que vous êtes têtu comme une mule. En réalité, c’est grâce à cette détermination et à cette obstination que vous ne vous détournez jamais du but que vous vous êtes fixé. La difficulté de toutes les tentatives qui visent à utiliser contre vous une magie altérant l’esprit augmente de +3 (maximum 9). Cet atout n’affecte pas les pouvoirs en rapport avec les émotions et les personnages dont le score de Volonté est inférieur à 5 ne peuvent pas le choisir.
+| Volonté de fer | atoUt ; 3 points | Vos détracteurs prétendent que vous êtes têtu comme une mule. En réalité, c’est grâce à cette détermination et à cette obstination que vous ne vous détournez jamais du but que vous vous êtes fixé. La difficulté de toutes les tentatives qui visent à utiliser contre vous une magie altérant l’esprit augmente de +3 (maximum 9). Cet atout n’affecte pas les pouvoirs en rapport avec les émotions et les personnages dont le score de Volonté est inférieur à 5 ne peuvent pas le choisir.
 | impatient | handicap ; 1 point | L’action surpasse toujours l’inaction et rester à ne rien faire, c’est bon pour les Grincheux. Une fois par scénario, faites un jet de Volonté (difficulté 5) si vous êtes obligé d’attendre au lieu d’agir. En cas d’échec, vous insistez lourdement sur la nécessité d’inter- venir, ce qui agacera sans doute votre Bande. S’ils ne suivent pas vos conseils, vous foncerez probablement tête baissée, malgré tous leurs efforts pour vous arrêter
 | coléreux | handicap ; 2 points | Vous distribuez des coups à la moindre provocation à votre encontre ou l’un de vos proches compagnons. Quand on vous incite à réagir de la sorte, vous devez faire un jet de Volonté pour vous maîtriser (difficulté à l’appréciation du conteur selon la gravité de l’insulte)
 | flash-back | handicap ; 3 points | Vous revivez parfois des événements du passé si la situation est difficile ou que les circonstances ressemblent à celles qui ont provoqué le traumatisme. Un stimulus positif ou négatif peut déclencher un tel épisode. Revenir à un souvenir agréable ou heureux peut s’avérer aussi dangereux ou distrayant que de se retrouver cerné par des hallucinations démoniaques. Au cours du flash-back, vous ignorez ce qui se passe autour de vous. Même les gens qui vous parlent feront partie des personnes ou des objets de votre vision. Vous devez interpréter ces flash-back ou les repousser en dépensant un point de Volonté

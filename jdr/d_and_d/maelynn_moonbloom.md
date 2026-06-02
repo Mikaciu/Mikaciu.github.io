@@ -1,3 +1,6 @@
+---
+layout: custom-page
+---
 # Maelynn Moonbloom
 
 ![Maelynn](./Maelynn_Moonbloom.jpeg)

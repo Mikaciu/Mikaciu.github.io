@@ -16,8 +16,6 @@
 
         div.container div.element {
             flex: 1 0 24.3%;
-            /* flex-grow: unset; */
-            /* flex-shrink: unset; */
             border: 1px solid #A0A0A0;
             overflow: hidden;
         }
