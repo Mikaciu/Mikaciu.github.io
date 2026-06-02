@@ -6,9 +6,8 @@ permissions:
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: ${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true
 
 # Controls when the workflow will run
