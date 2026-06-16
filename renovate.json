@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:best-practices"],
+  "ignorePresets": ["docker:pinDigests"],
+  "enabledManagers": ["github-actions"],
+  "packageRules": [
+    {
+      "matchDepTypes": ["action"],
+      "pinDigests": false
+    }
+  ]
+}
