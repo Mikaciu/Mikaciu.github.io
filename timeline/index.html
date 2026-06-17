@@ -1,148 +1,197 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
-    <head>
-        <title>Timeline</title>
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <link href="https://unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
-        <style type="text/css">
-            body,
-            html{
-                font-family: sans-serif;
-                margin: 0;
-                padding: 0;
-                height: 100%;
-                width: 100%;
-            }
-            .vis-group.piquet .vis-item{ background-color: #6272a4; border-color: #6272a4cc; color: #f8f8f2; text-align: center; font-weight:bold;}
-            .vis-group.c-sat .vis-item{ background-color:#bd93f9; border-color: #bd93f9cc; }
-            .vis-group.vsav .vis-item{ background-color:#ff5555; border-color: #ff5555cc; }
-            .vis-group.vtu .vis-item{ background-color:#50fa7b; border-color: #50fa7bcc; }
-            .vis-group.epa .vis-item{ background-color:#8be9fd; border-color: #8be9fdcc; }
-            .vis-group.fpt .vis-item{ background-color:#ffb86c; border-color: #ffb86ccc; }
-            .vis-group.sr .vis-item{ background-color:#ff79c6; border-color: #ff79c6cc; }
-            .vis-group .vis-item.vis-background{ opacity: .25; }
+  <head>
+    <title>Timeline</title>
+    <meta
+      name="description"
+      content="Interactive timeline visualization using vis-timeline with selectable years and event grouping."
+    />
+    <meta
+      name="keywords"
+      content="timeline, visualization, vis-timeline, events, javascript, interactive"
+    />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link
+      href="https://unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style type="text/css">
+      body,
+      html {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+      .vis-group.piquet .vis-item {
+        background-color: #6272a4;
+        border-color: #6272a4cc;
+        color: #f8f8f2;
+        text-align: center;
+        font-weight: bold;
+      }
+      .vis-group.c-sat .vis-item {
+        background-color: #bd93f9;
+        border-color: #bd93f9cc;
+      }
+      .vis-group.vsav .vis-item {
+        background-color: #ff5555;
+        border-color: #ff5555cc;
+      }
+      .vis-group.vtu .vis-item {
+        background-color: #50fa7b;
+        border-color: #50fa7bcc;
+      }
+      .vis-group.epa .vis-item {
+        background-color: #8be9fd;
+        border-color: #8be9fdcc;
+      }
+      .vis-group.fpt .vis-item {
+        background-color: #ffb86c;
+        border-color: #ffb86ccc;
+      }
+      .vis-group.sr .vis-item {
+        background-color: #ff79c6;
+        border-color: #ff79c6cc;
+      }
+      .vis-group .vis-item.vis-background {
+        opacity: 0.25;
+      }
 
-            #year-selector{position: fixed;top: 0.5em;left: 0.5em;width: 7.3em;z-index: 1;}
-        </style>
+      #year-selector {
+        position: fixed;
+        top: 0.5em;
+        left: 0.5em;
+        width: 7.3em;
+        z-index: 1;
+      }
+    </style>
 
-        <!-- Load jquery for ajax support -->
-        <script src="https://unpkg.com/jquery@2/dist/jquery.min.js"></script>
-        <script src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
-    </head>
-    <body>
-        <select id="year-selector">
-            <option value="" selected="selected"></option>
-            <option value="2018">2018</option>
-            <option value="2019">2019</option>
-            <option value="2020">2020</option>
-            <option value="2021">2021</option>
-            <option value="2022">2022</option>
-            <option value="2023">2023</option>
-            <option value="2024">2024</option>
-        </select>
-        <div id="visualization"></div>
+    <!-- Load jquery for ajax support -->
+    <script src="https://unpkg.com/jquery@2/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
+  </head>
+  <body>
+    <select id="year-selector">
+      <option value="" selected="selected"></option>
+      <option value="2018">2018</option>
+      <option value="2019">2019</option>
+      <option value="2020">2020</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+      <option value="2023">2023</option>
+      <option value="2024">2024</option>
+    </select>
+    <div id="visualization"></div>
 
-        <script type="text/javascript">
-            // DOM element where the Timeline will be attached
-            var container = document.getElementById('visualization');
+    <script type="text/javascript">
+      // DOM element where the Timeline will be attached
+      var container = document.getElementById("visualization");
 
-            // Create a Timeline
-            var timeline = new vis.Timeline(container);
+      // Create a Timeline
+      var timeline = new vis.Timeline(container);
 
-            function get_min_max_dates(selected_year_value){
-                const current_year = new Date().getFullYear();
-                const selected_year = selected_year_value || current_year;
-                
-                const min_date = new Date(selected_year + '-01-01');
-                const max_date = new Date(selected_year + '-12-31');
+      function get_min_max_dates(selected_year_value) {
+        const current_year = new Date().getFullYear();
+        const selected_year = selected_year_value || current_year;
 
-                const max_view_date = (selected_year != current_year) ? max_date : timeline.options.end;
+        const min_date = new Date(selected_year + "-01-01");
+        const max_date = new Date(selected_year + "-12-31");
 
-                return {
-                    'min': min_date,
-                    'max': max_view_date
-                };
-            }
+        const max_view_date =
+          selected_year != current_year ? max_date : timeline.options.end;
 
-            $('#year-selector').on("change", function(){
-                min_max_dates = get_min_max_dates(this.value);
-                timeline.setOptions(min_max_dates)
+        return {
+          min: min_date,
+          max: max_view_date,
+        };
+      }
 
-                timeline.setWindow(min_max_dates['min'], min_max_dates['max'])
-                timeline.redraw()
-            });
-            
-            var nextStartDate = "";
-            $.ajax({
-                url: 'timeline_options.json',
-                success: function (data) {
-                    if ('nextStartDate' in data){
-                        nextStartDate = data['nextStartDate'];
-                        delete data['nextStartDate'];
-                    }
+      $("#year-selector").on("change", function () {
+        min_max_dates = get_min_max_dates(this.value);
+        timeline.setOptions(min_max_dates);
 
-                    timeline.setOptions(data);
+        timeline.setWindow(min_max_dates["min"], min_max_dates["max"]);
+        timeline.redraw();
+      });
 
-                    min_max_dates = get_min_max_dates($('#year-selector').value);
-                    timeline.setOptions(min_max_dates)
+      var nextStartDate = "";
+      $.ajax({
+        url: "timeline_options.json",
+        success: function (data) {
+          if ("nextStartDate" in data) {
+            nextStartDate = data["nextStartDate"];
+            delete data["nextStartDate"];
+          }
+
+          timeline.setOptions(data);
+
+          min_max_dates = get_min_max_dates($("#year-selector").value);
+          timeline.setOptions(min_max_dates);
+        },
+        error: function (err) {
+          console.log("Error", err);
+          if (err.status === 0) {
+            alert(
+              "Failed to load timeline_options.json.\nPlease run this example on a server.",
+            );
+          } else {
+            alert("Failed to load timeline_options.json.");
+          }
+        },
+      });
+
+      $.ajax({
+        url: "timeline_groups_dataset.json",
+        success: function (data) {
+          var groups = new vis.DataSet(data);
+          timeline.setGroups(groups);
+        },
+        error: function (err) {
+          console.log("Error", err);
+          if (err.status === 0) {
+            alert(
+              "Failed to load timeline_groups_dataset.json.\nPlease run this example on a server.",
+            );
+          } else {
+            alert("Failed to load timeline_groups_dataset.json.");
+          }
+        },
+      });
+
+      $.ajax({
+        url: "timeline_dataset.json",
+        success: function (data) {
+          var timeline_data = new vis.DataSet(data);
+          timeline.setItems(timeline_data);
+          if (nextStartDate != "") {
+            timeline.setOptions({
+              start: nextStartDate,
+              cluster: {
+                maxItems: 3,
+                titleTemplate:
+                  "Cluster containing {count} events. Zoom in to see the individual events.",
+                clusterCriteria: function (a, b) {
+                  return a.type != "background" && b.type != "background";
                 },
-                error: function (err) {
-                    console.log('Error', err);
-                    if (err.status === 0) {
-                        alert('Failed to load timeline_options.json.\nPlease run this example on a server.');
-                    }
-                    else {
-                        alert('Failed to load timeline_options.json.');
-                    }
-                }
+              },
             });
-            
-            $.ajax({
-                url: 'timeline_groups_dataset.json',
-                success: function (data) {
-                    var groups = new vis.DataSet(data);
-                    timeline.setGroups(groups);
-                },
-                error: function (err) {
-                    console.log('Error', err);
-                    if (err.status === 0) {
-                        alert('Failed to load timeline_groups_dataset.json.\nPlease run this example on a server.');
-                    }
-                    else {
-                        alert('Failed to load timeline_groups_dataset.json.');
-                    }
-                }
-            });
-
-            $.ajax({
-                url: 'timeline_dataset.json',
-                success: function (data) {
-                    var timeline_data = new vis.DataSet(data);
-                    timeline.setItems(timeline_data);
-                    if (nextStartDate != ''){
-                        timeline.setOptions({
-                            start: nextStartDate,
-                            cluster: {
-                                maxItems: 3,
-                                titleTemplate: "Cluster containing {count} events. Zoom in to see the individual events.",
-                                clusterCriteria: function (a, b) {
-                                    return a.type != 'background' && b.type != 'background'
-                                }
-                            }
-                        });
-                    }
-                    current_date = new Date();
-                },
-                error: function (err) {
-                    console.log('Error', err);
-                    if (err.status === 0) {
-                        alert('Failed to load timeline_dataset.json.\nPlease run this example on a server.');
-                    }
-                    else {
-                        alert('Failed to load timeline_dataset.json.');
-                    }
-                }
-            });
-        </script>
-    </body>
+          }
+          current_date = new Date();
+        },
+        error: function (err) {
+          console.log("Error", err);
+          if (err.status === 0) {
+            alert(
+              "Failed to load timeline_dataset.json.\nPlease run this example on a server.",
+            );
+          } else {
+            alert("Failed to load timeline_dataset.json.");
+          }
+        },
+      });
+    </script>
+  </body>
 </html>

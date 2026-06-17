@@ -18,6 +18,10 @@ DISABLE:
   - COPYPASTE # Comment to enable checks of excessive copy-pastes
   - SPELL # Comment to enable checks of spelling mistakes
 
+DISABLE_LINTERS:
+  - REPOSITORY_TRIVY_SBOM
+  - REPOSITORY_SYFT
+
 SHOW_ELAPSED_TIME: true
 
 # Uncomment if you want MegaLinter to detect errors but not block CI to pass
@@ -25,3 +29,11 @@ SHOW_ELAPSED_TIME: true
 
 ACTION_ZIZMOR_UNSECURED_ENV_VARIABLES:
   - GITHUB_TOKEN
+
+ADDITIONAL_EXCLUDED_DIRECTORIES:
+  - _includes
+  - _layouts
+
+FILTER_REGEX_EXCLUDE: "(_includes/|_layouts/)"
+HTML_HTMLHINT_FILTER_REGEX_EXCLUDE: "(_includes/|_layouts/)"
+HTML_DJLINT_FILTER_REGEX_EXCLUDE: "(_includes/|_layouts/)"

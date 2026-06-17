@@ -1,511 +1,539 @@
-<!DOCTYPE html>
+<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Informations et outils pour la construction de base dans Cyberpunk 2045, avec tableaux, graphiques et ressources pour la gestion de l'inventaire."
+    />
+    <meta
+      name="keywords"
+      content="Cyberpunk 2045, jeu de rôle, construction de base, inventaire, ressources, tableaux, graphiques"
+    />
+    <title>Cyberpunk 2045 - construction de base</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"
+      integrity="sha256-Lye89HGy1p3XhJT24hcvsoRw64Q4IOL5a7hdOflhjTA="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+      integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://code.jquery.com/ui/1.14.1/themes/dark-hive/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+    <link
+      href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Lato");
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyberpunk 2045 - construction de base</title>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"
-    integrity="sha256-Lye89HGy1p3XhJT24hcvsoRw64Q4IOL5a7hdOflhjTA=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
-    integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
-  <link href="https://code.jquery.com/ui/1.14.1/themes/dark-hive/jquery-ui.css" rel="stylesheet" />
-  <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
-  <link href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css" rel="stylesheet" />
-  <style>
-    @import url("https://fonts.googleapis.com/css?family=Lato");
+      .inventory-pane {
+        min-width: 85vw;
+        max-width: 95vw;
+        min-height: 50vh;
+        padding: 2.5vh 5vw 0 5vw;
+      }
 
-    .inventory-pane {
-      min-width: 85vw;
-      max-width: 95vw;
-      min-height: 50vh;
-      padding: 2.5vh 5vw 0 5vw;
-    }
+      .progress-pane {
+        min-height: 50vh;
+        min-width: 20vw;
+        max-width: 33vw;
+        padding-left: 2.5vw;
+        flex: 1;
+      }
 
-    .progress-pane {
-      min-height: 50vh;
-      min-width: 20vw;
-      max-width: 33vw;
-      padding-left: 2.5vw;
-      flex: 1;
-    }
+      .pie-pane {
+        height: 75vh;
+        min-width: 20vw;
+        max-width: 33vw;
+        flex: 1;
+        padding: 0 5vw;
+      }
 
-    .pie-pane {
-      height: 75vh;
-      min-width: 20vw;
-      max-width: 33vw;
-      flex: 1;
-      padding: 0 5vw;
-    }
+      .table-pane {
+        min-height: 50vh;
+        min-width: 20vw;
+        max-width: 33vw;
+        padding-right: 2.5vw;
+        flex: 1;
+      }
 
-    .table-pane {
-      min-height: 50vh;
-      min-width: 20vw;
-      max-width: 33vw;
-      padding-right: 2.5vw;
-      flex: 1;
-    }
+      .progress {
+        display: inline-flex;
+        height: 33vh;
+      }
 
-    .progress {
-      display: inline-flex;
-      height: 33vh;
-    }
+      .progress > div {
+        display: flex;
+        flex-direction: column;
+        color: #282a36;
+      }
 
-    .progress>div {
-      display: flex;
-      flex-direction: column;
-      color: #282a36;
-    }
+      .progress > div.left {
+        padding-right: 20px;
+        text-align: right;
+      }
 
-    .progress>div.left {
-      padding-right: 20px;
-      text-align: right;
-    }
+      .progress > div.left div:last-of-type:after {
+        display: none;
+      }
 
-    .progress>div.left div:last-of-type:after {
-      display: none;
-    }
+      .progress > div.left div:after {
+        content: "";
+        background: rgba(51, 51, 51, 0.1);
+        border-radius: 2px;
+        position: absolute;
+        right: -20px;
+        top: 10px;
+        width: 1px;
+        transform: translateX(50%);
+      }
 
-    .progress>div.left div:after {
-      content: "";
-      background: rgba(51, 51, 51, 0.1);
-      border-radius: 2px;
-      position: absolute;
-      right: -20px;
-      top: 10px;
-      width: 1px;
-      transform: translateX(50%);
-    }
+      .progress > div.right {
+        padding-left: 20px;
+      }
 
-    .progress>div.right {
-      padding-left: 20px;
-    }
+      .progress > div.right div.prev:after {
+        transition: none;
+      }
 
-    .progress>div.right div.prev:after {
-      transition: none;
-    }
+      .progress > div.right div.current {
+        color: #282a36;
+        font-weight: bold;
+      }
 
-    .progress>div.right div.current {
-      color: #282a36;
-      font-weight: bold;
-    }
+      .progress > div.right div.current:before {
+        background: #282a36;
+        padding: 10px;
+        transition: all 0.2s 0.15s cubic-bezier(0.175, 0.885, 0.32, 2);
+      }
 
-    .progress>div.right div.current:before {
-      background: #282a36;
-      padding: 10px;
-      transition: all 0.2s 0.15s cubic-bezier(0.175, 0.885, 0.32, 2);
-    }
+      .progress > div.right div.current:after {
+        height: 0%;
+        transition: height 0.2s ease-out;
+      }
 
-    .progress>div.right div.current:after {
-      height: 0%;
-      transition: height 0.2s ease-out;
-    }
+      .progress > div.right div.current ~ div {
+        color: #666;
+      }
 
-    .progress>div.right div.current~div {
-      color: #666;
-    }
+      .progress > div.right div.current ~ div:before {
+        background: #666;
+        padding: 2.5px;
+      }
 
-    .progress>div.right div.current~div:before {
-      background: #666;
-      padding: 2.5px;
-    }
+      .progress > div.right div.current ~ div:after {
+        height: 0%;
+        transition: none;
+      }
 
-    .progress>div.right div.current~div:after {
-      height: 0%;
-      transition: none;
-    }
+      .progress > div.right div:before {
+        content: "";
+        background: #282a36;
+        padding: 5px;
+        border-radius: 50%;
+        position: absolute;
+        left: -20px;
+        top: 10px;
+        transform: translateX(-50%) translateY(-50%);
+        transition: padding 0.2s ease;
+      }
 
-    .progress>div.right div:before {
-      content: "";
-      background: #282a36;
-      padding: 5px;
-      border-radius: 50%;
-      position: absolute;
-      left: -20px;
-      top: 10px;
-      transform: translateX(-50%) translateY(-50%);
-      transition: padding 0.2s ease;
-    }
+      .progress > div.right div:after {
+        content: "";
+        background: #282a36;
+        border-radius: 2px;
+        position: absolute;
+        left: -20px;
+        top: 10px;
+        width: 2px;
+        transform: translateX(-50%);
+        transition: height 0.2s ease;
+      }
 
-    .progress>div.right div:after {
-      content: "";
-      background: #282a36;
-      border-radius: 2px;
-      position: absolute;
-      left: -20px;
-      top: 10px;
-      width: 2px;
-      transform: translateX(-50%);
-      transition: height 0.2s ease;
-    }
+      .progress > div div {
+        flex: 1;
+        position: relative;
+        line-height: 20px;
+        cursor: default;
+        min-height: 30px;
+      }
 
-    .progress>div div {
-      flex: 1;
-      position: relative;
-      line-height: 20px;
-      cursor: default;
-      min-height: 30px;
-    }
+      .progress > div div:last-of-type {
+        flex: 0;
+      }
 
-    .progress>div div:last-of-type {
-      flex: 0;
-    }
+      .progress.dark {
+        background: #282a36;
+        display: inline-flex;
+        width: 100%;
+      }
 
-    .progress.dark {
-      background: #282a36;
-      display: inline-flex;
-      width: 100%;
-    }
+      .progress.dark > div {
+        display: flex;
+        flex-direction: column;
+        color: #ccc;
+      }
 
-    .progress.dark>div {
-      display: flex;
-      flex-direction: column;
-      color: #ccc;
-    }
+      .progress.dark > div.left {
+        padding-right: 20px;
+        text-align: right;
+      }
 
-    .progress.dark>div.left {
-      padding-right: 20px;
-      text-align: right;
-    }
+      .progress.dark > div.left div:last-of-type:after {
+        display: none;
+      }
 
-    .progress.dark>div.left div:last-of-type:after {
-      display: none;
-    }
+      .progress.dark > div.left div:after {
+        content: "";
+        background: rgba(211, 211, 211, 0.05);
+        border-radius: 2px;
+        position: absolute;
+        right: -20px;
+        top: 10px;
+        width: 1px;
+        transform: translateX(50%);
+      }
 
-    .progress.dark>div.left div:after {
-      content: "";
-      background: rgba(211, 211, 211, 0.05);
-      border-radius: 2px;
-      position: absolute;
-      right: -20px;
-      top: 10px;
-      width: 1px;
-      transform: translateX(50%);
-    }
+      .progress.dark > div.right {
+        padding-left: 20px;
+      }
 
-    .progress.dark>div.right {
-      padding-left: 20px;
-    }
+      .progress.dark > div.right div.prev:after {
+        transition: none;
+      }
 
-    .progress.dark>div.right div.prev:after {
-      transition: none;
-    }
+      .progress.dark > div.right div.current {
+        color: white;
+        font-weight: bold;
+      }
 
-    .progress.dark>div.right div.current {
-      color: white;
-      font-weight: bold;
-    }
+      .progress.dark > div.right div.current:before {
+        background: white;
+        padding: 10px;
+        transition: all 0.2s 0.15s cubic-bezier(0.175, 0.885, 0.32, 2);
+      }
 
-    .progress.dark>div.right div.current:before {
-      background: white;
-      padding: 10px;
-      transition: all 0.2s 0.15s cubic-bezier(0.175, 0.885, 0.32, 2);
-    }
+      .progress.dark > div.right div.current:after {
+        height: 0%;
+        transition: height 0.2s ease-out;
+      }
 
-    .progress.dark>div.right div.current:after {
-      height: 0%;
-      transition: height 0.2s ease-out;
-    }
+      .progress.dark > div.right div.current ~ div {
+        color: #666;
+      }
 
-    .progress.dark>div.right div.current~div {
-      color: #666;
-    }
+      .progress.dark > div.right div.current ~ div:before {
+        background: #666;
+        padding: 2.5px;
+      }
 
-    .progress.dark>div.right div.current~div:before {
-      background: #666;
-      padding: 2.5px;
-    }
+      .progress.dark > div.right div.current ~ div:after {
+        height: 0%;
+        transition: none;
+      }
 
-    .progress.dark>div.right div.current~div:after {
-      height: 0%;
-      transition: none;
-    }
+      .progress.dark > div.right div:before {
+        content: "";
+        background: lightgray;
+        padding: 5px;
+        border-radius: 50%;
+        position: absolute;
+        left: -20px;
+        top: 10px;
+        transform: translateX(-50%) translateY(-50%);
+        transition: padding 0.2s ease;
+      }
 
-    .progress.dark>div.right div:before {
-      content: "";
-      background: lightgray;
-      padding: 5px;
-      border-radius: 50%;
-      position: absolute;
-      left: -20px;
-      top: 10px;
-      transform: translateX(-50%) translateY(-50%);
-      transition: padding 0.2s ease;
-    }
+      .progress.dark > div.right div:after {
+        content: "";
+        background: lightgray;
+        border-radius: 2px;
+        position: absolute;
+        left: -20px;
+        top: 10px;
+        height: 101%;
+        width: 2px;
+        transform: translateX(-50%);
+        transition: height 0.2s ease;
+      }
 
-    .progress.dark>div.right div:after {
-      content: "";
-      background: lightgray;
-      border-radius: 2px;
-      position: absolute;
-      left: -20px;
-      top: 10px;
-      height: 101%;
-      width: 2px;
-      transform: translateX(-50%);
-      transition: height 0.2s ease;
-    }
+      .progress.dark > div.right div.done:after {
+        background-color: #90ee9066;
+      }
 
-    .progress.dark>div.right div.done:after {
-      background-color: #90ee9066;
-    }
+      .progress.dark > div.right div.done:before {
+        background-color: #90ee90;
+      }
 
-    .progress.dark>div.right div.done:before {
-      background-color: #90ee90;
-    }
+      .progress.dark > div div {
+        flex: 1;
+        position: relative;
+        line-height: 20px;
+        cursor: default;
+        min-height: 30px;
+      }
 
-    .progress.dark>div div {
-      flex: 1;
-      position: relative;
-      line-height: 20px;
-      cursor: default;
-      min-height: 30px;
-    }
+      .progress.dark > div div:last-of-type {
+        flex: 0;
+      }
 
-    .progress.dark>div div:last-of-type {
-      flex: 0;
-    }
+      .done.current {
+        color: #62af0b !important;
+      }
 
-    .done.current {
-      color: #62af0b !important;
-    }
+      .done.current:before {
+        background: #62af0b !important;
+      }
 
-    .done.current:before {
-      background: #62af0b !important;
-    }
+      .dark .right .done {
+        color: #90ee90c0 !important;
+      }
 
-    .dark .right .done {
-      color: #90ee90c0 !important;
-    }
+      .dark .done.current {
+        color: lightgreen !important;
+      }
 
-    .dark .done.current {
-      color: lightgreen !important;
-    }
+      .dark .done.current:before {
+        background: lightgreen !important;
+      }
 
-    .dark .done.current:before {
-      background: lightgreen !important;
-    }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Lato", Arial, sans-serif;
+        background-color: #282a36;
+        color: #f8f8f2;
+      }
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Lato", Arial, sans-serif;
-      background-color: #282a36;
-      color: #f8f8f2;
-    }
+      h1 {
+        border-bottom: 1px solid #44475a;
+      }
 
-    h1 {
-      border-bottom: 1px solid #44475a;
-    }
+      div.content {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+      }
 
-    div.content {
-      display: flex;
-      position: relative;
-      flex-wrap: wrap;
-    }
+      div.background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.05;
+        background: no-repeat center url("sceptre.jpg");
+      }
 
-    div.background {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: .05;
-      background: no-repeat center url("sceptre.jpg");
-    }
+      /* JQuery-ui overrides */
+      div#tabs {
+        width: 98.7vw;
+      }
 
-    /* JQuery-ui overrides */
-    div#tabs {
-      width: 98.7vw;
-    }
+      .ui-tabs {
+        padding: 0;
+        margin: 0;
+      }
 
-    .ui-tabs {
-      padding: 0;
-      margin: 0;
-    }
+      .ui-widget-content {
+        background: none;
+        border: 0 none;
+      }
 
-    .ui-widget-content {
-      background: none;
-      border: 0 none;
-    }
+      .ui-widget-header {
+        background: none;
+      }
 
-    .ui-widget-header {
-      background: none;
-    }
-
-    .ui-tabs .ui-tabs-panel {
-      display: flex;
-    }
-  </style>
-  <script>
-    const USED_CREDIT = 30000 + 25000 + 50000;
-    let total_contribution_drawn = false;
-    $(document).ready(function () {
-      $("#tabs").tabs();
-      $('.table-pane table').DataTable({
-        paging: false,
-        searching: false,
-        info: false,
-        fixedHeader: {
-          header: false,
-          footer: false
-        },
-        order: [[0, 'desc'], [1, 'asc'], [2, 'asc']],
-        ajax: 'https://mikaciu.github.io/jdr/contributions.json',
-        drawCallback: function () {
-          var api = this.api();
-          try {
-
-            // the initial call will not work because this is called after each draw
-            if (!total_contribution_drawn) {
-              total_contribution_drawn = true;
-              return;
-            }
-
-            $('#contribution-total').html(api
-              .column(2)
-              .data()
-              .reduce(function (a, b) {
-                return a + b;
-              }));
-            $('#contribution-used').html(USED_CREDIT);
-            $('#contribution-remaining').html($('#contribution-total').html() - USED_CREDIT);
-          } catch (error) {
-            console.error(error);
-          }
-        }
-      });
-
-      $('.inventory-pane table').DataTable({
-        paging: false,
-        searching: false,
-        info: false,
-        fixedHeader: {
-          header: false,
-          footer: false
-        },
-        ajax: 'https://mikaciu.github.io/jdr/inventory.json',
-      });
-
-      $.get(
-        'https://mikaciu.github.io/jdr/contributions.json',
-        function (data) {
-          let contributions = {};
-          data["data"].forEach(function (current_element) {
-            if (contributions[current_element[1]] === undefined) {
-              contributions[current_element[1]] = 0;
-            }
-            contributions[current_element[1]] += current_element[2];
-          });
-
-          const ordered_contributions = Object.keys(contributions).sort().reduce(
-            (obj, key) => {
-              obj[key] = contributions[key];
-              return obj;
-            },
-            {}
-          );
-
-          try {
-            new Chart(document.getElementById("contributions-pie-chart"), {
-              type: 'doughnut',
-              data: {
-                labels: Object.keys(ordered_contributions),
-                datasets: [{
-                  data: Object.values(ordered_contributions),
-                  hoverOffset: 4
-                }]
+      .ui-tabs .ui-tabs-panel {
+        display: flex;
+      }
+    </style>
+    <script>
+      const USED_CREDIT = 30000 + 25000 + 50000;
+      let total_contribution_drawn = false;
+      $(document).ready(function () {
+        $("#tabs").tabs();
+        $(".table-pane table").DataTable({
+          paging: false,
+          searching: false,
+          info: false,
+          fixedHeader: {
+            header: false,
+            footer: false,
+          },
+          order: [
+            [0, "desc"],
+            [1, "asc"],
+            [2, "asc"],
+          ],
+          ajax: "https://mikaciu.github.io/jdr/contributions.json",
+          drawCallback: function () {
+            var api = this.api();
+            try {
+              // the initial call will not work because this is called after each draw
+              if (!total_contribution_drawn) {
+                total_contribution_drawn = true;
+                return;
               }
-            });
-          } catch (e) {
-            console.error(e);
-          }
-        }
-      );
-    });
-  </script>
-</head>
 
-<body>
-  <h1>Progression création de la base CyberPunk RED</h1>
-  <div id="tabs">
-    <ul>
-      <li><a href="#tabs-contribs">Contributions</a></li>
-      <li><a href="#tabs-inventory">Inventaire</a></li>
-    </ul>
-    <div id="tabs-contribs" class="content">
-      <div class="background"></div>
-      <div class="progress-pane">
-        <h2>Constructions</h2>
-        <div class="progress dark">
-          <div class="left">
-            <div class="done">30 000 €$</div>
-            <div class="done">25 000 €$</div>
-            <div class="done">50 000 €$</div>
-            <div>40 000 €$</div>
-            <div>85 000 €$</div>
-            <div></div>
-            <div></div>
-          </div>
-          <div class="right">
-            <div class="done">🥼 Laboratoire médical</div>
-            <div class="done">📦 Hangar de stockage</div>
-            <div class="done current">🚘 Garage à véhicules</div>
-            <div>⚡ Alimentation électrique</div>
-            <div>🥷🏻 Local pour netrunners et danse sensorielle</div>
-            <div>🦾 Local à cyber-implants</div>
-            <div>🚇 Travaux des souterrains</div>
+              $("#contribution-total").html(
+                api
+                  .column(2)
+                  .data()
+                  .reduce(function (a, b) {
+                    return a + b;
+                  }),
+              );
+              $("#contribution-used").html(USED_CREDIT);
+              $("#contribution-remaining").html(
+                $("#contribution-total").html() - USED_CREDIT,
+              );
+            } catch (error) {
+              console.error(error);
+            }
+          },
+        });
+
+        $(".inventory-pane table").DataTable({
+          paging: false,
+          searching: false,
+          info: false,
+          fixedHeader: {
+            header: false,
+            footer: false,
+          },
+          ajax: "https://mikaciu.github.io/jdr/inventory.json",
+        });
+
+        $.get(
+          "https://mikaciu.github.io/jdr/contributions.json",
+          function (data) {
+            let contributions = {};
+            data["data"].forEach(function (current_element) {
+              if (contributions[current_element[1]] === undefined) {
+                contributions[current_element[1]] = 0;
+              }
+              contributions[current_element[1]] += current_element[2];
+            });
+
+            const ordered_contributions = Object.keys(contributions)
+              .sort()
+              .reduce((obj, key) => {
+                obj[key] = contributions[key];
+                return obj;
+              }, {});
+
+            try {
+              new Chart(document.getElementById("contributions-pie-chart"), {
+                type: "doughnut",
+                data: {
+                  labels: Object.keys(ordered_contributions),
+                  datasets: [
+                    {
+                      data: Object.values(ordered_contributions),
+                      hoverOffset: 4,
+                    },
+                  ],
+                },
+              });
+            } catch (e) {
+              console.error(e);
+            }
+          },
+        );
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>Progression création de la base CyberPunk RED</h1>
+    <div id="tabs">
+      <ul>
+        <li><a href="#tabs-contribs">Contributions</a></li>
+        <li><a href="#tabs-inventory">Inventaire</a></li>
+      </ul>
+      <div id="tabs-contribs" class="content">
+        <div class="background"></div>
+        <div class="progress-pane">
+          <h2>Constructions</h2>
+          <div class="progress dark">
+            <div class="left">
+              <div class="done">30 000 €$</div>
+              <div class="done">25 000 €$</div>
+              <div class="done">50 000 €$</div>
+              <div>40 000 €$</div>
+              <div>85 000 €$</div>
+            </div>
+            <div class="right">
+              <div class="done">🥼 Laboratoire médical</div>
+              <div class="done">📦 Hangar de stockage</div>
+              <div class="done current">🚘 Garage à véhicules</div>
+              <div>⚡ Alimentation électrique</div>
+              <div>🥷🏻 Local pour netrunners et danse sensorielle</div>
+              <div>🦾 Local à cyber-implants</div>
+              <div>🚇 Travaux des souterrains</div>
+            </div>
           </div>
         </div>
+        <div class="pie-pane" style="position: relative">
+          <h2>Répartition des contributions</h2>
+          <canvas id="contributions-pie-chart"></canvas>
+        </div>
+        <div class="table-pane">
+          <h2>Contributions</h2>
+          <table>
+            <thead>
+              <th>Date</th>
+              <th>Donateur</th>
+              <th>Montant (€$)</th>
+            </thead>
+            <tbody>
+              &nbsp;
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="2">Total</td>
+                <td id="contribution-total">0</td>
+              </tr>
+              <tr>
+                <td colspan="2">Crédits consommés</td>
+                <td id="contribution-used">0</td>
+              </tr>
+              <tr>
+                <td colspan="2">Restant</td>
+                <td id="contribution-remaining">0</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
       </div>
-      <div class="pie-pane" style="position:relative;">
-        <h2>Répartition des contributions</h2>
-        <canvas id="contributions-pie-chart"></canvas>
-      </div>
-      <div class="table-pane">
-        <h2>Contributions</h2>
-        <table>
-          <thead>
-            <th>Date</th>
-            <th>Donateur</th>
-            <th>Montant (€$)</th>
-          </thead>
-          <tbody>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="2">Total</td>
-              <td id="contribution-total">0</td>
-            </tr>
-            <tr>
-              <td colspan="2">Cr&eacute;dits consommés</td>
-              <td id="contribution-used">0</td>
-            </tr>
-            <tr>
-              <td colspan="2">Restant</td>
-              <td id="contribution-remaining">0</td>
-            </tr>
-          </tfoot>
-        </table>
+      <div id="tabs-inventory" class="content">
+        <div class="inventory-pane">
+          <h2>Inventaire</h2>
+          <table>
+            <thead>
+              <th>Catégorie</th>
+              <th>Élement</th>
+              <th>Notes</th>
+              <th>Quantité</th>
+            </thead>
+            <tbody>
+              &nbsp;
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-    <div id="tabs-inventory" class="content">
-      <div class="inventory-pane">
-        <h2>Inventaire</h2>
-        <table>
-          <thead>
-            <th>Cat&eacute;gorie</th>
-            <th>&Eacute;lement</th>
-            <th>Notes</th>
-            <th>Quantit&eacute;</th>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-      </div>
-
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
