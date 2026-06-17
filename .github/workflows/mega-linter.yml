@@ -93,13 +93,12 @@ jobs:
           # VALIDATE_ALL_CODEBASE: true
           #
           # To validate only diff with main, set to:
-          # VALIDATE_ALL_CODEBASE: >-
-          #   ${{
-          #     github.event_name == 'push' &&
-          #     github.ref == 'refs/heads/main'
-          #   }}
-          VALIDATE_ALL_CODEBASE: true
-
+          VALIDATE_ALL_CODEBASE: >-
+            ${{
+              github.event_name == 'push' &&
+              github.ref == 'refs/heads/main'
+            }}
+          # VALIDATE_ALL_CODEBASE: true
           # Disable LLM Advisor for bot PRs (dependabot, renovate, etc.)
           LLM_ADVISOR_ENABLED: >-
             ${{
