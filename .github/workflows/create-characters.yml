@@ -82,7 +82,7 @@ jobs:
           echo "PDF file generated"
 
       - name: Publish the PDF file
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: personnages
           path: jdr/adc/personnages.pdf
