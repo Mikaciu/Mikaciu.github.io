@@ -23,8 +23,24 @@ const JSP2_LESSONS = [
   ["INC-A1", "INC-B1", "INC-B2"],
 ];
 
+const JSP2_LESSON_COUNTS = JSP2_DATES.reduce(
+  (acc, date, index) => {
+    const lessons = JSP2_LESSONS[index] || [];
+
+    lessons.forEach((lesson) => {
+      if (lesson != "M")
+        acc.runningCounts[lesson] = (acc.runningCounts[lesson] || 0) + 1;
+    });
+
+    acc.byDate[date] = { ...acc.runningCounts };
+    return acc;
+  },
+  { byDate: {}, runningCounts: {} },
+).byDate;
+
 const JSP2_EVENTS = JSP2_DATES.map((date, index) => {
   const content = JSP2_LESSONS[index] || [];
+  const lessonCounts = JSP2_LESSON_COUNTS[date] || {};
   return {
     title: `JSP 2 - cours ${index + 1}`,
     start: `${date}T08:00:00`,
@@ -32,6 +48,7 @@ const JSP2_EVENTS = JSP2_DATES.map((date, index) => {
     borderColor: "red",
     extendedProps: {
       content: content.map((lesson) => JSP2_CONTENT[lesson]),
+      lessonCounts,
     },
   };
 });

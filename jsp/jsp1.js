@@ -41,14 +41,31 @@ const JSP1_LESSONS = [
   ["INC-C2", "SC-A1", "M"],
 ];
 
+const JSP1_LESSON_COUNTS = JSP1_DATES.reduce(
+  (acc, date, index) => {
+    const lessons = JSP1_LESSONS[index] || [];
+
+    lessons.forEach((lesson) => {
+      if (lesson != "M")
+        acc.runningCounts[lesson] = (acc.runningCounts[lesson] || 0) + 1;
+    });
+
+    acc.byDate[date] = { ...acc.runningCounts };
+    return acc;
+  },
+  { byDate: {}, runningCounts: {} },
+).byDate;
+
 const JSP1_EVENTS = JSP1_DATES.map((date, index) => {
   const content = JSP1_LESSONS[index] || [];
+  const lessonCounts = JSP1_LESSON_COUNTS[date] || {};
   return {
     title: `JSP 1 - cours ${index + 1}`,
     start: `${date}T08:00:00`,
     color: JSP1_COLOR,
     extendedProps: {
       content: content.map((lesson) => JSP1_CONTENT[lesson]),
+      lessonCounts,
     },
   };
 });

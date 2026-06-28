@@ -8,15 +8,32 @@ const JSP4_DATES = LESSONS_DATES.filter(
 
 const JSP4_LESSONS = [[], []];
 
+const JSP4_LESSON_COUNTS = JSP4_DATES.reduce(
+  (acc, date, index) => {
+    const lessons = JSP4_LESSONS[index] || [];
+
+    lessons.forEach((lesson) => {
+      if (lesson != "M")
+        acc.runningCounts[lesson] = (acc.runningCounts[lesson] || 0) + 1;
+    });
+
+    acc.byDate[date] = { ...acc.runningCounts };
+    return acc;
+  },
+  { byDate: {}, runningCounts: {} },
+).byDate;
+
 const JSP4_EVENTS = [
   ...JSP4_DATES.map((date, index) => {
     const content = JSP4_LESSONS[index] || [];
+    const lessonCounts = JSP4_LESSON_COUNTS[date] || {};
     return {
       title: `JSP 4 - cours ${index + 1}`,
       start: `${date}T08:00:00`,
       color: JSP4_COLOR,
       extendedProps: {
         content: content.map((lesson) => JSP4_CONTENT[lesson]),
+        lessonCounts,
       },
     };
   }),

@@ -81,7 +81,7 @@
         var calendar = new FullCalendar.Calendar(calendarEl, {
           headerToolbar: {
             start: "title",
-            center: "listAll,dayGridMonth,Année",
+            center: "listAll,dayGridWeek,dayGridMonth,multiMonthYear",
             end: "prev,today,next",
           }, // buttons for switching between views
 
@@ -89,7 +89,7 @@
           dayMaxEvents: false,
           borderless: true,
           initialDate: calendar_start_date,
-          initialView: "Année",
+          initialView: "multiMonthYear",
           multiMonthMaxColumns: 2,
           activeStart: calendar_start_date,
           activeEnd: calendar_end_date,
@@ -108,25 +108,21 @@
               activeStart: calendar_start_date,
               activeEnd: calendar_end_date,
             },
+            timeGridWeek: {},
             dayGridYear: {
               type: "dayGrid",
             },
             dayGridMonth: {
-              // height: "85vh",
               dayMaxEventRows: 4,
               dayMaxEvents: 4,
               height: "auto",
               aspectRatio: 2.3,
             },
-            Année: {
-              type: "multiMonthYear",
-              multiMonthMaxColumns: 2,
-              duration: {
-                months: calendar_months_duration,
-              },
+            multiMonthYear: {
               dayMaxEventRows: 4,
               dayMaxEvents: 4,
               aspectRatio: 1,
+              multiMonthMaxColumns: 2,
             },
           },
 
@@ -158,15 +154,29 @@
                 .map((c) => {
                   const importantHtml =
                     c.important && c.important.length
-                      ? `<p>☝️ Notions importantes: <ul><li>${c.important.join("</li><li>")}</li></ul>`
+                      ? `<p>☝️ Notions importantes: <ul><li>${c.important.join("</li><li>")}</li></ul></p>`
                       : "";
                   const bookPages =
                     c.book && c.book.length
-                      ? `📚 <em>Page(s) ${c.book}</em></div>`
+                      ? `<p>📚 <em>Page(s) ${c.book}</em></p>`
                       : "";
-                  return `<h3>📖 <strong>${c.theme}</h3>${locationHtml}${importantHtml}${bookPages}</div>`;
+                  return `<h3>📖 ${c.theme}</h3><p>${locationHtml}${importantHtml}${bookPages}</p>`;
                 })
                 .join("<hr style='margin: 5px 0;'>");
+            }
+
+            const lessonCounts = info.event.extendedProps.lessonCounts;
+            if (lessonCounts && Object.keys(lessonCounts).length) {
+              console.log("Lessons: ", lessonCounts);
+              const sortedLessonCounts = Object.entries(lessonCounts).sort(
+                ([lessonA], [lessonB]) => lessonA.localeCompare(lessonB),
+              );
+              console.log("sortedLessonCounts: ", sortedLessonCounts);
+
+              const lessonCountHtml = sortedLessonCounts
+                .map(([lesson, count]) => `${lesson} × ${count}`)
+                .join(", ");
+              tooltipContent += `<h3>📊 Comptage des leçons</h3><p>${lessonCountHtml}</p>`;
             }
 
             // Create the tooltip using Tippy.js
