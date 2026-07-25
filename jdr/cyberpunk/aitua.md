@@ -1,6 +1,7 @@
 ---
 layout: custom-page
 ---
+
 # Kaori Kaumātua (Aituā)
 
 ![Aitua](./aitua.jpg)
@@ -25,7 +26,7 @@ Trouver les responsables du krach bancaire et les faire ... Payer (mauvais jeu d
 Synthétiser une substance capable de ranimer une victime en arrêt cardiaque.
 Idée: la qualité de la substance va déterminer le temps maximum après l'arrêt pendant lequel la substance est efficace.
 
-### Nanorobotique
+### Nanorobotique ✅✅⬜⬜⬜⬜⬜
 
 Trouver une manière de rendre les nanorobots capable de diagnostic médical
 
