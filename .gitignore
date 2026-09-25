@@ -211,3 +211,5 @@ pyrightconfig.json
 
 **/.tool-versions
 **/megalinter-reports/
+
+resumes/mika/rendercv_output/*

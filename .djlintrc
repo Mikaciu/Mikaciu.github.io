@@ -1,3 +1,4 @@
 {
-    "use_gitignore": true
+    "use_gitignore": true,
+    "ignore": "H030"
 }

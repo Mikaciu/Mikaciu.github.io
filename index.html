@@ -1,933 +1,558 @@
 <!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html lang="fr">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta
-      name="description"
-      content="Personal website and resume of Mikaël Hautin showcasing skills, experience, and projects."
-    />
-    <meta
-      name="keywords"
-      content="Mikaël Hautin, resume, portfolio, web developer, projects, skills"
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="CV Mikaël Hautin" />
+    <title>Mikaël Hautin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-light.min.css"
+      integrity="sha512-Pmhg2i/F7+5+7SsdoUqKeH7UAZoVMYb1sxGOoJ0jWXAEHP0XV2H4CITyK267eHWp2jpj7rtqWNkmEOw1tNyYpg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link
       rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.12/dist/katex.min.css"
+      integrity="sha384-PDbUeNCuE6bOPudPOgFyIUEy3UJawJVwr3XlGO90FIuf5qNIoTLSgOJo/dC2ZXV/"
+      crossorigin="anonymous"
     />
 
-    <title>Mikaël Hautin</title>
-    <style type="text/css">
-      * {
-        margin: 0;
-        padding: 0;
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.12/dist/katex.min.js"
+      integrity="sha384-VkqWq8xtm5YQk1BBXczQ8/Sx+DlCzF8cuS43bZwmtVXzRFtyLTqTCdP7MKmKo+KN"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.12/dist/contrib/auto-render.min.js"
+      integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh"
+      crossorigin="anonymous"
+      onload="
+        renderMathInElement(document.body, {
+          delimiters: [{ left: '$$', right: '$$', display: false }],
+        })
+      "
+    ></script>
+    <style>
+      .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 45px;
       }
 
-      body {
-        font-family: "Open Sans", Helvetica, Sans-Serif;
-        font-size: 16px;
-        font-style: normal;
-        background: url(images/noise.jpg);
-      }
-
-      #page-wrap {
-        width: 800px;
-        margin: 40px auto 60px;
-      }
-
-      h1 {
-        margin: 0 0 16px 0;
-        padding: 0 0 16px 0;
-        font-size: 42px;
-        font-weight: bold;
-        letter-spacing: -2px;
-      }
-
-      h1,
-      div.values {
-        border-bottom: 1px solid #999;
-      }
-
-      h2 {
-        font-size: 20px;
-        margin: 0 0 6px 0;
-        position: relative;
-      }
-
-      h2 span {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        font-style: italic;
-        font-family: Georgia, Serif;
-        font-size: 16px;
-        color: #999;
-        font-weight: normal;
-      }
-
-      h3 {
-        font-size: 16px;
-        margin: 0 0 6px 0;
-        position: relative;
-      }
-
-      h3 span {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        font-style: italic;
-        font-family: Georgia, Serif;
-        font-size: 14px;
-        color: #999;
-        font-weight: normal;
-      }
-
-      h4 {
-        font-size: 14px;
-        margin: 0 0 6px 0;
-        position: relative;
-      }
-
-      p {
-        margin: 0 0 16px 0;
-      }
-
-      a {
-        color: #999;
-        text-decoration: none;
-        border-bottom: 1px dotted #999;
-      }
-
-      a:hover {
-        border-bottom-style: solid;
-        color: black;
-      }
-
-      div.experience {
-        margin-top: 12px;
-        padding-top: 12px;
-        border-top: 1px solid #999;
-      }
-
-      ul {
-        margin: 0 0 8px 17px;
-      }
-
-      div.values {
-        padding-bottom: 12px;
-      }
-      div.values,
-      div.misc {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 100%;
-      }
-      div.values h1 {
-        width: 100%;
-      }
-      div.values div#contact-info {
-        flex-basis: 33%;
-        width: 33%;
-      }
-      div.values div#objective {
-        flex-basis: 66%;
-        width: 66%;
-      }
-      div.misc > div {
-        flex-basis: 45%;
-        width: 45%;
-      }
-
-      dd.adr {
-        display: flex;
-        align-items: center;
-      }
-      dd.adr span {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0 1px;
-      }
-      dd.adr span.postal-code,
-      dd.adr span.locality {
-        padding-bottom: 4px;
-      }
-
-      #objective p:first-child {
-        margin-top: 0;
-      }
-      #objective p {
-        font-family: Georgia, Serif;
-        font-style: italic;
-        color: #666;
-        margin: 6px 0;
-        font-size: 0.92em;
-      }
-
-      div.container-twocol {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: space-between;
-        margin-top: 24px;
-      }
-      div.container-twocol div.background {
-        flex-basis: 66%;
-        width: 66%;
-      }
-      div.container-twocol div.background div.background-item {
-        margin: 1em 0;
-      }
-      div.container-twocol div.background div.background-item:last-child {
-        margin: 1em 0 0 0;
-      }
-
-      div.container-twocol div.skills {
-        flex-basis: 33%;
-        width: 33%;
-      }
-      div.container-twocol div.skills div.skill {
-        margin: 1em 0;
-      }
-      div.container-twocol div.skills div.skill:last-child {
-        margin: 1em 0 0 0;
-      }
-      div.skill div.info {
-        font-size: 0.9em;
-        display: inline-block;
-        color: #666;
-      }
-      div.skill div.info ul {
-        margin: 0;
-      }
-      div.skill div.info ul li {
-        display: inline;
-        font-size: 0.7em;
-      }
-      div.skill div.info > svg,
-      div.skill div.info > i {
-        margin-right: 3px;
-      }
-      div.skill div.info ul li i,
-      div.skill div.info ul li svg,
-      div.skill div.info ul li img {
-        margin-right: 3px;
-      }
-      div.skill div.info ul li i,
-      div.skill div.info svg {
-        width: 1em;
-        height: 1em;
-      }
-      div.skill div.info ul li svg,
-      div.skill div.info ul li img {
-        height: 0.7em;
-        width: 0.7em;
-      }
-      div.skill div.info ul li:after {
-        content: " · ";
-      }
-      div.skill div.info ul li:last-child:after {
-        content: "";
-      }
-      div.score {
-        border: 1px solid #c0c0c0;
-        border-radius: 6px;
-        font-size: 0;
-        height: 5px;
-        width: 90%;
-        background-color: #d1d9e1;
-      }
-      div.score div.score-progress {
-        background-color: #5695cd;
-        height: 5px;
-      }
-
-      dl.contents {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: right;
-        margin-top: 2em;
-      }
-
-      dl.contents > dt {
-        flex-basis: 20%;
-        width: 20%;
-      }
-      dl.contents > dd {
-        flex-basis: 79%;
-        width: 79%;
-      }
-
-      dt.icon {
-        float: left;
-        clear: left;
-        width: 24px;
-        color: #5695cd;
-      }
-
-      dd.icon {
-        float: left;
-        margin: 0 0 0 6px;
-      }
-
-      dd.email span.email:after {
-        content: "contact\40hautin.fr";
-      }
-      dd.tel span.tel:after {
-        content: "6 67 08 15 33";
-      }
-
-      .round-icon {
-        display: flex;
-        align-items: center;
-        padding-right: 0.5em;
-      }
-      .round-icon i {
-        margin-right: 0.63em;
-        font-size: 1.14em;
-        background-color: #5695cd;
-        color: #fff;
-        padding: 0.25em;
-        border-radius: 50%;
-        height: 1.14em;
-        width: 1.14em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 1.6;
-      }
-      .round-icon h2 {
-        margin-top: 0;
-        font-size: 1.5em;
-        line-height: 1;
-      }
-
-      ul.technical-context {
-        list-style-type: none;
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      ul.technical-context li {
-        border: 1px solid #999;
-        border-radius: 5px;
-        padding: 3px;
-        margin: 3px;
-        flex: auto;
-        text-align: center;
-        color: #444;
-      }
-
-      dt svg {
-        max-width: 24px;
-        max-height: 24px;
-      }
-
-      ul.languages,
-      ul.hobbies {
-        margin: 6px 0 0 0;
-        list-style-type: none;
-      }
-      ul.languages li,
-      ul.hobbies li {
-        margin: 0;
-      }
-      ul.languages img,
-      ul.hobbies li i {
-        margin-right: 3px;
-      }
-      ul.languages img {
-        height: 14px;
-      }
-
-      div.xp-item {
-        margin: 1em 0;
-      }
-      div.xp-item:first-of-type {
-        margin-top: 0;
-      }
-      div.xp-item:last-of-type {
-        margin-bottom: 0;
-      }
-      div.xp-job {
-        font-size: 1.14em;
-        font-weight: 600;
-        line-height: 1.25;
-      }
-      div.xp-job span,
-      div.xp-job small {
-        font-weight: 400;
-      }
-      div.xp-job small {
-        font-size: 0.9em;
-      }
-      div.xp-date {
-        font-size: 0.8em;
-        margin-top: 0.3em;
-        margin-bottom: 1em;
-        color: #5695cd;
-      }
-      div.xp-detail ul {
-        font-size: 0.9em;
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
       }
     </style>
   </head>
 
   <body>
-    <div id="page-wrap">
-      <div class="values">
-        <h1 class="fn">Mikaël Hautin</h1>
-        <div id="contact-info">
-          <dl class="vcard">
-            <dt class="icon"><i class="fa fa-phone"></i></dt>
-            <dd class="tel"><span class="tel">+33&nbsp;</span></dd>
-            <dt class="icon"><i class="fa fa-envelope"></i></dt>
-            <dd class="email"><span class="email">&nbsp;</span></dd>
-            <dt class="icon"><i class="fa fa-car"></i></dt>
-            <dd class="note">Permis B</dd>
-            <dt class="icon"><i class="fa fa-house"></i></dt>
-            <dd class="adr">
-              <span class="country-name"
-                ><img alt="France" src="flags/fr.png"
-              /></span>
-              <span class="postal-code">90400</span>
-              <span class="locality">Dorans</span>
-            </dd>
-            <dt class="icon"><i class="fa fa-house-signal"></i></dt>
-            <dd class="note">Propriétaire</dd>
-            <dt class="icon"><i class="fa fa-truck-medical"></i></dt>
-            <dd class="note">Sapeur-pompier volontaire</dd>
-          </dl>
-        </div>
-
-        <div id="objective">
+    <article class="markdown-body">
+      <h1>Mikaël Hautin's CV</h1>
+      <ul>
+        <li>Phone: +33 6 67 08 15 33</li>
+        <li>Email: <a href="mailto:contact@hautin.fr">contact@hautin.fr</a></li>
+        <li>Location: 🇫🇷 Dorans, FR</li>
+        <li>GitHub: <a href="https://github.com/mikaciu">mikaciu</a></li>
+      </ul>
+      <h1>À propos de moi</h1>
+      <p>
+        Je sais faire preuve d'adaptation au contexte ainsi qu'aux contraintes,
+        en toutes circonstances.
+      </p>
+      <p>
+        J'aime beaucoup travailler en équipe et échanger avec mes collègues dans
+        le but d'accroître mutuellement nos connaissances ; je n'hésite pas à me
+        remettre en question en ce sens.
+      </p>
+      <p>
+        Ma philosophie professionnelle se résume en ces termes : "le respect par
+        la compétence".
+      </p>
+      <p>
+        Je suis passionné par l'informatique et les nouvelles technologies, et
+        je m'intéresse particulièrement à la sécurité informatique, au
+        DevSecOps, à l'automatisation et au cloud.
+      </p>
+      <h1>Compétences</h1>
+      <p><strong>Cloud:</strong> Microsoft Azure</p>
+      <p>
+        <strong>Cybersécurité:</strong> fail2ban, ufw, lynis, nmap, suricata
+      </p>
+      <p>
+        <strong>Développement:</strong> Python (à l'aide de <code>uv</code>,
+        <code>ty</code>, <code>ruff</code>), Bash, PHP, SQL, JavaScript,
+        HTML/CSS
+      </p>
+      <p>
+        <strong>DevSecOps:</strong> Azure Pipelines, git, GitHub actions,
+        Kubernetes, helm-charts, terraform
+      </p>
+      <p>
+        <strong>Expérience développeur:</strong> Conception de webinaires,
+        sessions de formations avec les développeurs, échanges réguliers afin de
+        récolter des retours d'expérience
+      </p>
+      <p>
+        <strong>IA:</strong> Création de <em>skill</em> IA pour automatiser la
+        création de pipelines SonarQube
+      </p>
+      <p>
+        <strong>SAST:</strong> checkov, gitleaks/betterleaks, grype, SonarQube,
+        trivy, semgrep, megalinter
+      </p>
+      <p>
+        <strong>Systèmes:</strong> GNU/Linux (Debian, OpenSuSE, gentoo), Mac OS,
+        Windows
+      </p>
+      <p>
+        <strong>Langues:</strong> Français (natif) ; Anglais (courant) ;
+        Espagnol (lu) ; Italien (lu)
+      </p>
+      <p><strong>Permis de conduire:</strong> Catégorie B</p>
+      <h1>Expériences</h1>
+      <h2><strong>Ingénieur en services cloud</strong>, FORVIA -- France</h2>
+      <p>Jan 2020 – présent</p>
+      <ul>
+        <li>
           <p>
-            Je sais faire preuve d'adaptation au contexte ainsi qu'aux
-            contraintes, en toutes circonstances.
+            Déploiement automatique d'une instance SonarQube (license developer
+            puis enterprise)
           </p>
+        </li>
+        <li>
           <p>
-            J'aime beaucoup travailler en équipe et échanger avec mes collègues
-            dans le but d'accroître mutuellement nos connaissances.
+            Automatisation autour de l'API SonarQube: création de projets,
+            création d'utilisateurs et configuration de permissions, calcul
+            d'indicateurs
           </p>
+        </li>
+        <li>
           <p>
-            J'ai à cœur d'accroître sans cesse ma compétence et n'hésite pas à
-            me remettre en question.
+            Création d'outils pour automatiser au maximum les tâches répétitives
           </p>
+        </li>
+        <li>
           <p>
-            Ma philosophie professionnelle se résume en ces termes : "le respect
-            par la compétence".
+            Partage de connaissance par le biais de webinaires et de sessions de
+            formation
           </p>
-        </div>
-      </div>
-
-      <div class="container-twocol">
-        <div class="background">
-          <div class="round-icon">
-            <i class="fa fa-pencil"></i>
-            <h2>&Eacute;ducation</h2>
-          </div>
-
-          <div class="background-item">
-            <h3>2008-2017 - Ingénieur Réseaux, Systèmes et Multimedia</h3>
-            <h4>Centre National des Arts et Métiers</h4>
-            <h5>Mention très bien</h5>
-            <div class="score">
-              <div class="score-progress" style="width: 80%">&nbsp;</div>
-            </div>
-          </div>
-
-          <div class="background-item">
-            <h3>2010 - Certification "TYPO3 certified integrator"</h3>
-            <h4>Typo3 Association - score de 72%</h4>
-            <div class="score">
-              <div class="score-progress" style="width: 72%">&nbsp;</div>
-            </div>
-          </div>
-
-          <div class="background-item">
-            <h3>
-              2005 - Licence professionnelle
-              <abbr
-                title="Intégration des Processus Industriels aux Technologies de l'information et de la Communication"
-                >IPITC</abbr
-              >
-            </h3>
-            <h4>IUT Montbéliard</h4>
-          </div>
-
-          <div class="background-item">
-            <h3>2004 - DUT Informatique de gestion</h3>
-            <h4>IUT Belfort</h4>
-          </div>
-
-          <div class="background-item">
-            <h3>2002 - Baccalauréat scientifique</h3>
-            <h4>Lycée Gustave Courbet</h4>
-          </div>
-
-          <div class="misc">
-            <div>
-              <div class="round-icon">
-                <i class="fa fa-language"></i>
-                <h2>Langues</h2>
-              </div>
-              <ul class="languages">
-                <li>
-                  <img alt="Fran&ccedil;ais" src="flags/fr.png" />Langue
-                  maternelle
-                </li>
-                <li>
-                  <img alt="Anglais" src="flags/gb.png" />Niveau courant. <br />
-                  BULATS obtenu en juin 2010, avec un score de 89% (C1/4).<br />
-                  Pratique professionnelle régulière.
-                </li>
-                <li><img alt="Italien" src="flags/it.png" />Lu</li>
-                <li><img alt="Espagnol" src="flags/es.png" />Lu</li>
-              </ul>
-            </div>
-            <div>
-              <div class="round-icon">
-                <i class="fa fa-heart-pulse"></i>
-                <h2>Hobbies</h2>
-              </div>
-              <ul class="hobbies">
-                <li>
-                  <i class="fa fa-person-running"></i>Course &agrave; pied
-                </li>
-                <li><i class="fa fa-kitchen-set"></i>Cuisine</li>
-                <li><i class="fa fa-pen-ruler"></i>DIY</li>
-                <li><i class="fa fa-dumbbell"></i>Fitness</li>
-                <li><i class="fa fa-dice"></i>Jeux de rôle</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="skills">
-          <div class="round-icon">
-            <i class="fa fa-toolbox"></i>
-            <h2>Compétences</h2>
-          </div>
-
-          <div class="skill">
-            <div class="info">
-              <i class="fa fa-gears"></i>Systèmes d'exploitation
-              <ul>
-                <li><i class="fa-brands fa-linux"></i>GNU/Linux</li>
-                <li><i class="fa-brands fa-apple"></i>Mac OS</li>
-                <li><i class="fa-brands fa-windows"></i>Windows</li>
-              </ul>
-            </div>
-            <div class="score">
-              <div class="score-progress" style="width: 80%">&nbsp;</div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="info">
-              <i class="fa-brands fa-python"></i>Python
-              <ul>
-                <li>
-                  <img
-                    alt="pipx"
-                    src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/pipx.svg"
-                  />pipx
-                </li>
-                <li>pyenv</li>
-                <li>
-                  <img
-                    alt="ruff"
-                    src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/ruff.svg"
-                  />ruff
-                </li>
-                <li>
-                  <img
-                    alt="uv"
-                    src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/uv.svg"
-                  />uv
-                </li>
-              </ul>
-            </div>
-            <div class="score">
-              <div class="score-progress" style="width: 85%">&nbsp;</div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="info">
-              <i class="fa fa-infinity"></i
-              ><abbr title="Continuous Integration">CI</abbr> -
-              <abbr title="Continuous Delivery">CD</abbr>
-              <ul>
-                <li>Azure pipelines</li>
-                <li>
-                  <img
-                    alt="git"
-                    src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/git.svg"
-                  />git
-                </li>
-                <li>
-                  <img
-                    alt="GitHub actions"
-                    src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/githubactions.svg"
-                  />GitHub actions
-                </li>
-                <li>
-                  <img
-                    alt="Kubernetes"
-                    src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/kubernetes.svg"
-                  />Kubernetes
-                </li>
-                <li>
-                  <img
-                    alt="helm-charts"
-                    src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/helm.svg"
-                  />helm-charts
-                </li>
-                <li>
-                  <img
-                    alt="Terraform"
-                    src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/terraform.svg"
-                  />Terraform
-                </li>
-              </ul>
-            </div>
-            <div class="score">
-              <div class="score-progress" style="width: 85%">&nbsp;</div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="info">
-              <i class="fa fa-file-shield"></i
-              ><abbr title="Static Application Security Testing">SAST</abbr>
-              <ul>
-                <li>checkov</li>
-                <li>gitleaks</li>
-                <li>grype</li>
-                <li>
-                  <img
-                    alt="SonarQube"
-                    src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/sonarqube.svg"
-                  />SonarQube
-                </li>
-                <li>
-                  <img
-                    alt="trivy"
-                    src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/trivy.svg"
-                  />trivy
-                </li>
-              </ul>
-            </div>
-            <div class="score">
-              <div class="score-progress" style="width: 85%">&nbsp;</div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="info">
-              <i class="fa fa-lock"></i>Cybers&eacute;curit&eacute;
-              <ul>
-                <li>fail2ban</li>
-                <li>lynis</li>
-                <li>nmap</li>
-                <li>shorewall</li>
-                <li>suricata</li>
-                <li>ufw</li>
-              </ul>
-            </div>
-            <div class="score">
-              <div class="score-progress" style="width: 45%">&nbsp;</div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="info">
-              <i class="fa fa-pencil"></i
-              ><abbr
-                title="Content Management System = Syst&egrave;me de gestion de contenu"
-                >CMS</abbr
-              >
-              <ul>
-                <li>
-                  <img
-                    alt="TYPO3"
-                    src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/typo3.svg"
-                  />TYPO3
-                </li>
-                <li>SPIP</li>
-                <li>CREloaded</li>
-                <li>Prestashop</li>
-                <li>PluXML</li>
-              </ul>
-            </div>
-            <div class="score">
-              <div class="score-progress" style="width: 75%">&nbsp;</div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="info">
-              <i class="fa fa-list-check"></i>Normes
-              <ul>
-                <li>Accessiweb</li>
-                <li>MERISE</li>
-                <li>
-                  <abbr
-                    title="Référentiel Général d'Accessibilité pour les Administrations"
-                    >RGAA</abbr
-                  >
-                </li>
-                <li>
-                  <img
-                    alt="UML"
-                    src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/uml.svg"
-                  />UML
-                </li>
-                <li><abbr title="Web Accessibility Initiative">WAI</abbr></li>
-                <li>
-                  <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>
-                </li>
-              </ul>
-            </div>
-            <div class="score">
-              <div class="score-progress" style="width: 90%">&nbsp;</div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="info">
-              <i class="fa fa-language"></i>Programmation
-              <ul>
-                <li>CSS</li>
-                <li>Java</li>
-                <li>JavaScript</li>
-                <li>PHP</li>
-                <li>SQL</li>
-                <li>XHTML</li>
-              </ul>
-            </div>
-            <div class="score">
-              <div class="score-progress" style="width: 75%">&nbsp;</div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="info">
-              <i class="fa fa-scroll"></i>Scripting
-              <ul>
-                <li>Shell (bash, sh)</li>
-                <li>Powershell</li>
-                <li>regex</li>
-              </ul>
-            </div>
-            <div class="score">
-              <div class="score-progress" style="width: 80%">&nbsp;</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="experience">
-        <div class="round-icon">
-          <i class="fa fa-toolbox"></i>
-          <h2>Expérience professionnelle</h2>
-        </div>
-
-        <div class="xp-item">
-          <div class="xp-job">
-            Ingénieur en services cloud<span> @ Forvia</span><br /><small
-              >Seloncourt, France</small
-            >
-          </div>
-          <div class="xp-date">Jan 2020 - pr&eacute;sent</div>
-          <div class="xp-detail">
-            <ul>
-              <li>
-                Déploiement automatique d'une instance SonarQube (license
-                <em>developer</em> puis <em>enterprise</em>)
-              </li>
-              <li>
-                Automatisation autour de l'API SonarQube:
-                <ul>
-                  <li>Création de projets</li>
-                  <li>
-                    Création d'utilisateurs et configuration de permissions
-                  </li>
-                  <li>Calcul d'indicateurs</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="xp-item">
-          <div class="xp-job">
-            Prestataire en architecture technique<span> @ Feel Europe</span
-            ><br /><small>Seloncourt, France</small>
-          </div>
-          <div class="xp-date">F&eacute;v 2016 - D&eacute;c 2019</div>
-          <div class="xp-detail">
-            <ul>
-              <li>
-                Installation et configuration d'une instance GitLab. Formation
-                des utilisateurs à Git
-              </li>
-              <li>
-                Livraison des environnements (standard Dassault et
-                personnalisations Faurecia)<br />ENOVIA V6R2009x, V6R2012x,
-                V6R2015x
-              </li>
-              <li>Suivi des anomalies avec Dassault Systèmes</li>
-              <li>Développement et maintenance des outils utilisés</li>
-              <li>Packaging et déploiement silencieux sur postes clients</li>
-              <li>
-                Construction et collaboration à une base de connaissances sur
-                les applications déployées
-              </li>
-              <li>Outil de déchiffrement et rechiffrement d'eFCS</li>
-              <li>
-                Outil de maintenance du composant 3DSXI (recherche indexée)
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="xp-item">
-          <div class="xp-job">
-            Prestataire en support niveau 3<span> @ Feel Europe</span
-            ><br /><small>Seloncourt, France</small>
-          </div>
-          <div class="xp-date">Mai 2012 - Jan 2016</div>
-          <div class="xp-detail">
-            <ul>
-              <li>
-                Mise en place de procédures de travail concernant les tâches
-                récurrentes du support, et intégration de ces procédures dans
-                une base de connaissances (Wiki)
-              </li>
-              <li>
-                Refonte de la librairie Java du support, dans le but de
-                simplifier le traitement des scripts exécutés en production (SP)
-                et mise en place de sa documentation
-              </li>
-              <li>
-                Assistance technique aux membres chinois de l'équipe, afin de
-                les orienter dans une démarche de montée en compétence JAVA et
-                une amélioration de la qualité et de la traçabilité.
-              </li>
-              <li>
-                Analyse des incidents récurrents afin d'en établir des
-                <abbr title="Request for Change">RFC</abbr>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="xp-item">
-          <div class="xp-job">
-            Prestataire en développement logiciel<span> @ Feel Europe</span
-            ><br /><small>Seloncourt, France</small>
-          </div>
-          <div class="xp-date">Jul 2011 - Avr 2012</div>
-          <div class="xp-detail">
-            <ul>
-              <li>développement de RFC (Request for Change)</li>
-              <li>
-                développement et maintenance des outils utilisés (extension
-                Firefox, intégration notepad++)
-              </li>
-              <li>analyse et optimisation des process étudiés.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="xp-item">
-          <div class="xp-job">
-            Autoentrepreneur en d&eacute;veloppement logiciel et administration
-            syst&egrave;me<span> @ Ind&eacute;pendant</span><br /><small
-              >Valdoie, France</small
-            >
-          </div>
-          <div class="xp-date">Mar 2011 - F&eacute;v 2012</div>
-          <div class="xp-detail">
-            <ul>
-              <li>Découpage CATEP</li>
-              <li>Administration système</li>
-              <li>Diaporama HTML</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="xp-item">
-          <div class="xp-job">
-            D&eacute;veloppeur &amp; administrateur syst&egrave;mes<span>
-              @ Cim&eacute;os</span
-            ><br /><small>Montb&eacute;liard, France</small>
-          </div>
-          <div class="xp-date">Avr 2009 - Mar 2011</div>
-          <div class="xp-detail">
-            <ul>
-              <li>Site internet CAPEB</li>
-              <li>Site internet SARLAM</li>
-              <li>Site internet Bourgogne Bâtiment Durable</li>
-              <li>
-                Administration de l'infrastructure (serveurs windows et Linux)
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="xp-item">
-          <div class="xp-job">
-            D&eacute;veloppeur web<span> @ Pimentic</span><br /><small
-              >Belfort, France</small
-            >
-          </div>
-          <div class="xp-date">Sep 2005 - F&eacute;v 2009</div>
-          <div class="xp-detail">
-            <ul>
-              <li>Mairie de Seloncourt</li>
-              <li>
-                SERS (Société d'aménagement et d'Équipement de la Région de
-                Strasbourg)
-              </li>
-              <li>Centre de Gestion 70</li>
-              <li>Création d'un modèle de site SPIP réutilisable</li>
-              <li>TGV Belfort</li>
-              <li>IEG</li>
-              <li>Générateur de site TYPO3 Vétoquinol</li>
-              <li>Place de marché economia</li>
-              <li>Prestige équipement</li>
-              <li>Cre@site (générateur de sites internet en ASP)</li>
-              <li>
-                Bien-être Attitude, Confiserie des Hautes-Vosges, Europartners,
-                Mabi
-              </li>
-              <li>Intranet Vetoquinol</li>
-              <li>
-                Chambre de Commerce et d'Industrie du Territoire de Belfort
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="xp-item">
-          <div class="xp-job">
-            D&eacute;veloppeur web<span> @ Alstom</span><br /><small
-              >Belfort, France</small
-            >
-          </div>
-          <div class="xp-date">Avr 2005 - Juin 2005</div>
-          <div class="xp-detail">
-            <ul>
-              <li>Recensement et rédaction du besoin client</li>
-              <li>Conception et développement de maquettes fonctionnelles</li>
-              <li>Analyse du retour utilisateur</li>
-              <li>Conception, réalisation et maintenance de la plateforme</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+        </li>
+      </ul>
+      <h2>
+        <strong>Caporal-Chef de Sapeur-Pompier volontaire</strong>, SDIS90 --
+        Danjoutin, France
+      </h2>
+      <p>2018 – présent</p>
+      <ul>
+        <li>
+          <p>
+            Responsable pédagogique des Jeunes Sapeurs-Pompiers de
+            l'agglomération Belfortaine: conception de cours et d'évaluations,
+            suivi des résultats
+          </p>
+        </li>
+        <li>
+          <p>
+            Réalisation d'une application (PHP, MariaDB) de gestion de solde de
+            boissons pour le foyer
+          </p>
+        </li>
+      </ul>
+      <h2>
+        <strong>Prestataire en architecture technique</strong>, Feel Europe --
+        Seloncourt, France
+      </h2>
+      <p>Fév 2016 – Déc 2019</p>
+      <ul>
+        <li>
+          <p>
+            Installation et configuration d'une instance GitLab, et formation
+            des utilisateurs à Git
+          </p>
+        </li>
+        <li>
+          <p>
+            Livraison des environnements standards Dassault et des
+            personnalisations Faurecia (ENOVIA V6R2009x, V6R2012x et V6R2015x)
+          </p>
+        </li>
+        <li>
+          <p>Suivi des anomalies avec Dassault Systèmes</p>
+        </li>
+        <li>
+          <p>Développement et maintenance des outils utilisés</p>
+        </li>
+        <li>
+          <p>Packaging et déploiement silencieux sur les postes clients</p>
+        </li>
+        <li>
+          <p>
+            Construction et contribution à une base de connaissances sur les
+            applications déployées
+          </p>
+        </li>
+        <li>
+          <p>Outil de déchiffrement et de rechiffrement d'eFCS</p>
+        </li>
+        <li>
+          <p>Outil de maintenance du composant 3DSXI (recherche indexée)</p>
+        </li>
+      </ul>
+      <h2>
+        <strong>Prestataire en support niveau 3</strong>, Feel Europe --
+        Seloncourt, France
+      </h2>
+      <p>Mai 2012 – Jan 2016</p>
+      <ul>
+        <li>
+          <p>
+            Mise en place de procédures pour les tâches récurrentes du support
+            et intégration dans une base de connaissances (Wiki)
+          </p>
+        </li>
+        <li>
+          <p>
+            Refonte de la bibliothèque Java du support pour simplifier le
+            traitement des scripts exécutés en production (SP), avec
+            documentation
+          </p>
+        </li>
+        <li>
+          <p>
+            Accompagnement technique des membres chinois de l'équipe pour
+            développer leurs compétences Java, la qualité et la traçabilité
+          </p>
+        </li>
+        <li>
+          <p>
+            Analyse des incidents récurrents afin d'établir des demandes de
+            changement (RFC)
+          </p>
+        </li>
+      </ul>
+      <h2>
+        <strong>Prestataire en développement logiciel</strong>, Feel Europe --
+        Seloncourt, France
+      </h2>
+      <p>Juil 2011 – Avr 2012</p>
+      <ul>
+        <li>
+          <p>Développement de demandes de changement (RFC)</p>
+        </li>
+        <li>
+          <p>
+            Développement et maintenance des outils utilisés (extension Firefox,
+            intégration Notepad++)
+          </p>
+        </li>
+        <li>
+          <p>Analyse et optimisation des processus étudiés</p>
+        </li>
+      </ul>
+      <h2>
+        <strong
+          >Autoentrepreneur en développement logiciel et administration
+          système</strong
+        >, Indépendant -- Valdoie, France
+      </h2>
+      <p>Mar 2011 – Fév 2012</p>
+      <ul>
+        <li>
+          <p>Découpage CATEP</p>
+        </li>
+        <li>
+          <p>Administration système</p>
+        </li>
+        <li>
+          <p>Diaporama HTML</p>
+        </li>
+      </ul>
+      <h2>
+        <strong>Développeur et administrateur systèmes</strong>, Ciméos --
+        Montbéliard, France
+      </h2>
+      <p>Avr 2009 – Mar 2011</p>
+      <ul>
+        <li>
+          <p>Site internet CAPEB</p>
+        </li>
+        <li>
+          <p>Site internet SARLAM</p>
+        </li>
+        <li>
+          <p>Site internet Bourgogne Bâtiment Durable</p>
+        </li>
+        <li>
+          <p>Administration de l'infrastructure (serveurs Windows et Linux)</p>
+        </li>
+      </ul>
+      <h2><strong>Développeur web</strong>, Pimentic -- Belfort, France</h2>
+      <p>Sep 2005 – Fév 2009</p>
+      <ul>
+        <li>
+          <p>
+            Sites et applications pour la mairie de Seloncourt, SERS, le Centre
+            de Gestion 70, TGV Belfort et IEG
+          </p>
+        </li>
+        <li>
+          <p>Création d'un modèle de site SPIP réutilisable</p>
+        </li>
+        <li>
+          <p>Générateur de site TYPO3 pour Vétoquinol</p>
+        </li>
+        <li>
+          <p>
+            Sites Place de marché Economia, Prestige Équipement et Cre@site
+            (générateur de sites internet en ASP)
+          </p>
+        </li>
+        <li>
+          <p>
+            Sites pour Bien-être Attitude, Confiserie des Hautes-Vosges,
+            Europartners et Mabi
+          </p>
+        </li>
+        <li>
+          <p>Intranet Vetoquinol</p>
+        </li>
+        <li>
+          <p>
+            Site pour la Chambre de Commerce et d'Industrie du Territoire de
+            Belfort
+          </p>
+        </li>
+      </ul>
+      <h2><strong>Développeur web</strong>, Alstom -- Belfort, France</h2>
+      <p>Avr 2005 – Juin 2005</p>
+      <ul>
+        <li>
+          <p>Recensement et rédaction du besoin client</p>
+        </li>
+        <li>
+          <p>Conception et développement de maquettes fonctionnelles</p>
+        </li>
+        <li>
+          <p>Analyse du retour utilisateur</p>
+        </li>
+        <li>
+          <p>Conception, réalisation et maintenance de la plateforme</p>
+        </li>
+      </ul>
+      <h1>Réalisations</h1>
+      <h2><strong>sqctl</strong></h2>
+      <p>2020 – présent</p>
+      <p>
+        Client en ligne de commandes permettant de gérer une instance SonarQube
+      </p>
+      <ul>
+        <li>
+          <p>
+            Conception Python modulaire et orientée objet, basée sur les
+            décorateurs (haut niveau) et <code>requests</code> pour les appels à
+            l'API
+          </p>
+        </li>
+        <li>
+          <p>Contrôle d'intégrité des paramètres avant appel API</p>
+        </li>
+        <li>
+          <p>
+            Vérification de compatibilité: version de l'application et édition
+            (<em>community</em>, <em>developer</em>, <em>enterprise</em>)
+          </p>
+        </li>
+        <li>
+          <p>
+            Scrapping de la documentation API existante dans l'application à
+            l'aide de la console développeur. Retraitement automatisé pour en
+            dériver les paramètres
+          </p>
+        </li>
+        <li>
+          <p>
+            Gestion automatisée d'un <code>RBAC</code> SonarQube à partir d'une
+            structure de permissions Azure DevOps (principe de ségrégation des
+            tâches)
+          </p>
+        </li>
+        <li>
+          <p>
+            Extraction d'indicateurs de performance clé (répartition du nombre
+            de lignes de code par projet) et automatisation (anonymisation des
+            utilisateurs après inactivité)
+          </p>
+        </li>
+        <li>
+          <p>
+            Technologies: Python, Microsoft Graph API, Azure DevOps REST API
+          </p>
+        </li>
+      </ul>
+      <h2><strong>adopy</strong></h2>
+      <p>2022 – présent</p>
+      <p>
+        Client en ligne de commandes permettant d'automatiser des tâches
+        administratives Azure DevOps
+      </p>
+      <ul>
+        <li>
+          Technologies: Python, Microsoft Graph API, Azure DevOps REST API
+        </li>
+      </ul>
+      <h2><strong>work item creator</strong></h2>
+      <p>2022 – présent</p>
+      <p>
+        Client en ligne de commandes permettant de créer une structure de
+        <em>work items</em> Azure Boards à partir d'un fichier de configuration
+      </p>
+      <ul>
+        <li>
+          <p>
+            Utilisation de templates Jinja2 pour créer les
+            <em>work items</em> ainsi que les relations entre ces
+            <em>work items</em>
+          </p>
+        </li>
+        <li>
+          <p>Technologies: Python, Azure DevOps REST API</p>
+        </li>
+      </ul>
+      <h2><strong>pipeline templates</strong></h2>
+      <p>2020 – présent</p>
+      <p>Bibliothèque de modèles de pipelines Azure DevOps</p>
+      <ul>
+        <li>
+          <p>Modèles génériques pour un usage multiple</p>
+        </li>
+        <li>
+          <p>
+            Synchronisation de la bibliothèque vers 22 organisations Azure
+            DevOps
+          </p>
+        </li>
+      </ul>
+      <h2><strong>Anubis</strong></h2>
+      <p>2021 – présent</p>
+      <p>Docker image used to scan a repository for secrets</p>
+      <ul>
+        <li>
+          Integrate <code>grype</code>, <code>checkov</code>,
+          <code>trivy</code>, <code>betterleaks</code> in the DevSecOps process
+        </li>
+      </ul>
+      <h1>Formations</h1>
+      <h2>
+        <strong
+          ><a href="https://www.ambient-it.net/formation/kubernetes-avance/"
+            >Kubernetes Avancé : Administration en Production</a
+          ></strong
+        >
+      </h2>
+      <p>2026</p>
+      <p>Ambient-IT</p>
+      <h2>
+        <strong
+          ><a
+            href="https://www.orsys.fr/formation/formation-hacking-securite-expertise"
+            >Hacking et sécurité, niveau 1</a
+          ></strong
+        >
+      </h2>
+      <p>ORSYS</p>
+      <h2>
+        <strong
+          ><a
+            href="https://www.orsys.fr/formation/formation-hacking-et-securite-expertise"
+            >Hacking et sécurité, niveau 2</a
+          ></strong
+        >
+      </h2>
+      <p>ORSYS</p>
+      <h2>
+        <strong
+          ><a
+            href="https://www.orsys.fr/formation/formation-devzecops-foundation-dsof-certification-devops-institute"
+            >DevSecOps Foundation (DSOF), certification DevOps Institute®</a
+          ></strong
+        >
+      </h2>
+      <p>ORSYS</p>
+      <h1>Éducation</h1>
+      <h2>
+        <strong>Caporal de Sapeur-pompier</strong> --
+        <strong>Danjoutin, France</strong>
+      </h2>
+      <p>2022</p>
+      <h2>
+        <strong>Équipier de Sapeur-pompier</strong> --
+        <strong>Danjoutin, France + Offemont, France</strong>
+      </h2>
+      <p>2018</p>
+      <h2>
+        <strong>Ingénieur Réseaux, Systèmes et Multimedia</strong> --
+        <strong>Belfort, France</strong>
+      </h2>
+      <p>2008 – 2017</p>
+      <p>Mention très bien</p>
+      <h2>
+        <strong>Certification TYPO3 certified integrator</strong> --
+        <strong>Paris, France</strong>
+      </h2>
+      <p>2010</p>
+      <p>Score de 72%</p>
+      <h2>
+        <strong>Licence professionnelle IPITC</strong> --
+        <strong>Montbéliard, France</strong>
+      </h2>
+      <p>2004 – 2005</p>
+      <p>
+        Intégration des Processus Industriels aux Technologies de Communication
+      </p>
+      <h2>
+        <strong>DUT Informatique de gestion</strong> --
+        <strong>Belfort, France</strong>
+      </h2>
+      <p>2002 – 2004</p>
+      <p>Architecture système, programmation, gestion de projet</p>
+      <h2>
+        <strong>Baccalauréat scientifique</strong> --
+        <strong>Belfort, France</strong>
+      </h2>
+      <p>2000 – 2002</p>
+      <p>Spécialité physique-chimie</p>
+      <h1>Loisirs</h1>
+      <p>
+        <strong>Jeux de rôle:</strong> Animation du jeu de rôle l'Appel de
+        Cthulhu
+      </p>
+      <p>
+        <strong>Auto-hébergement:</strong> Sauvegardes (kopia), expérimentations
+        en cybersécurité (suricata, crowdsec, ufw), gestion de la médiathèque
+        (jellyfin), indexation de fichiers PDF (sist2), automatisation et
+        gestion de posture (squirrel server manager, patchmon, watchtower),
+        surveillance et résilience (grafana/loki/alloy, uptime kuma, ntfy)
+      </p>
+      <p>
+        <strong>Sport:</strong> Course à pied, cyclisme, <em>crosstraining</em>
+      </p>
+      <p>
+        <strong>Bricolage / DIY:</strong> J'aime beaucoup le travail du bois et
+        créer des petits objets qui facilitent la vie quotidienne
+      </p>
+      <p><strong>Cuisine:</strong> Pâtisserie</p>
+    </article>
   </body>
 </html>

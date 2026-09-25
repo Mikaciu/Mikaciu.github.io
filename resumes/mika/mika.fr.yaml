@@ -1,0 +1,286 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.4/schema.json
+cv:
+  name: Mikaël Hautin
+  headline: DevSecOps | Automation | Cloud | Security
+  photo: mika_resume.png
+  location: 🇫🇷 Dorans, FR
+  email: contact@hautin.fr
+  phone: +33 6 67 08 15 33
+  social_networks:
+    - network: GitHub
+      username: mikaciu
+
+  sections:
+    "À propos de moi":
+      - |
+        Je sais faire preuve d'adaptation au contexte ainsi qu'aux contraintes, en toutes circonstances.
+      - |
+        J'aime beaucoup travailler en équipe et échanger avec mes collègues dans le but d'accroître mutuellement nos connaissances ; je n'hésite pas à me remettre en question en ce sens.
+      - |
+        Ma philosophie professionnelle se résume en ces termes : "le respect par la compétence".
+      - |
+        Je suis passionné par l'informatique et les nouvelles technologies, et je m'intéresse particulièrement à la sécurité informatique, au DevSecOps, à l'automatisation et au cloud.
+
+    Compétences:
+      - label: "Cloud"
+        details: "Microsoft Azure"
+      - label: "Cybersécurité"
+        details: "fail2ban, ufw, lynis, nmap, suricata"
+      - label: "Développement"
+        details: "Python (à l'aide de `uv`, `ty`, `ruff`), Bash, PHP, SQL, JavaScript, HTML/CSS"
+      - label: "DevSecOps"
+        details: "Azure Pipelines, git, GitHub actions, Kubernetes, helm-charts, terraform"
+      - label: "Expérience développeur"
+        details: "Conception de webinaires, sessions de formations avec les développeurs, échanges réguliers afin de récolter des retours d'expérience"
+      - label: "IA"
+        details: "Création de _skill_ IA pour automatiser la création de pipelines SonarQube"
+      - label: "SAST"
+        details: "checkov, gitleaks/betterleaks, grype, SonarQube, trivy, semgrep, megalinter"
+      - label: "Systèmes"
+        details: "GNU/Linux (Debian, OpenSuSE, gentoo), Mac OS, Windows"
+      - label: Langues
+        details: "Français (natif) ; Anglais (courant) ; Espagnol (lu) ; Italien (lu)"
+      - label: Permis de conduire
+        details: "Catégorie B"
+
+    Expériences:
+      - company: FORVIA
+        position: Ingénieur en services cloud
+        start_date: 2020-01
+        end_date: present
+        location: France
+        highlights:
+          - Déploiement automatique d'une instance SonarQube (license developer puis enterprise)
+          - "Automatisation autour de l'API SonarQube: création de projets, création d'utilisateurs et configuration de permissions, calcul d'indicateurs"
+          - Création d'outils pour automatiser au maximum les tâches répétitives
+          - Partage de connaissance par le biais de webinaires et de sessions de formation
+
+      - company: SDIS90
+        position: Caporal-Chef de Sapeur-Pompier volontaire
+        start_date: 2018
+        end_date: present
+        location: Danjoutin, France
+        highlights:
+          - "Responsable pédagogique des Jeunes Sapeurs-Pompiers de l'agglomération Belfortaine: conception de cours et d'évaluations, suivi des résultats"
+          - Réalisation d'une application (PHP, MariaDB) de gestion de solde de boissons pour le foyer
+
+      - company: Feel Europe
+        position: Prestataire en architecture technique
+        start_date: 2016-02
+        end_date: 2019-12
+        location: Seloncourt, France
+        highlights:
+          - Installation et configuration d'une instance GitLab, et formation des utilisateurs à Git
+          - Livraison des environnements standards Dassault et des personnalisations Faurecia (ENOVIA V6R2009x, V6R2012x et V6R2015x)
+          - Suivi des anomalies avec Dassault Systèmes
+          - Développement et maintenance des outils utilisés
+          - Packaging et déploiement silencieux sur les postes clients
+          - Construction et contribution à une base de connaissances sur les applications déployées
+          - Outil de déchiffrement et de rechiffrement d'eFCS
+          - Outil de maintenance du composant 3DSXI (recherche indexée)
+
+      - company: Feel Europe
+        position: Prestataire en support niveau 3
+        start_date: 2012-05
+        end_date: 2016-01
+        location: Seloncourt, France
+        highlights:
+          - Mise en place de procédures pour les tâches récurrentes du support et intégration dans une base de connaissances (Wiki)
+          - Refonte de la bibliothèque Java du support pour simplifier le traitement des scripts exécutés en production (SP), avec documentation
+          - Accompagnement technique des membres chinois de l'équipe pour développer leurs compétences Java, la qualité et la traçabilité
+          - Analyse des incidents récurrents afin d'établir des demandes de changement (RFC)
+
+      - company: Feel Europe
+        position: Prestataire en développement logiciel
+        start_date: 2011-07
+        end_date: 2012-04
+        location: Seloncourt, France
+        highlights:
+          - Développement de demandes de changement (RFC)
+          - Développement et maintenance des outils utilisés (extension Firefox, intégration Notepad++)
+          - Analyse et optimisation des processus étudiés
+
+      - company: Indépendant
+        position: Autoentrepreneur en développement logiciel et administration système
+        start_date: 2011-03
+        end_date: 2012-02
+        location: Valdoie, France
+        highlights:
+          - Découpage CATEP
+          - Administration système
+          - Diaporama HTML
+
+      - company: Ciméos
+        position: Développeur et administrateur systèmes
+        start_date: 2009-04
+        end_date: 2011-03
+        location: Montbéliard, France
+        highlights:
+          - Site internet CAPEB
+          - Site internet SARLAM
+          - Site internet Bourgogne Bâtiment Durable
+          - Administration de l'infrastructure (serveurs Windows et Linux)
+
+      - company: Pimentic
+        position: Développeur web
+        start_date: 2005-09
+        end_date: 2009-02
+        location: Belfort, France
+        highlights:
+          - Sites et applications pour la mairie de Seloncourt, SERS, le Centre de Gestion 70, TGV Belfort et IEG
+          - Création d'un modèle de site SPIP réutilisable
+          - Générateur de site TYPO3 pour Vétoquinol
+          - Sites Place de marché Economia, Prestige Équipement et Cre@site (générateur de sites internet en ASP)
+          - Sites pour Bien-être Attitude, Confiserie des Hautes-Vosges, Europartners et Mabi
+          - Intranet Vetoquinol
+          - Site pour la Chambre de Commerce et d'Industrie du Territoire de Belfort
+
+      - company: Alstom
+        position: Développeur web
+        start_date: 2005-04
+        end_date: 2005-06
+        location: Belfort, France
+        highlights:
+          - Recensement et rédaction du besoin client
+          - Conception et développement de maquettes fonctionnelles
+          - Analyse du retour utilisateur
+          - Conception, réalisation et maintenance de la plateforme
+
+    Réalisations:
+      - name: sqctl
+        start_date: 2020
+        end_date: present
+        summary: Client en ligne de commandes permettant de gérer une instance SonarQube
+        highlights:
+          - Conception Python modulaire et orientée objet, basée sur les décorateurs (haut niveau) et `requests` pour les appels à l'API
+          - Contrôle d'intégrité des paramètres avant appel API
+          - |
+            Vérification de compatibilité: version de l'application et édition (_community_, _developer_, _enterprise_)
+          - Scrapping de la documentation API existante dans l'application à l'aide de la console développeur. Retraitement automatisé pour en dériver les paramètres
+          - Gestion automatisée d'un `RBAC` SonarQube à partir d'une structure de permissions Azure DevOps (principe de ségrégation des tâches)
+          - Extraction d'indicateurs de performance clé (répartition du nombre de lignes de code par projet) et automatisation (anonymisation des utilisateurs après inactivité)
+          - "Technologies: Python, Microsoft Graph API, Azure DevOps REST API"
+      - name: adopy
+        start_date: 2022
+        end_date: present
+        summary: Client en ligne de commandes permettant d'automatiser des tâches administratives Azure DevOps
+        highlights:
+          - "Technologies: Python, Microsoft Graph API, Azure DevOps REST API"
+      - name: work item creator
+        start_date: 2022
+        end_date: present
+        summary: Client en ligne de commandes permettant de créer une structure de _work items_ Azure Boards à partir d'un fichier de configuration
+        highlights:
+          - Utilisation de templates Jinja2 pour créer les _work items_ ainsi que les relations entre ces _work items_
+          - "Technologies: Python, Azure DevOps REST API"
+      - name: pipeline templates
+        start_date: 2020
+        end_date: present
+        summary: Bibliothèque de modèles de pipelines Azure DevOps
+        highlights:
+          - Modèles génériques pour un usage multiple
+          - Synchronisation de la bibliothèque vers 22 organisations Azure DevOps
+      - name: Anubis
+        start_date: 2021
+        end_date: present
+        summary: Docker image used to scan a repository for secrets
+        highlights:
+          - Integrate `grype`, `checkov`, `trivy`, `betterleaks` in the DevSecOps process
+
+    Formations:
+      - name: "[Kubernetes Avancé : Administration en Production](https://www.ambient-it.net/formation/kubernetes-avance/)"
+        date: 2026
+        summary: Ambient-IT
+      - name: "[Hacking et sécurité, niveau 1](https://www.orsys.fr/formation/formation-hacking-securite-expertise)"
+        summary: ORSYS
+      - name: "[Hacking et sécurité, niveau 2](https://www.orsys.fr/formation/formation-hacking-et-securite-expertise)"
+        summary: ORSYS
+      - name: "[DevSecOps Foundation (DSOF), certification DevOps Institute®](https://www.orsys.fr/formation/formation-devzecops-foundation-dsof-certification-devops-institute)"
+        summary: ORSYS
+
+    Éducation:
+      - institution: Service Départemental d'Incendie et de Secours du territoire de Belfort (SDIS90)
+        degree: "Formation d'Adaptation à l'Emploi de Caporal de Sapeur-pompier"
+        name: "Caporal de Sapeur-pompier"
+        date: 2022
+        location: Danjoutin, France
+      - institution: Service Départemental d'Incendie et de Secours du territoire de Belfort (SDIS90)
+        degree: "Équipier de Sapeur-pompier"
+        name: "Équipier de Sapeur-pompier"
+        date: 2018
+        location: Danjoutin, France + Offemont, France
+      - institution: "Centre National des Arts et Métiers"
+        degree: "Ingénieur Réseaux, Systèmes et Multimedia"
+        name: "Ingénieur Réseaux, Systèmes et Multimedia"
+        start_date: 2008
+        end_date: 2017
+        location: Belfort, France
+        summary: "Mention très bien"
+      - institution: "Typo3 Association"
+        degree: "TYPO3 certified integrator"
+        name: "Certification TYPO3 certified integrator"
+        date: 2010
+        location: Paris, France
+        summary: "Score de 72%"
+      - institution: "IUT Montbéliard"
+        degree: "Licence professionnelle IPITC"
+        name: "Licence professionnelle IPITC"
+        start_date: 2004
+        end_date: 2005
+        location: Montbéliard, France
+        summary: Intégration des Processus Industriels aux Technologies de Communication
+      - institution: "IUT Belfort"
+        area: Programmation, gestion de projet
+        degree: DUT
+        name: "DUT Informatique de gestion"
+        start_date: 2002
+        end_date: 2004
+        location: Belfort, France
+        summary: Architecture système, programmation, gestion de projet
+      - institution: "Lycée Gustave Courbet"
+        degree: Bac
+        name: "Baccalauréat scientifique"
+        start_date: 2000
+        end_date: 2002
+        location: Belfort, France
+        summary: Spécialité physique-chimie
+
+    Loisirs:
+      - label: Jeux de rôle
+        details: Animation du jeu de rôle l'Appel de Cthulhu
+      - label: Auto-hébergement
+        details: Sauvegardes (kopia), expérimentations en cybersécurité (suricata, crowdsec, ufw), gestion de la médiathèque (jellyfin), indexation de fichiers PDF (sist2), automatisation et gestion de posture (squirrel server manager, patchmon, watchtower), surveillance et résilience (grafana/loki/alloy, uptime kuma, ntfy)
+      - label: Sport
+        details: Course à pied, cyclisme, _crosstraining_
+      - label: Bricolage / DIY
+        details: "J'aime beaucoup le travail du bois et créer des petits objets qui facilitent la vie quotidienne"
+      - label: Cuisine
+        details: Pâtisserie
+
+# ===============================================================================
+# SETTINGS
+#===============================================================================
+
+design:
+  theme: engineeringclassic
+  page:
+    size: a4
+    show_top_note: true
+    show_footer: true
+  typography:
+    font_family: Open Sans
+  colors:
+    name: rgb(33, 15, 55)
+    connections: rgb(124, 69, 133)
+    section_titles: rgb(79, 28, 81)
+    links: rgb(165, 91, 75)
+  templates:
+    footer: "*NAME -- PAGE_NUMBER/TOTAL_PAGES* -- [RenderCV](https://github.com/rendercv/rendercv) 🚀"
+
+locale:
+  language: french
+
+settings:
+  render_command:
+    dont_generate_png: true
+    output_folder: rendercv_output/fr

@@ -1,11 +1,16 @@
 ---
 repos:
-  - repo: https://github.com/oxsecurity/megalinter
-    rev: v10.1.0
+  - repo: local
     hooks:
-      - id: megalinter-incremental # Faster, less thorough
+      - id: megalinter
+        name: Megalinter linting
         stages:
           - pre-commit
-      - id: megalinter-full # Slower, more thorough
-        stages:
-          - pre-push
+        language: docker_image
+        require_serial: true
+        entry: >
+          -e DEFAULT_WORKSPACE=/src
+          -e CLEAR_REPORT_FOLDER=true
+          -e UPDATED_SOURCES_REPORTER=true
+          --tmpfs /.cache
+          ghcr.io/oxsecurity/megalinter-documentation

@@ -1,0 +1,286 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.4/schema.json
+cv:
+  name: Mikaël Hautin
+  headline: DevSecOps | Automation | Cloud | Security
+  photo:
+  location: 🇫🇷 Dorans, FR
+  email: contact@hautin.fr
+  phone: +33 6 67 08 15 33
+  social_networks:
+    - network: GitHub
+      username: mikaciu
+
+  sections:
+    "About me":
+      - |
+        I can adapt to the context and constraints in all circumstances.
+      - |
+        I enjoy working as part of a team and exchanging with my colleagues to mutually expand our knowledge; I do not hesitate to question myself in that regard.
+      - |
+        My professional philosophy is summarized as: "respect through skill".
+      - |
+        I am passionate about computer science and new technologies, and I am particularly interested in cybersecurity, DevSecOps, automation, and cloud.
+
+    Skills:
+      - label: "Cloud"
+        details: "Microsoft Azure"
+      - label: "Cybersecurity"
+        details: "fail2ban, ufw, lynis, nmap, suricata"
+      - label: "Development"
+        details: "Python (using `uv`, `ty`, `ruff`), Bash, PHP, SQL, JavaScript, HTML/CSS"
+      - label: "DevSecOps"
+        details: "Azure Pipelines, git, GitHub Actions, Kubernetes, helm charts, Terraform"
+      - label: "Developer experience"
+        details: "Designing webinars, training sessions for developers, regular exchanges to gather feedback"
+      - label: "AI"
+        details: "Creation of an AI _skill_ to automate SonarQube pipeline creation"
+      - label: "SAST"
+        details: "checkov, gitleaks/betterleaks, grype, SonarQube, trivy, semgrep, megalinter"
+      - label: "Systems"
+        details: "GNU/Linux (Debian, OpenSUSE, Gentoo), macOS, Windows"
+      - label: Languages
+        details: "French (native); English (fluent); Spanish (reading); Italian (reading)"
+      - label: Driver's license
+        details: "Category B"
+
+    Experience:
+      - company: FORVIA
+        position: Cloud Services Engineer
+        start_date: 2020-01
+        end_date: present
+        location: France
+        highlights:
+          - Automated deployment of a SonarQube instance (developer license, then enterprise)
+          - "Automation around the SonarQube API: project creation, user creation and permission configuration, indicator calculation"
+          - Creation of tools to automate repetitive tasks as much as possible
+          - Knowledge sharing through webinars and training sessions
+
+      - company: SDIS90
+        position: Chief Corporal, Volunteer Firefighter
+        start_date: 2018
+        end_date: present
+        location: Danjoutin, France
+        highlights:
+          - "Pedagogical manager for the Young Firefighters of the Belfort metropolitan area: course and assessment design, tracking results"
+          - Development of a PHP and MariaDB application to manage drink balances for the fire station canteen
+
+      - company: Feel Europe
+        position: Technical Architecture Consultant
+        start_date: 2016-02
+        end_date: 2019-12
+        location: Seloncourt, France
+        highlights:
+          - Installation and configuration of a GitLab instance and Git training for users
+          - Delivery of standard Dassault environments and Faurecia customizations (ENOVIA V6R2009x, V6R2012x, and V6R2015x)
+          - Anomaly tracking with Dassault Systèmes
+          - Development and maintenance of the tools used
+          - Packaging and silent deployment on customer workstations
+          - Building and contributing to a knowledge base for deployed applications
+          - Tool for decrypting and re-encrypting eFCS
+          - Maintenance tool for the 3DSXI component (indexed search)
+
+      - company: Feel Europe
+        position: Level 3 Support Consultant
+        start_date: 2012-05
+        end_date: 2016-01
+        location: Seloncourt, France
+        highlights:
+          - Implementation of procedures for recurring support tasks and integration into a knowledge base (Wiki)
+          - Redesign of the support Java library to simplify the handling of scripts executed in production (SP), with documentation
+          - Technical support for Chinese team members to develop their Java skills, quality, and traceability
+          - Analysis of recurring incidents to establish change requests (RFC)
+
+      - company: Feel Europe
+        position: Software Development Consultant
+        start_date: 2011-07
+        end_date: 2012-04
+        location: Seloncourt, France
+        highlights:
+          - Development of change requests (RFC)
+          - Development and maintenance of the tools used (Firefox extension, Notepad++ integration)
+          - Analysis and optimization of the studied processes
+
+      - company: Independent
+        position: Self-employed software developer and system administrator
+        start_date: 2011-03
+        end_date: 2012-02
+        location: Valdoie, France
+        highlights:
+          - CATEP breakdown
+          - System administration
+          - HTML slideshow
+
+      - company: Ciméos
+        position: Developer and Systems Administrator
+        start_date: 2009-04
+        end_date: 2011-03
+        location: Montbéliard, France
+        highlights:
+          - CAPEB website
+          - SARLAM website
+          - Bourgogne Bâtiment Durable website
+          - Infrastructure administration (Windows and Linux servers)
+
+      - company: Pimentic
+        position: Web Developer
+        start_date: 2005-09
+        end_date: 2009-02
+        location: Belfort, France
+        highlights:
+          - Sites and applications for Seloncourt town hall, SERS, the 70 Management Center, TGV Belfort, and IEG
+          - Creation of a reusable SPIP site template
+          - TYPO3 site generator for Vétoquinol
+          - Market sites Economia, Prestige Équipement, and Cre@site (website generator in ASP)
+          - Sites for Bien-être Attitude, Confiserie des Hautes-Vosges, Europartners, and Mabi
+          - Vetoquinol intranet
+          - Site for the Chamber of Commerce and Industry of the Belfort Territory
+
+      - company: Alstom
+        position: Web Developer
+        start_date: 2005-04
+        end_date: 2005-06
+        location: Belfort, France
+        highlights:
+          - Customer need inventory and specification writing
+          - Design and development of functional mockups
+          - User feedback analysis
+          - Design, implementation, and maintenance of the platform
+
+    Projects:
+      - name: sqctl
+        start_date: 2020
+        end_date: present
+        summary: Command-line client for managing a SonarQube instance
+        highlights:
+          - Modular, object-oriented Python design based on decorators (high level) and `requests` for API calls
+          - Parameter integrity checks before API calls
+          - |
+            Compatibility checks: application version and edition (_community_, _developer_, _enterprise_)
+          - Scraping the existing API documentation from the application using the developer console. Automated post-processing to derive parameters
+          - Automated management of SonarQube `RBAC` from an Azure DevOps permission structure (segregation-of-duties principle)
+          - Extraction of key performance indicators (distribution of the number of lines of code per project) and automation (user anonymization after inactivity)
+          - "Technologies: Python, Microsoft Graph API, Azure DevOps REST API"
+      - name: adopy
+        start_date: 2022
+        end_date: present
+        summary: Command-line client for automating Azure DevOps administrative tasks
+        highlights:
+          - "Technologies: Python, Microsoft Graph API, Azure DevOps REST API"
+      - name: work item creator
+        start_date: 2022
+        end_date: present
+        summary: Command-line client for creating an Azure Boards _work items_ structure from a configuration file
+        highlights:
+          - Use of Jinja2 templates to create the _work items_ and relationships between them
+          - "Technologies: Python, Azure DevOps REST API"
+      - name: pipeline templates
+        start_date: 2020
+        end_date: present
+        summary: Library of reusable Azure pipeline templates
+        highlights:
+          - Generic templates for multi-purpose tasks
+          - Synchronization of the pipeline library across 22 Azure DevOps organizations
+      - name: Anubis
+        start_date: 2021
+        end_date: present
+        summary: Docker image used to scan a repository for secrets
+        highlights:
+          - Integrate `grype`, `checkov`, `trivy`, `betterleaks` in the DevSecOps process
+
+    Training:
+      - name: "[Advanced Kubernetes: Administration in Production](https://www.ambient-it.net/formation/kubernetes-avance/)"
+        date: 2026
+        summary: Ambient-IT
+      - name: "[Hacking and Security, level 1](https://www.orsys.fr/formation/formation-hacking-securite-expertise)"
+        summary: ORSYS
+      - name: "[Hacking and Security, level 2](https://www.orsys.fr/formation/formation-hacking-et-securite-expertise)"
+        summary: ORSYS
+      - name: "[DevSecOps Foundation (DSOF), DevOps Institute® certification](https://www.orsys.fr/formation/formation-devzecops-foundation-dsof-certification-devops-institute)"
+        summary: ORSYS
+
+    Education:
+      - institution: Belfort Fire and Rescue Department (SDIS90)
+        degree: "Training for Employment Adaptation as Firefighter Corporal"
+        name: "Firefighter Corporal"
+        date: 2022
+        location: Danjoutin, France
+      - institution: Belfort Fire and Rescue Department (SDIS90)
+        degree: "Firefighter"
+        name: "Firefighter"
+        date: 2018
+        location: Danjoutin, France + Offemont, France
+      - institution: "National Center for Arts and Crafts"
+        degree: "Network, Systems and Multimedia Engineer"
+        name: "Network, Systems and Multimedia Engineer"
+        start_date: 2008
+        end_date: 2017
+        location: Belfort, France
+        summary: "Very good mention"
+      - institution: "Typo3 Association"
+        degree: "TYPO3 certified integrator"
+        name: "TYPO3 certified integrator certification"
+        date: 2010
+        location: Paris, France
+        summary: "Score of 72%"
+      - institution: "IUT Montbéliard"
+        degree: "Professional License IPITC"
+        name: "Professional License IPITC"
+        start_date: 2004
+        end_date: 2005
+        location: Montbéliard, France
+        summary: Integration of industrial processes into communication technologies
+      - institution: "IUT Belfort"
+        area: Programming, project management
+        degree: DUT
+        name: "DUT in Management Informatics"
+        start_date: 2002
+        end_date: 2004
+        location: Belfort, France
+        summary: System architecture, programming, project management
+      - institution: "Gustave Courbet High School"
+        degree: Baccalaureate
+        name: "Scientific Baccalaureate"
+        start_date: 2000
+        end_date: 2002
+        location: Belfort, France
+        summary: Physics and chemistry specialization
+
+    Hobbies:
+      - label: Role-playing games
+        details: Running the role-playing game The Call of Cthulhu
+      - label: Self-hosting
+        details: Backups (kopia), cybersecurity experiments (suricata, crowdsec, ufw), media library management (jellyfin), PDF file indexing (sist2), automation and posture management (squirrel server manager, patchmon, watchtower), monitoring and resilience (grafana/loki/alloy, uptime kuma, ntfy)
+      - label: Sport
+        details: Running, cycling, _cross-training_
+      - label: DIY / Woodworking
+        details: "I really enjoy woodworking and creating small objects that make everyday life easier"
+      - label: Cooking
+        details: Pastry
+
+# ===============================================================================
+# SETTINGS
+#===============================================================================
+
+design:
+  theme: engineeringclassic
+  page:
+    size: a4
+    show_top_note: true
+    show_footer: true
+  typography:
+    font_family: Open Sans
+  colors:
+    name: rgb(33, 15, 55)
+    connections: rgb(124, 69, 133)
+    section_titles: rgb(79, 28, 81)
+    links: rgb(165, 91, 75)
+  templates:
+    footer: "*NAME -- PAGE_NUMBER/TOTAL_PAGES* -- [RenderCV](https://github.com/rendercv/rendercv) 🚀"
+
+locale:
+  language: english
+
+settings:
+  render_command:
+    dont_generate_png: true
+    output_folder: rendercv_output/en
