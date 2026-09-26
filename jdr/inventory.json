@@ -41,6 +41,7 @@
     ["Drone", "Porteur de matériel lourd", "", 1],
     ["Habillement", "Combinaisons Nucléaire Biologique Chimique", "", 3],
     ["Habillement", "Dressing", "Tenues civiles", 1],
+    ["Habillement", "Masque à gaz", "Qualité militaire", 5],
     ["Habillement", "Paire de bottes magnétiques", "", 3],
     [
       "Habillement",
