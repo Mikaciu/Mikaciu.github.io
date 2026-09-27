@@ -18,22 +18,22 @@
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.min.js"
-      integrity="sha256-Lye89HGy1p3XhJT24hcvsoRw64Q4IOL5a7hdOflhjTA="
+      src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"
+      integrity="sha256-SERKgtTty1vsDxll+qzd4Y2cF9swY9BCq62i9wXJ9Uo="
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
-      integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI="
+      src="https://cdn.jsdelivr.net/npm/jquery-ui@1.14.2/dist/jquery-ui.min.js"
+      integrity="sha256-mblSWfbYzaq/f+4akyMhE6XELCou4jbkgPv+JQPER2M="
       crossorigin="anonymous"
     ></script>
     <link
-      href="https://code.jquery.com/ui/1.14.1/themes/dark-hive/jquery-ui.css"
+      href="https://code.jquery.com/ui/1.14.2/themes/dark-hive/jquery-ui.css"
       rel="stylesheet"
     />
-    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.3.8/js/dataTables.min.js"></script>
     <link
-      href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css"
+      href="https://cdn.datatables.net/2.3.8/css/dataTables.dataTables.min.css"
       rel="stylesheet"
     />
     <style>
@@ -70,6 +70,83 @@
         flex: 1;
       }
 
+      .donation-goal-pane {
+        margin-top: 1rem;
+      }
+
+      .donation-goal-summary {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+
+      .donation-goal-summary p {
+        margin: 0;
+      }
+
+      .donation-goal-content {
+        --donation-track-width: 14px;
+        --donation-track-gap: 1.5rem;
+        display: flex;
+        align-items: stretch;
+        gap: var(--donation-track-gap);
+        min-height: 33vh;
+      }
+
+      .donation-track {
+        position: relative;
+        flex: 0 0 var(--donation-track-width);
+        width: var(--donation-track-width);
+        height: auto;
+        min-height: 33vh;
+        background: #44475a;
+        border-radius: 7px;
+      }
+
+      .donation-track-fill {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #90ee90;
+        border-radius: inherit;
+        transition: height 0.5s ease;
+      }
+
+      .donation-milestones {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 0;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .donation-milestones li {
+        padding: 0.6rem 0;
+        border-top: 1px solid #44475a;
+        color: #aaa;
+      }
+
+      .donation-milestones li.is-reached {
+        color: lightgreen;
+        border-color: #90ee90;
+      }
+
+      .donation-milestones strong,
+      .donation-milestones span {
+        display: block;
+      }
+
+      .donation-milestones strong {
+        margin-bottom: 0.2rem;
+      }
+
       .progress {
         display: inline-flex;
         height: 33vh;
@@ -103,10 +180,6 @@
 
       .progress > div.right {
         padding-left: 20px;
-      }
-
-      .progress > div.right div.prev:after {
-        transition: none;
       }
 
       .progress > div.right div.current {
@@ -176,7 +249,6 @@
       }
 
       .progress.dark {
-        background: #282a36;
         display: inline-flex;
         width: 100%;
       }
@@ -209,10 +281,6 @@
 
       .progress.dark > div.right {
         padding-left: 20px;
-      }
-
-      .progress.dark > div.right div.prev:after {
-        transition: none;
       }
 
       .progress.dark > div.right div.current {
@@ -316,6 +384,7 @@
         font-family: "Lato", Arial, sans-serif;
         background-color: #282a36;
         color: #f8f8f2;
+        position: relative;
       }
 
       h1 {
@@ -324,21 +393,22 @@
 
       div.content {
         display: flex;
-        position: relative;
         flex-wrap: wrap;
       }
 
       div.background {
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: 98.6vw;
+        height: 84vh;
         opacity: 0.05;
         background: no-repeat center url("sceptre.jpg");
+        background-size: contain;
+        z-index: -1;
       }
 
       /* JQuery-ui overrides */
       div#tabs {
-        width: 98.7vw;
+        width: 98.6vw;
       }
 
       .ui-tabs {
@@ -355,22 +425,143 @@
         background: none;
       }
 
+      #tabs > .ui-tabs-nav {
+        display: flex;
+        gap: 1.25rem;
+        margin: 0;
+        padding: 0 1rem;
+        border: 0;
+        border-bottom: 1px solid #44475a;
+        border-radius: 0;
+        background: transparent;
+      }
+
+      #tabs > .ui-tabs-nav li,
+      #tabs > .ui-tabs-nav li.ui-tabs-active {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      #tabs > .ui-tabs-nav li a {
+        display: block;
+        padding: 0.55rem 0.15rem;
+        color: #aaa;
+      }
+
+      #tabs > .ui-tabs-nav li.ui-tabs-active a {
+        border-bottom: 2px solid lightgreen;
+        color: #f8f8f2;
+      }
+
       .ui-tabs .ui-tabs-panel {
         display: flex;
       }
     </style>
     <script>
-      const USED_CREDIT = 30000 + 25000 + 50000 + 40000 + 70000;
+      const DONATION_GOALS = [
+        { cost: 0, label: "🚘 Garage à véhicules" },
+        { cost: 30000, label: "🥼 Laboratoire médical" },
+        { cost: 25000, label: "📦 Hangar de stockage" },
+        { cost: 50000, label: "⚡ Alimentation électrique" },
+        {
+          cost: 40000,
+          label: "🥷🏻 Local pour netrunners et danse sensorielle",
+        },
+        {
+          cost: 70000,
+          label: "🦾🔬Local à cyber-implants / nanotechnologie",
+        },
+        { cost: 85000, label: "🚇 Travaux des souterrains" },
+        { cost: 0, label: "🛡️ Amélioration de la sécurité" },
+        { cost: 0, label: "🛩️ Échappatoire métro vers piste naevi" },
+      ];
+      let cumulativeDonationGoal = 0;
+      DONATION_GOALS.forEach(function (goal) {
+        cumulativeDonationGoal += goal.cost;
+        goal.amount = cumulativeDonationGoal;
+      });
+      const DONATION_TARGET = cumulativeDonationGoal;
       let total_contribution_drawn = false;
+
+      function updateContributionTotals(total) {
+        const usedCredit = DONATION_GOALS.reduce(function (used, goal) {
+          return total >= goal.amount ? used + goal.cost : used;
+        }, 0);
+
+        $("#contribution-total").html(total);
+        $("#contribution-used").html(usedCredit);
+        $("#contribution-remaining").html(total - usedCredit);
+      }
+
+      function updateDonationProgress(total) {
+        const progress = document.getElementById("donation-progress");
+        const fill = document.getElementById("donation-progress-fill");
+        const amountLabel = document.getElementById("donation-progress-amount");
+        const milestones = document.querySelectorAll(".donation-milestones li");
+        const formattedTotal = new Intl.NumberFormat("fr-FR").format(total);
+        const progressAmount = Math.min(total, DONATION_TARGET);
+        const nextGoal = DONATION_GOALS.find((goal) => total < goal.amount);
+
+        progress.setAttribute("aria-valuenow", progressAmount);
+        progress.setAttribute(
+          "aria-valuetext",
+          `${formattedTotal} €$ collectés sur ${new Intl.NumberFormat("fr-FR").format(DONATION_TARGET)} €$`,
+        );
+        fill.style.height = `${(progressAmount / DONATION_TARGET) * 100}%`;
+        amountLabel.textContent = nextGoal
+          ? `Prochain objectif dans ${new Intl.NumberFormat("fr-FR").format(nextGoal.amount - total)} €$ : ${nextGoal.label}`
+          : `${formattedTotal} €$ collectés · Objectif atteint`;
+
+        milestones.forEach(function (milestone) {
+          milestone.classList.toggle(
+            "is-reached",
+            total >= Number(milestone.dataset.goalAmount),
+          );
+        });
+      }
+
+      function addDonationMilestones() {
+        const progress = document.getElementById("donation-progress");
+        const milestoneList = document.querySelector(".donation-milestones");
+        const formatAmount = (amount) =>
+          new Intl.NumberFormat("fr-FR").format(amount);
+
+        progress.setAttribute("aria-valuemax", DONATION_TARGET);
+        document.getElementById("donation-target-label").textContent =
+          `Objectif total : ${formatAmount(DONATION_TARGET)} €$`;
+
+        DONATION_GOALS.slice()
+          .reverse()
+          .forEach(function (goal) {
+            const milestone = document.createElement("li");
+            const cost = document.createElement("strong");
+            const label = document.createElement("span");
+
+            milestone.dataset.goalAmount = goal.amount;
+            cost.textContent = `${formatAmount(goal.cost)} €$`;
+            label.textContent = goal.label;
+            milestone.append(cost, label);
+            milestoneList.appendChild(milestone);
+          });
+      }
+
       $(document).ready(function () {
         $("#tabs").tabs();
+        addDonationMilestones();
         $(".table-pane table").DataTable({
-          paging: false,
+          paging: true,
           searching: false,
           info: false,
           fixedHeader: {
             header: false,
             footer: false,
+          },
+          layout: {
+            topStart: "",
           },
           order: [
             [0, "desc"],
@@ -387,18 +578,13 @@
                 return;
               }
 
-              $("#contribution-total").html(
-                api
-                  .column(2)
-                  .data()
-                  .reduce(function (a, b) {
-                    return a + b;
-                  }),
-              );
-              $("#contribution-used").html(USED_CREDIT);
-              $("#contribution-remaining").html(
-                $("#contribution-total").html() - USED_CREDIT,
-              );
+              const total = api
+                .column(2)
+                .data()
+                .reduce(function (a, b) {
+                  return a + b;
+                });
+              updateContributionTotals(total);
             } catch (error) {
               console.error(error);
             }
@@ -407,7 +593,7 @@
 
         $(".inventory-pane table").DataTable({
           paging: false,
-          searching: false,
+          searching: true,
           info: false,
           fixedHeader: {
             header: false,
@@ -419,6 +605,15 @@
         $.get(
           "https://mikaciu.github.io/jdr/contributions.json",
           function (data) {
+            const totalContributions = data["data"].reduce(function (
+              total,
+              contribution,
+            ) {
+              return total + contribution[2];
+            }, 0);
+            updateDonationProgress(totalContributions);
+            updateContributionTotals(totalContributions);
+
             let contributions = {};
             data["data"].forEach(function (current_element) {
               if (contributions[current_element[1]] === undefined) {
@@ -427,21 +622,24 @@
               contributions[current_element[1]] += current_element[2];
             });
 
-            const ordered_contributions = Object.keys(contributions)
-              .sort()
-              .reduce((obj, key) => {
-                obj[key] = contributions[key];
-                return obj;
-              }, {});
+            const ordered_contributions = Object.entries(contributions).sort(
+              function ([, amount_a], [, amount_b]) {
+                return amount_b - amount_a;
+              },
+            );
 
             try {
               new Chart(document.getElementById("contributions-pie-chart"), {
                 type: "doughnut",
                 data: {
-                  labels: Object.keys(ordered_contributions),
+                  labels: ordered_contributions.map(([donor]) => donor),
                   datasets: [
                     {
-                      data: Object.values(ordered_contributions),
+                      data: ordered_contributions.map(([, amount]) => amount),
+                      backgroundColor: ordered_contributions.map(
+                        (_, index) =>
+                          `hsl(${(index * 137.508) % 360}, 68%, 58%)`,
+                      ),
                       hoverOffset: 4,
                     },
                   ],
@@ -466,27 +664,35 @@
       <div id="tabs-contribs" class="content">
         <div class="background"></div>
         <div class="progress-pane">
-          <h2>Constructions</h2>
-          <div class="progress dark">
-            <div class="left">
-              <div class="done">30 000 €$</div>
-              <div class="done">25 000 €$</div>
-              <div class="done"></div>
-              <div class="done">50 000 €$</div>
-              <div class="done">40 000 €$</div>
-              <div class="done">70 000 €$</div>
-              <div>85 000 €$</div>
+          <section
+            class="donation-goal-pane"
+            aria-labelledby="donation-goals-title"
+          >
+            <h2 id="donation-goals-title">Objectifs des dons</h2>
+            <div class="donation-goal-summary">
+              <p id="donation-progress-amount" aria-live="polite">
+                Chargement des contributions…
+              </p>
+              <p id="donation-target-label"></p>
             </div>
-            <div class="right">
-              <div class="done">🥼 Laboratoire médical</div>
-              <div class="done">📦 Hangar de stockage</div>
-              <div class="done">🚘 Garage à véhicules</div>
-              <div class="done">⚡ Alimentation électrique</div>
-              <div class="done">🥷🏻 Local pour netrunners et danse sensorielle</div>
-              <div class="done current">🦾🔬 Local à cyber-implants / nanotechnologie</div>
-              <div>🚇 Travaux des souterrains</div>
+            <div class="donation-goal-content">
+              <div
+                id="donation-progress"
+                class="donation-track"
+                role="progressbar"
+                aria-label="Progression des dons vers les objectifs de construction"
+                aria-valuemin="0"
+                aria-valuemax="300000"
+                aria-valuenow="0"
+              >
+                <div
+                  id="donation-progress-fill"
+                  class="donation-track-fill"
+                ></div>
+              </div>
+              <ol class="donation-milestones"></ol>
             </div>
-          </div>
+          </section>
         </div>
         <div class="pie-pane">
           <h2>Répartition des contributions</h2>
@@ -522,17 +728,14 @@
       </div>
       <div id="tabs-inventory" class="content">
         <div class="inventory-pane">
-          <h2>Inventaire</h2>
           <table>
             <thead>
               <th>Catégorie</th>
               <th>Élement</th>
               <th>Notes</th>
               <th>Quantité</th>
+              <th>Livre</th>
             </thead>
-            <tbody>
-              &nbsp;
-            </tbody>
           </table>
         </div>
       </div>
