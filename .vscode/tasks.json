@@ -1,0 +1,51 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "Copy all mika CV HTML files",
+      "dependsOn": [
+        "Copy the mika FR CV HTML file",
+        "Copy the mika EN CV HTML file"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Copy the mika FR CV HTML file",
+      "command": "cp -v resumes/mika/rendercv_output/fr/Mikaël_Hautin_CV.html index.html",
+      "dependsOn": ["Generate mika fr CV"],
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Copy the mika EN CV HTML file",
+      "command": "cp -v resumes/mika/rendercv_output/en/Mikaël_Hautin_CV.html index.en.html",
+      "dependsOn": ["Generate mika en CV"],
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Generate mika fr CV",
+      "command": "uv run rendercv render resumes/mika/mika.fr.yaml",
+      "group": {
+        "kind": "build"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Generate mika en CV",
+      "command": "uv run rendercv render resumes/mika/mika.en.yaml",
+      "group": {
+        "kind": "build"
+      }
+    }
+  ]
+}
