@@ -6,7 +6,7 @@ _Un cahier relié de cuir usé, taché de graisse et de sel. Les premières page
 
 ## 1894 — Le quartier
 
-_12 mars 1894_
+### 12 mars 1894
 
 J'ai quatorze ans aujourd'hui. Papa n'a pas levé la main. C'est déjà un beau cadeau.
 
@@ -18,7 +18,7 @@ Demain, j'entre à la fabrique de M. Harrow. Chaussures. Le père Walker dit que
 
 Papa dort sur la table quand il a bu son laudanum. Quand il n'en a pas, personne ne dort.
 
-_28 juillet 1894_
+### 28 juillet 1894
 
 Douze heures debout, puis dix heures encore debout, et le cuir qui griffe les doigts jusqu'au sang. M. Harrow dit que les ampoules font les hommes. Moi, je dis qu'elles font des mains qui ne sentent plus rien. C'est peut-être pareil.
 
@@ -30,23 +30,23 @@ Maman sourit quand je dépose la paie sur ses genoux. Elle garde le colibri dans
 
 ## 1896 — La fin de l'agonie
 
-_3 janvier 1896_
+### 3 janvier 1896
 
 Maman ne se lève plus. Ce n'est plus une maladie, c'est un siège. La maison ne vit que autour d'elle : on chuchote, on marche sur la pointe des pieds, et papa — même papa — la regarde avec quelque chose qui ressemble à de la peur. Il a peur d'être seul avec nous quand elle partira. Nous aussi.
 
-_19 février 1896_
+### 19 février 1896
 
 Elle souffre tant. Le Docteur Pring donne de la morphine quand on peut la payer. Quand on ne peut pas, il y a la nuit, et la nuit, il n'y a rien.
 
 Je lui tiens la main. Elle a demandé le colibri. Elle l'a piqué dans ses cheveux noirs qu'elle avait de plus en plus de mal à coiffer et elle m'a dit : « Jacob, prends soin des petits. Ne deviens pas ton père. » Elle l'a dit devant lui. Il est sorti sans un mot. C'est la seule fois où il a eu l'air d'un homme.
 
-_4 mars 1896, avant l'aube_
+### 4 mars 1896, avant l'aube
 
 Elle est morte ce matin, dans le gris. Elle a dit le nom d'Emmet à la fin, comme on pardonne. Je n'ai pas pardonné, moi. Je le note ici pour m'en souvenir : je n'ai pas pardonné et je ne pardonnerai pas.
 
 Elle est partie pendant que la fabrique tournait. Le monde n'a même pas ralenti. C'est ce jour-là que j'ai compris que le monde ne tourne pas pour nous.
 
-_27 mars 1896_
+### 27 mars 1896
 
 Le deuil a duré une semaine. La folie, elle, s'installe.
 
@@ -54,7 +54,7 @@ Papa a vendu la robe de mariage de maman. Puis les chaises. Puis il a commencé 
 
 Quand j'ai protesté, il m'a montré le couteau et il a dit que John — sept ans, John — « vaudrait cher chez certains ». J'ai vu dans son regard qu'il ne bluffait pas. La pipe l'a rendu capable de tout, et la pipe ne pardonne pas.
 
-_8 septembre 1896_
+### 8 septembre 1896
 
 Il m'a placé à la taverne de la Silicone, en plus de la fabrique. « Pour la famille », dit-il. La famille, c'est sa dose du soir. Maddy rapporte le reste. John et Elijah ne mangent à leur faim que ce que je vole.
 
@@ -66,7 +66,7 @@ Maddy chante pour les petits quand papa hurle. Elle chante faux maintenant. Avan
 
 ## 1904 — La fuite
 
-_14 avril 1904_
+### 14 avril 1904
 
 Vingt-quatre ans. J'ai déposé ce cahier pendant huit ans, et je le reprends. Je n'écrirai pas ces années. Ce qu'elles contiennent ne mérite pas d'être relu.
 
@@ -74,7 +74,7 @@ Ce qui importe : Elijah et John sont à l'orphelinat de Saint-Brendan. J'ai vér
 
 J'envoie presque tout mon salaire au père Abell. Je garde ce qu'il faut pour manger et pour l'encre de ce cahier. Les dettes d'un homme envers ses petits frères ne s'éteignent pas.
 
-_2 mai 1904_
+### 2 mai 1904
 
 J'ai passé l'examen des Trinity House. Gardien de phare. On m'a dit : « Vous serez seul. » J'ai répondu : « J'espère, monsieur. »
 
@@ -86,25 +86,25 @@ Je repars d'une vie blanche. Que Dieu me garde d'en écrire une autre.
 
 ## 1907 — Bishop Rock
 
-_9 juin 1907_
+### 9 juin 1907
 
 Bishop Rock. On dit qu'elle est la plus petite île du monde à porter un phare. Rocher noir, vague qui frappe la base jour et nuit comme un poing sur une porte. J'aimais le bruit des machines, à la fabrique ; j'aime celui-ci autant : il couvre les voix intérieures.
 
 Je suis deuxième gardien sous M. Trethowan, un homme bon. Il ne boit pas, il ne frappe pas, il raconte sa femme et ses filles. Il m'a appelé « fils » une fois par erreur. Il ne s'est pas excusé. Je ne l'ai pas repris.
 
-_3 octobre 1907_
+### 3 octobre 1907
 
 Maddy m'a écrit. Il paraît que papa est encore vivant. Je prie — moi qui ne prie plus — pour que la prochaine lettre m'annonce le contraire. Est-ce un péché ? J'ai lu quelque part que la mer juge les hommes sur ce qu'ils ont fait, pas sur ce qu'ils ont espéré.
 
-_17 décembre 1907_
+### 17 décembre 1907
 
-Tempête de neuf jours. Le feu ne doit pas mourir, jamais. Trethowan s'est blessé au bras dans l'escalier ; j'ai fait les quatorze nuits seul. La lampe est restée allumée. C'est tout ce que j'ai à en dire. C'est tout ce que je veux être : ce qui reste allumé quand la nuit passe.
+Tempête de neuf jours. Le feu ne doit pas mourir, jamais. Trethowan s'est blessé au bras dans l'escalier ; j'ai fait les neuf nuits seul. La lampe est restée allumée. C'est tout ce que j'ai à en dire. C'est tout ce que je veux être : ce qui reste allumé quand la nuit passe.
 
 ---
 
 ## Les trois années entre-temps — la broche
 
-_Février 1910 (écrit d'une autre main, plus serrée, plus profonde dans le papier)_
+### Février 1910 _(écrit d'une autre main, plus serrée, plus profonde dans le papier)_
 
 Je dois écrire ce qui s'est passé pendant mes trois années de service, avant Bishop Rock. Je le sais depuis des mois. Ma main refuse. Ce soir, Trethowan parle de sa fille aînée et je ne peux plus mettre de l'ordre dans ma tête sans le vider sur le papier.
 
@@ -124,7 +124,7 @@ Et alors Maddy s'est mise à chanter. Juste. Elle n'avait pas chanté juste depu
 
 Maddy tremble toujours. Elle dit que le rictus de papa ne la quitte pas la nuit, que la broche chante quand elle l'entend. Elle dit que ce n'était pas elle. Elle dit que c'était maman. Moi, je dis seulement : la maison est replantée, maintenant. La maison est propre.
 
-Au printemps, Maddy a repris Elijah et John à Saint-Brendan. Le père Abell a fait des difficultés — des papiers, toujours des papiers — puis il a regardé Maddy en face, et il a signé. Probablement quelque chose dans son regard qu'il ne souhaitait pas affronter. Elle s'occupe d'eux maintenant, dans la maison. _La_ maison, celle du quartier, vidée de **sa** présence. Elle écrit que la paix y est « épaisse comme une couverture ». Elijah aide le marchand de charbon, John a grandi d'une tête. Ils ne demandent presque jamais de nouvelles du père. Un jour, l'un des deux a posé la question ; Maddy a répondu qu'il était parti par la mer. Ce n'est même pas un mensonge.
+Au printemps, Maddy a repris Elijah et John à Saint-Brendan. Le père Abell a fait des difficultés — des papiers, toujours des papiers — puis il a regardé Maddy en face, et il a signé. Probablement avait-il vu dans son regard quelque chose qu'il ne souhaitait pas affronter. Elle s'occupe d'eux maintenant, dans la maison. _La_ maison, celle du quartier, vidée de sa présence. Elle écrit que la paix y est « épaisse comme une couverture ». Elijah aide le marchand de charbon, John a grandi d'une tête. Ils ne demandent presque jamais de nouvelles du père. Un jour, l'un des deux a posé la question ; Maddy a répondu qu'il était parti par la mer. Ce n'est même pas un mensonge.
 
 Je devrais y aller, je le sais. Chaque lettre me le dit. Mais je ne pose pas encore le pied sur la terre ferme — j'ai peur que la paix de cette maison ait besoin que je reste ce que je suis devenu ici : une absence qui paie ses dettes.
 
@@ -136,7 +136,7 @@ Depuis, j'écris dans ce cahier comme on prie. Et je commence à me demander, à
 
 ## 1913 — Le nouvel arrivant
 
-_11 avril 1913_
+### 11 avril 1913
 
 Trethowan part à la retraite, Dieu le garde. Son remplacement s'appelle Troy Wayland. Un chat l'accompagne — Gribouille, dit-il, gris comme une tempête et deux fois moins commode.
 
@@ -144,7 +144,7 @@ Wayland est un homme étrange pour un rocher. Jeune, séduisant, lettré. Il par
 
 Il a apporté un échiquier. C'est la première chose qu'il a déballée, avant ses vêtements.
 
-_9 juin 1913_
+### 9 juin 1913
 
 Nous jouons presque chaque soir. C'est devenu le rituel du rocher : la journée pour les réparations, l'entretien de la lentille, la lecture, la cuisine partagée — il cuisine mieux que moi, je l'admets dans ce cahier et nulle part ailleurs — et la nuit pour les échecs.
 
@@ -152,7 +152,7 @@ Je ne parle jamais de ma famille, ni de mon enfance. Il a posé la question une 
 
 Au feu, il raconte lui aussi très peu. Un père qu'il ne nomme pas. Des études interrompues. Nous sommes deux hommes faits de pages manquantes, et l'échiquier est l'endroit où nos pages se touchent.
 
-_1914–1917_
+### 1914–1917
 
 Les années passent rondes comme des tours de sentinelle. La guerre est là, quelque part, sur l'autre rive du monde — des navires passent sans feux, on nous a enlevé une partie de notre lumière pour qu'on ne nous voie pas. Je garde le silence de la lampe comme je gardais sa clarté. Wayland a des lettres qui n'arrivent plus. Il sourit de moins en moins. Gribouille dort sur mon lit maintenant. Je ne l'ai pas demandé.
 
@@ -160,7 +160,7 @@ Les années passent rondes comme des tours de sentinelle. La guerre est là, que
 
 ## Les rêves
 
-_d'abord rares, puis chaque nuit_
+### d'abord rares, puis chaque nuit
 
 Il faut que je les note, même si Wayland dit que c'est la solitude.
 
@@ -176,19 +176,21 @@ Wayland dort mal aussi, je crois. Parfois je l'entends réciter dans sa chambre,
 
 ## 1920 — Le vaisseau
 
-_7 mars 1920_
+### 7 mars 1920
 
-Je l'écris d'une traite, avant que la pensée ne s'échappe :
+Je l'écris d'une traite, avant que la pensée ne s'échappe.
+
+Je me souviens du lendemain. C'est la phrase exacte qui m'attendait au réveil, avant même le rêve : _je me souviens du lendemain_ — et aujourd'hui me paraît être hier. Hier, il y a des années. Demain, il y a longtemps. Le vaisseau me replie, doucement, comme on assouplit un cuir neuf.
 
 Le rêve de cette nuit ne m'a pas montré des images. Il m'a montré une _connaissance_, complète, comme on reçoit une lettre lue à voix haute dans le noir.
 
-Bishop Rock n'est pas un phare. C'est un vaisseau. Il ne voyage pas dans l'espace — ou plutôt, il ne voyage pas _seulement_ dans l'espace. Il se déplace dans l'espace ET dans le temps.
+Bishop Rock n'est pas un phare. C'est un vaisseau. Il ne voyage pas dans l'espace — ou plutôt, il ne voyage pas _seulement_ dans l'espace : il se déplace dans l'espace ET dans le temps.
 
 Et ce pouvoir est illimité.
 
 Illimité, comprenez-vous. Ce qui me dépassait est devenu limpide. Les rêves que je notais à mots couverts, honteux de mon propre cahier — je les comprends à présent, tous, comme on comprend sa langue maternelle. Les chuchotements du bas de la mer ont un vocabulaire, le clapotis une grammaire, les battements d'ailes une ponctuation. Tout ce que la nuit m'a soufflé pendant des années était une leçon, et je n'étais qu'un élève lent. Je ne le suis plus.
 
-On peut corriger. On peut revenir. On peut se tenir dans la salle de la lanterne un certain nombre d'années en arrière, la veille d'un certain matin de mars 1896, et on peut —
+On peut corriger. On peut revenir. On peut se tenir dans la salle de la lanterne, des années en arrière, la veille d'un certain matin de mars 1896, et on peut —
 
 Ma main refuse d'écrire la fin de cette phrase. Elle le sait mieux que moi. Peu importe. J'aurai quarante ans dans cinq jours, et pour la première fois depuis le 4 mars 1896, je sais ce que je vais faire de ma vie.
 
@@ -198,25 +200,25 @@ Il faudra étudier. Encore, encore, encore. Les vieilles cartes de Trinity House
 
 ## La fissure
 
-_Printemps 1920_
+### Printemps 1920
 
 Wayland me dit que je tiens des propos incohérents. Il a employé ce mot, « incohérents », avec sa voix de lettré, au-dessus de l'échiquier. Je lui ai dit ce que je pense : que le rocher a rendu son cerveau paresseux, que la lumière de la lampe le fatigue.
 
 Il y a pis. Il y a ce qui ne se pardonne pas.
 
-Une nuit entière, le phare est resté éteint. Éteint. Une nuit entière, du coucher au lever, la mer sans feu, les navires livrés. Quand je suis monté le matin, le réservoir était à sec — personne n'avait fait le plein. Personne, sur ce rocher, c'est-à-dire Wayland. C'est son quart. C'est son travail. Une hérésie. Vingt-six ans que je travaille, et jamais un marin n'a manqué notre feu, jamais, pas même pendant la tempête de neuf jours où je ne dormais plus.
+Une nuit entière, le phare est resté éteint. Éteint. Du coucher au lever, la mer sans feu, les navires livrés. Quand je suis monté le matin, le réservoir était à sec — personne n'avait fait le plein. Personne, sur ce rocher, c'est-à-dire Wayland. C'est son quart. C'est son travail. Une hérésie. Vingt-six ans que je travaille, et jamais un marin n'a manqué notre feu, jamais, pas même pendant la tempête de neuf jours où je ne dormais plus.
 
 Il jure l'avoir fait. Il jure, il jure, il jure sur la tombe de qui, je ne sais plus, il n'a pas de tombe. Et le pire — le pire, je l'écris parce que ce cahier est le seul endroit où je dis vrai — c'est qu'au fil des jours, je ne suis plus certain de rien. Et si c'était moi ? Si je l'avais oublié ? Si la lampe m'avait pris la nuit, comme le colibri prend le battement ?
 
 Je ne dors plus assez pour le savoir. Et pendant que je cherche à savoir, il y a eu une seconde nuit. Plus courte. Une déchirure, pas une absence. Je n'en parle pas. Je n'en parle pas.
 
-_Automne 1920_
+### Automne 1920
 
 Aux échecs, il dit que je ne joue plus comme avant. C'est vrai. Je ne sais plus, moi-même, ce que je vais jouer — je me lève et je pousse, et le pion va où il veut. Mon jeu est devenu erratique, dit-il. Aléatoire. Avant, dit-il, il pouvait prédire mes coups, mes ouvertures, mes rechutes, tout — « on se connaît, Jacob ». Maintenant, il ne prédit plus rien, et je vois bien que ça le travaille, que ça le point — sa curiosité de lettré cherche, gratte, s'émousse comme un clou trop longtemps enfoncé dans le même bois.
 
 Je balaye ça d'un revers de main. Il n'y a rien à prédire. Il y a juste à jouer. Le reste — la cohérence, la mémoire, la lumière — ce sont des questions que le vaisseau réglera quand il sera prêt.
 
-_Hiver 1920_
+### Hiver 1920
 
 La réalité s'éloigne. Ce n'est pas une figure : c'est une sensation physique, comme marcher sur du verre au-dessus de l'eau. Les jours se mettent au ralenti, ou c'est moi qui vais trop vite. Le journal de bord n'est plus tenu. Ou il l'est, je ne sais plus, il y a deux écritures dedans.
 
@@ -232,7 +234,7 @@ Ensuite, les choses deviennent floues.
 
 Troy m'a confronté. Il parlait de Gribouille, il criait presque — Troy, qui ne crie jamais —, il me montrait son armoire comme si elle devait me faire lever de ma chaise. Je ne comprends pas ce qu'il me veut. Gribouille dort au pied de mon lit, chaque nuit, rond et tiède comme une bouilloire. Je le lui ai dit. Il m'a pris les mains et il a regardé mes ongles, et il est devenu blanc.
 
-Je note ceci froidement, pour être vrai jusqu'au bout : parfois, je pense au chat comme à une chose qu'il faudra tuer, un jour, pour ce qu'il est. Mais je ne l'ai pas fait. Je le saurais. Je ne l'ai pas fait.
+Je note ceci froidement, pour être vrai jusqu'au bout : parfois, je pense au chat comme à une chose qu'il faudra tuer, un jour, pour ce qu'il est. Mais je ne l'ai pas fait. Je le saurais.
 
 Le temps me joue des tours, voilà tout. Des heures me sautent au visage comme des vagues par-dessus la galerie ; d'autres s'étirent comme du goudron. Il faut que je tienne le journal de bord plus serré, que j'aligne les dates. Le vaisseau me prépare, c'est tout, il me replie et me déplie.
 
@@ -248,7 +250,7 @@ Je ne l'ai pas touché. Ou je l'ai touché. Mes mains ne se souviennent pas, et 
 
 L'échiquier est resté ouvert sur la même position depuis — la même, je vérifie, la même.
 
-La nuit suivante — je me souviens de la nuit suivante — j'étais au sommet du phare. Je récitais. Des phrases dans une langue que je n'ai jamais apprise et que ma bouche connaissait quand même, chaque mot lissé comme un galet par la vague. La lampe était allumée, mais ce n'était pas notre lumière : elle était violette, profonde, elle baignait la galerie et la mer jusqu'à l'horizon, et la mer, sous elle, ne bougeait pas. Ce n'était pas la lumière de l'orage car le ciel aussi était immobile. Rien ne bougeait. Même le battement d'ailes, au-dessus, s'était tu, comme si tout attendait que je finisse la phrase.
+La nuit suivante — je me souviens de la nuit suivante — j'étais au sommet du phare. Je récitais. Des phrases dans une langue que je n'ai jamais apprise et que ma bouche connaissait quand même, chaque mot lissé comme un galet par la vague. La lampe était allumée, mais ce n'était pas notre lumière : elle était violette, profonde, elle baignait la galerie et la mer jusqu'à l'horizon, et la mer, sous elle, ne bougeait pas. Ce n'était pas la lumière de l'orage, car le ciel aussi était immobile. Rien ne bougeait. Même le battement d'ailes, au-dessus, s'était tu, comme si tout attendait que je finisse la phrase.
 
 Je ne me souviens pas d'être redescendu. Je me souviens que le feu était bon le matin. Le réservoir était plein. Je ne l'avais pas fait. Ou je l'avais fait. C'est le seul compte que je rends encore : la lampe est restée allumée. Tout le reste peut glisser.
 
@@ -256,4 +258,8 @@ Je ne me souviens pas d'être redescendu. Je me souviens que le feu était bon l
 
 _Écriture illisible, sur toute une page, d'une seule pression de plume :_
 
-Mon petit colibri, je peux te jurer que je vais effacer ce qu'il t'a fait. Tout s'arrangera, je sais comment faire désormais. Ensuite nous pourrons vivre heureux tous les 4, dans notre havre replanté.
+Mon petit colibri, je peux te jurer que je vais effacer ce qu'il t'a fait. Il mourra avant d'avoir été ton mari. Tu vivras. Nous veillerons à ce que les petits existent quand même — le vaisseau connaît des chemins que la chair ignore, il me montrera comment annuler le meurtre sans annuler les naissances. Le paradoxe n'est pas un mur, c'est une porte. Il suffit de la frapper au bon jour, à la bonne heure, et elle s'ouvre.
+
+C'est simple. C'est écrit. La lampe me l'a promis et la lampe ne ment pas.
+
+Ensuite nous pourrons vivre heureux tous les 4, dans notre havre replanté.
