@@ -5,12 +5,21 @@
       "type": "shell",
       "label": "Copy all mika CV HTML files",
       "dependsOn": [
+        "Remove the typst cache",
         "Copy the mika FR CV HTML file",
         "Copy the mika EN CV HTML file"
       ],
       "group": {
         "kind": "build",
         "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "Remove the typst cache",
+      "command": "rm -rf ~/.cache/typst",
+      "group": {
+        "kind": "build"
       }
     },
     {
