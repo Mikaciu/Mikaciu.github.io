@@ -9,17 +9,19 @@ cv:
   social_networks:
     - network: GitHub
       username: mikaciu
+    - network: LinkedIn
+      username: mikaël-hautin
 
   sections:
     "À propos de moi":
       - |
-        Je sais faire preuve d'adaptation au contexte ainsi qu'aux contraintes, en toutes circonstances.
+        Ingénieur en services cloud, je contribue à rendre les chaînes de développement et les environnements cloud plus fiables, automatisés et sécurisés. Je travaille notamment sur l'automatisation de SonarQube (outil d'analyse statique de code), les pipelines Azure DevOps et l'intégration de contrôles de qualité et de sécurité dans les workflows.
       - |
-        J'aime beaucoup travailler en équipe et échanger avec mes collègues dans le but d'accroître mutuellement nos connaissances ; je n'hésite pas à me remettre en question en ce sens.
+        J'aime transformer les tâches répétitives en outils maintenables et concevoir des solutions adaptées aux contraintes réelles des équipes. J'accorde une grande importance à la documentation, au partage des connaissances et aux échanges avec les développeurs, notamment par des webinaires et des formations. Mes domaines de prédilection sont le DevSecOps, l'automatisation, le cloud et la cybersécurité.
       - |
-        Ma philosophie professionnelle se résume en ces termes : "le respect par la compétence".
+        Ma philosophie professionnelle tient en une formule : le respect par la compétence.
       - |
-        Je suis passionné par l'informatique et les nouvelles technologies, et je m'intéresse particulièrement à la sécurité informatique, au DevSecOps, à l'automatisation et au cloud.
+        J'aime aussi faire évoluer mon homelab, bricoler et expérimenter de nouvelles technologies.
 
     Compétences:
       - label: "Cloud"
@@ -147,7 +149,7 @@ cv:
           - Conception, réalisation et maintenance de la plateforme
 
     Réalisations:
-      - name: sqctl
+      - name: sonarqubectl
         start_date: 2020
         end_date: present
         summary: Client en ligne de commandes permettant de gérer une instance SonarQube
@@ -179,7 +181,7 @@ cv:
         summary: Bibliothèque de modèles de pipelines Azure DevOps
         highlights:
           - Modèles génériques pour un usage multiple
-          - Synchronisation de la bibliothèque vers 22 organisations Azure DevOps
+          - Synchronisation de la bibliothèque vers 23 organisations Azure DevOps
       - name: Anubis
         start_date: 2021
         end_date: present

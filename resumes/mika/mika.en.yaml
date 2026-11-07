@@ -9,17 +9,19 @@ cv:
   social_networks:
     - network: GitHub
       username: mikaciu
+    - network: LinkedIn
+      username: mikaël-hautin
 
   sections:
     "About me":
       - |
-        I can adapt to the context and constraints in all circumstances.
+        As a Cloud Services Engineer, I help make development pipelines and cloud environments more reliable, automated, and secure. My work includes SonarQube automation (static code analysis), Azure DevOps pipelines, and integrating quality and security checks into workflows.
       - |
-        I enjoy working as part of a team and exchanging with my colleagues to mutually expand our knowledge; I do not hesitate to question myself in that regard.
+        I enjoy turning repetitive tasks into maintainable tools and designing solutions suited to teams' real-world constraints. I value clear documentation, knowledge sharing, and collaborating with developers through webinars and training. My areas of focus include DevSecOps, automation, cloud, and cybersecurity.
       - |
-        My professional philosophy is summarized as: "respect through skill".
+        My professional philosophy can be summed up as: respect through skill.
       - |
-        I am passionate about computer science and new technologies, and I am particularly interested in cybersecurity, DevSecOps, automation, and cloud.
+        I also enjoy building out my home lab, working on DIY projects, and experimenting with new technologies.
 
     Skills:
       - label: "Cloud"
@@ -147,7 +149,7 @@ cv:
           - Design, implementation, and maintenance of the platform
 
     Projects:
-      - name: sqctl
+      - name: sonarqubectl
         start_date: 2020
         end_date: present
         summary: Command-line client for managing a SonarQube instance
@@ -179,7 +181,7 @@ cv:
         summary: Library of reusable Azure pipeline templates
         highlights:
           - Generic templates for multi-purpose tasks
-          - Synchronization of the pipeline library across 22 Azure DevOps organizations
+          - Synchronization of the pipeline library across 23 Azure DevOps organizations
       - name: Anubis
         start_date: 2021
         end_date: present

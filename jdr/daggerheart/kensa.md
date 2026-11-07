@@ -9,7 +9,6 @@ layout: custom-page
 ## Ascendance : Katari
 
 > Feline Instincts. When you make an Agility Roll, you can spend 2 Hope to reroll your Hope Die.
-
 > Retracting Claws. Make an Agility Roll to scratch a target within Melee range. On a success, they become temporarily Vulnerable.
 
 ## Communauté : Wildborne
@@ -39,7 +38,6 @@ C'était ma femme. Elle m'avait juré que l'argent ne comptait pour rien face à
 Je ne l'ai pas tuée par colère. Je l'ai tuée parce qu'elle avait déjà tué tout le reste. Ce soir-là, j'ai appris que la confiance n'est pas un cadeau qu'on donne : c'est une dague qu'on tend à quelqu'un, manche vers lui, en priant pour qu'il ne la retourne pas. Je ne tends plus rien à personne.
 
 > Conséquence mécanique : source d'une peur: (« être trahi » ou « aimer à nouveau »).
-
 > Détail signature : un objet (alliance qu'elle portait) que le perso garde comme rappel
 
 #### Quelle organisation t'a entraîné dans l'art de l'assassinat et comment en es-tu devenu membre ?
@@ -69,17 +67,14 @@ Je n'ai jamais rien rapporté aux Plumes. Celui qui m'a échappé le fait encore
 ### Foundation features
 
 > First Strike. The first time in a scene you succeed on an attack, you deal double damage.
-
 > Ambush. Your “Marked for Death” feature uses d6s instead of d4s.
 
 ### Specialization features
 
 > Death Strike. When you deal Severe damage to a creature, you can mark a Stress to force them to mark an additional Hit Point.
-
 > Scorpion’s Poise. You gain a +2 bonus to your Evasion against attacks made by a creature you’ve Marked for Death.
 
 ### Mastery features
 
 > True Strike. Once per long rest when you fail an attack, you can spend a Hope to make it a success instead.
-
 > Backstab. Your “Marked for Death” feature uses d8s instead of d6s.
