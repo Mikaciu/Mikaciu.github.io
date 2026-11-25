@@ -1,9 +1,14 @@
 ---
 layout: custom-page
 ---
+
 # Shosuro Katsuko
 
 ![Shosuro Katsuko](./katsuko.jpeg)
+
+![Shosuro Katsuko, armure](./katsuko_armure.png)
+
+![Shosuro Katsuko, cour](./katsuko_cour.png)
 
 ## Objectifs
 
